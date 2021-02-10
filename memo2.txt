@@ -1,0 +1,24 @@
+insert into places(introduction, name, genre_name, tel, address, latitude, longitude, open_time, close_date, image1, image2, image3, image4, image5, nearest_station) values(
+Huluのロケ「Sweets Party」で利用されたカフェ。,
+ヒロマンズコーヒー(HIROMAN’S COFFEE),
+BTS(防弾少年団),
+03-5775-5663,
+東京都渋谷区神宮前3-18-12,
+11:00～19:00(L.O.18:30),
+日曜営業,
+明治神宮前駅から482m,
+);
+
+insert into places(introduction, name, genre_name, tel, address, latitude, longitude, open_time, close_date, image1, image2, image3, image4, image5, nearest_station, booking) values(
+BTSの旧レッスンスタジオが「油井食堂」の地下にあったことから、レッスン生時代の彼らはほぼ毎日こちらで食事をしていました。
+デビュー後、彼らがメディアで店名を出したことから、一気に「防弾食堂＝バンタン食堂」として知られ、韓国内から世界中のファンまで集まるようになりました。
+日本語不可ですが、日本語メニューがあります。,
+油井食堂(バンタン食堂),
+BTS(防弾少年団),
+02-511-4592,
+ソウル特別市 江南区 島山大路28キル 14,
+月～金曜10：00～21：30(ラストオーダー21：00)、土・日曜10：00～20：00(ラストオーダー19：30),
+旧正月・秋夕(チュソク)の連休,
+地下鉄3号線新沙(シンサ、Sinsa)駅 1番出口から徒歩12分、地下鉄3号線狎鴎亭(アックジョン、Apgujeong)駅 4番出口から徒歩12分,
+不可
+);

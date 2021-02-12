@@ -45,7 +45,7 @@
                 $user = $stmt->fetch();
                 
             }catch(PDOException $e){
-                $users = null;
+                $user = null;
             }finally{
                 self::close_connection($dbh, $stmt);
             }
@@ -62,6 +62,23 @@
                 $stmt->bindValue(':password', $user->password, PDO::PARAM_STR);
                 $stmt->bindValue(':birthday', $user->birthday, PDO::PARAM_INT);
                 $stmt->bindValue(':image', $user->image);
+                $stmt->execute();
+                
+            }catch(PDOException $e){
+            }finally{
+                self::close_connection($dbh, $stmt);
+            }
+        }
+        
+        //IDを指定して会員情報を変更するメソッド
+        public static function update($id, $name, $self_introduction, $favorite_person){
+            try{
+                $dbh = self::get_connection();
+                $stmt = $dbh->prepare('UPDATE users SET name= :name, self_introduction= :self_introduction, favorite_person= :favorite_person WHERE id= :id');
+                $stmt->bindValue(':name', $name, PDO::PARAM_STR);
+                $stmt->bindValue(':self_introduction', $self_introduction, PDO::PARAM_STR);
+                $stmt->bindValue(':favorite_person', $favorite_person, PDO::PARAM_STR);
+                $stmt->bindValue(':id', $id, PDO::PARAM_INT);
                 $stmt->execute();
                 
             }catch(PDOException $e){

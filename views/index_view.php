@@ -10,6 +10,7 @@
         <ul>
             <li><a href="#">about</a></li>
             <li><a href="#">search</a></li>
+            <li><a href="profile.php?id=<?= $user->id ?>">my page</a></li>
             <li><a href="#">contact</a></li>
         </ul>
         
@@ -27,11 +28,12 @@
         
         <h2>K-POPグループから探す</h2>
         <p>男性</p>
-        <?php foreach($places as $place): ?>
+        
         <ul>
-            <li><a href="show.php?genre_name=<?= $place->genre_name ?>">BTS</a></li>
-            <li><a href="#">BIGBANG</a></li>
-            <li><a href="#">IKON</a></li>
+            <li><a href="list.php?genre_name=BTS">BTS</a></li>
+            <li><a href="list.php?genre_name=BIGBANG">BIGBANG</a></li>
+            <li><a href="list.php?genre_name=IKON">IKON</a></li>
+            
         </ul>
         
         <p>女性</p>
@@ -45,7 +47,7 @@
         <a href="#">愛の不時着</a>
         <a href="#">梨泰院クラス</a>
         <a href="#">雲が描いた月明かり</a>
-        <?php endforeach; ?>
+        
         
         <a href="logout.php">ログアウト</a>
         

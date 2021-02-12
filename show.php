@@ -1,16 +1,10 @@
 <?php
     require_once 'filters/login_filter.php';
-    
     require_once 'daos/PlaceDAO.php';
-    // require_once 'daos/ReviewDAO.php';
-    session_start();
     
+    $id = $_GET['id'];
+    $place = PlaceDAO::get_place_by_id($id);
     
-    
-    $flash_message = $_SESSION['flash_message'];
-    $_SESSION['flash_message'] = null;
-    
-    $errors = $_SESSION['errors'];
-    $_SESSION['errors'] = null;
+    // var_dump($place);
     
     include_once 'views/show_view.php';

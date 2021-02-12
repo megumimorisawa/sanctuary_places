@@ -8,8 +8,8 @@
         public $name;
         public $introduction;
         public $address;
-        public $latitude;
-        public $longitude;
+        // public $latitude;
+        // public $longitude;
         public $tel;
         public $open_time;
         public $close_time;
@@ -25,15 +25,15 @@
         public $created_at;
         public $updated_at;
         
-        public function __construct($user_id="", $genre_name="", $name="", $introduction="", $address="", $latitude="", $longitude="", $tel="", $open_time="", $close_time="", $close_date="", $nearest_station="", $booking="", $price=""){
+        public function __construct($user_id="", $genre_name="", $name="", $introduction="", $postal_code="", $address="", $tel="", $open_time="", $close_time="", $close_date="", $nearest_station="", $booking="", $price="", $image1="", $image2="", $image3="", $image4="", $image5=""){
             $this->user_id = $user_id;
             $this->genre_name = $genre_name;
             $this->name = $name;
             $this->introduction = $introduction;
             $this->postal_code = $postal_code;
             $this->address = $address;
-            $this->latitude = $latitude;
-            $this->longitude = $longitude;
+            // $this->latitude = $latitude;
+            // $this->longitude = $longitude;
             $this->tel = $tel;
             $this->open_time = $open_time;
             $this->close_time = $close_time;

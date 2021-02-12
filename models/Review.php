@@ -8,16 +8,22 @@
         public $month;
         public $title;
         public $content;
-        public $image;
+        public $image1;
+        public $image2;
+        public $image3;
+        public $image4;
         public $created_at;
         
-        public function __construct($user_id="", $place_id="", $month="", $title="", $content="", $image=""){
+        public function __construct($user_id="", $place_id="", $month="", $title="", $content="", $image1="",  $image2="",  $image3="",  $image4="") {
             $this->user_id = $user_id;
             $this->place_id = $place_id;
             $this->month = $month;
             $this->title = $title;
             $this->content = $content;
-            $this->image = $image;
+            $this->image1 = $image1;
+            $this->image1 = $image2;
+            $this->image1 = $image3;
+            $this->image1 = $image4;
         }
         
         public function validate(){
@@ -31,7 +37,9 @@
             if($this->content === ''){
                 $errors[] = '内容を入力してください';
             }
-            
+            if($this->image1 === ''){
+                $errors[] = '写真を1枚は選択してください';
+            }
             return $errors;
         }
         

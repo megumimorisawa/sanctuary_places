@@ -38,15 +38,15 @@
         public static function insert($place){
             try{
                 $dbh = self::get_connection();
-                $stmt = $dbh->prepare('INSERT INTO places (user_id, genre_name, name, introduction, postal_code, address, latitude, longitude, tel, open_time, close_time, close_date, nearest_station, booking, price, image1, image2, image3, image4, image5)VALUES(:user_id, :genre_name, :name, :introduction, :postal_code, :address, :latitude, :longitude, :tel, :open_time, :close_time, :close_date, :nearest_station, :booking, :price, :image1, :image2, :image3, :image4, :image5)');
+                $stmt = $dbh->prepare('INSERT INTO places (user_id, genre_name, name, introduction, postal_code, address, tel, open_time, close_time, close_date, nearest_station, booking, price, image1, image2, image3, image4, image5)VALUES(:user_id, :genre_name, :name, :introduction, :postal_code, :address, :tel, :open_time, :close_time, :close_date, :nearest_station, :booking, :price, :image1, :image2, :image3, :image4, :image5)');
                 $stmt->bindValue(':user_id', $place->user_id, PDO::PARAM_INT);
                 $stmt->bindValue(':genre_name', $place->genre_name, PDO::PARAM_STR);
                 $stmt->bindValue(':name', $place->name, PDO::PARAM_STR);
                 $stmt->bindValue(':introduction', $place->introduction, PDO::PARAM_STR);
                 $stmt->bindValue(':postal_code', $place->postal_code, PDO::PARAM_INT);
                 $stmt->bindValue(':address', $place->address, PDO::PARAM_STR);
-                $stmt->bindValue(':latitude', $place->latitude, PDO::PARAM_INT);
-                $stmt->bindValue(':longitude', $place->longitude, PDO::PARAM_INT);
+                // $stmt->bindValue(':latitude', $place->latitude, PDO::PARAM_INT);
+                // $stmt->bindValue(':longitude', $place->longitude, PDO::PARAM_INT);
                 $stmt->bindValue(':tel', $place->tel, PDO::PARAM_INT);
                 $stmt->bindValue(':open_time', $place->open_time, PDO::PARAM_INT);
                 $stmt->bindValue(':close_time', $place->close_time, PDO::PARAM_INT);
@@ -81,12 +81,29 @@
             }
         }
         
-        //IDを指定して一つの聖地を抜き出すメソッド
+        //ジャンル名を指定して全ての聖地を抜き出すメソッド
+        public static function get_place_by_genre_name($genre_name){
+            try{
+                $dbh = self::get_connection();
+                $stmt = $dbh->prepare('SELECT * FROM places WHERE genre_name = :genre_name order by id desc');
+                $stmt->bindValue(':genre_name', $genre_name, PDO::PARAM_STR);
+                $stmt->execute();
+                $stmt->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'Place');
+                $places = $stmt->fetchAll();
+                
+            }catch(PDOException $e){
+            }finally{
+                self::close_connection($dbh, $stmt);
+            }
+            return $places;
+        }
+        
+        //IDを指定して聖地情報を抜き出すメソッド
         public static function get_place_by_id($id){
             try{
                 $dbh = self::get_connection();
                 $stmt = $dbh->prepare('SELECT * FROM places WHERE id = :id');
-                $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+                $stmt->bindValue(':id', $id, PDO::PARAM_STR);
                 $stmt->execute();
                 $stmt->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'Place');
                 $place = $stmt->fetch();
@@ -132,9 +149,9 @@
         
         //ファイルをアップデートするメソッド
         public function upload(){
-            if(!empty($_FILES['image']['name'])){
+            if(!empty($_FILES['image1']['name'])){
                 $image = uniqid(mt_rand(), true);
-                $image .= '.' . substr(strrchr($_FILES['image']['name'], '.'), 1);
+                $image .= '.' . substr(strrchr($_FILES['image1']['name'], '.'), 1);
                 $file = 'upload/' . $image;
                 move_uploaded_file($_FILES['image']['tmp_name'], $file);
                 

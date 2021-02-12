@@ -17,7 +17,7 @@
         
         <form action="create.php" method="POST" enctype="multipart/form-data">
             <p>グループ名・ドラマ名</p>
-            <div><select name="genre-name">
+            <div><select name="genre_name">
                 <option value="BTS">BTS</option>
                 <option value="BIGBANG">BIGBANG</option>
                 <option value="IKON">IKON</option>
@@ -31,7 +31,7 @@
             <p>場所の名称</p>
             <div><input type="text" name="name"></div>
             <p>紹介文</p>
-            <div><input type="text" name="introduction"</div>
+            <div><input type="text" name="introduction"></div>
             <p>郵便番号</p>
             <div><input type="text" name="postal_code" autocomplete="postal-code"></div>
             <p>住所</p>
@@ -44,22 +44,22 @@
             <p>定休日</p>
             <div><input type="text" name="close_date"></div>
             <p>最寄駅（徒歩何分かも分かれば）　※任意</p>
-            <div><input type="text" name="nearest-station"></div>
+            <div><input type="text" name="nearest_station"></div>
             <p>予約可否　※任意</p>
             <div><input type="text" name="booking"></div>
             <p>価格帯　※任意</p>
             <div><select name="price">
-                <option value="0-999">¥0〜¥999</option>
-                <option value="1000-1999">¥1,000〜¥1,999</option>
-                <option value="2000-2999">¥2,000〜¥2,999</option>
-                <option value="3000-3999">¥3,000〜¥3,999</option>
-                <option value="4000-4999">¥4,000〜¥4,999</option>
-                <option value="5000-5999">¥5,000〜¥5,999</option>
-                <option value="6000-6999">¥6,000〜¥6,999</option>
-                <option value="7000-7999">¥7,000〜¥7,999</option>
-                <option value="8000-8999">¥8,000〜¥8,999</option>
-                <option value="8000-8999">¥9,000〜¥9,999</option>
-                <option value="other">それ以上</option>
+                <option value="¥0〜¥999">¥0〜¥999</option>
+                <option value="¥1,000〜¥1,999">¥1,000〜¥1,999</option>
+                <option value="¥2,000〜¥2,999">¥2,000〜¥2,999</option>
+                <option value="¥3,000〜¥3,999">¥3,000〜¥3,999</option>
+                <option value="¥4,000〜¥4,999">¥4,000〜¥4,999</option>
+                <option value="¥5,000〜¥5,999">¥5,000〜¥5,999</option>
+                <option value="¥6,000〜¥6,999">¥6,000〜¥6,999</option>
+                <option value="¥7,000〜¥7,999">¥7,000〜¥7,999</option>
+                <option value="¥8,000〜¥8,999">¥8,000〜¥8,999</option>
+                <option value="¥9,000〜¥9,999">¥9,000〜¥9,999</option>
+                <option value="¥10,000以上">¥10,000以上</option>
             </select></div>
             <p>写真　一枚は必須</p>
             <div><input type="file" name="image1"></div>

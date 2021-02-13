@@ -23,15 +23,16 @@
         public static function insert_review($review){
             try{
                 $dbh = self::get_connection();
-                $stmt = $dbh->prepare('INSERT INTO reviews (user_id, place_id, title, content, image1, image2, image3, image4)VALUES(:user_id, :place_id, :title, :content, :image1, :image2, :image3, :image4)');
+                $stmt = $dbh->prepare('INSERT INTO reviews (user_id, place_id, title, month, content)VALUES(:user_id, :place_id, :title, :month, :content)');
                 $stmt->bindValue(':user_id', $review->user_id, PDO::PARAM_INT);
                 $stmt->bindValue(':place_id', $review->place_id, PDO::PARAM_INT);
                 $stmt->bindValue(':title', $review->title, PDO::PARAM_STR);
+                $stmt->bindValue(':month', $review->month, PDO::PARAM_INT);
                 $stmt->bindValue(':content', $review->content, PDO::PARAM_STR);
-                $stmt->bindValue(':image1', $review->image1);
-                $stmt->bindValue(':image2', $review->image2);
-                $stmt->bindValue(':image3', $review->image3);
-                $stmt->bindValue(':image4', $review->image4);
+                // $stmt->bindValue(':image1', $review->image1);
+                // $stmt->bindValue(':image2', $review->image2);
+                // $stmt->bindValue(':image3', $review->image3);
+                // $stmt->bindValue(':image4', $review->image4);
                 $stmt->execute();
             }catch(PDOException $e){
             }finally{
@@ -43,7 +44,7 @@
         public static function get_all_reviews($id){
             try{
                 $dbh = self::get_connection();
-                $stmt = $dbh->prepare('SELECT * FROM reviews WHERE place_id ORDER BY ID DESC');
+                $stmt = $dbh->prepare('SELECT * FROM reviews WHERE place_id = :place_id ORDER BY ID DESC');
                 $stmt->bindValue(':place_id', $id, PDO::PARAM_INT);
                 $stmt->execute();
                 $stmt->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'Review');
@@ -53,5 +54,19 @@
                 self::close_connection($dbh, $stmt);
             }
             return $reviews;
+        }
+        
+        //ファイルをアップデートするメソッド
+        public function upload(){
+            if(!empty($_FILES['image']['name'])){
+                $image = uniqid(mt_rand(), true);
+                $image .= '.' . substr(strrchr($_FILES['image']['name'], '.'), 1);
+                $file = 'upload/' . $image;
+                move_uploaded_file($_FILES['image']['tmp_name'], $file);
+                
+                return $image;
+            }else{
+                return '';
+            }
         }
     }

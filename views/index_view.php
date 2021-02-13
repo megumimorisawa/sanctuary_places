@@ -24,29 +24,33 @@
         <h1>「聖地さがし」</h1>
         <p>K-POPアイドル/韓国ドラマ好きのための聖地巡礼情報アプリ</p>
         
-        <a href="new.php">新しく見つけた聖地を登録</a>
+        <a href="new.php?user_id=<?= $user->id ?>">新しく見つけた聖地を登録</a>
         
         <h2>K-POPグループから探す</h2>
-        <p>男性</p>
+        <h3>男性</h3>
+        <form action="list.php" method="POST">
+            <input type="hidden" name="user_id" value="<?= $user->id ?>">
+            <div><input type="submit" name="genre_name" value="BTS"></div>
+            <div><input type="submit" name="genre_name" value="BIGBANG"></div>
+            <div><input type="submit" name="genre_name" value="IKON"></div>
+        </form>
         
-        <ul>
-            <li><a href="list.php?genre_name=BTS">BTS</a></li>
-            <li><a href="list.php?genre_name=BIGBANG">BIGBANG</a></li>
-            <li><a href="list.php?genre_name=IKON">IKON</a></li>
-            
-        </ul>
+        <h3>女性</h3>
+        <form action="list.php" method="POST">
+            <input type="hidden" name="id" value="<?= $user->id ?>">
+            <div><input type="submit" name="genre_name" value="BLACKPINK"></div>
+            <div><input type="submit" name="genre_name" value="TWICE"></div>
+            <div><input type="submit" name="genre_name" value="IU"></div>
+        </form>
         
-        <p>女性</p>
-        <ul>
-            <li><a href="#">BLACK PINK</a></li>
-            <li><a href="#">TWICE</a></li>
-            <li><a href="#">IU</a></li>
-        </ul>
         
-        <h2>ドラマから探す</h2>
-        <a href="#">愛の不時着</a>
-        <a href="#">梨泰院クラス</a>
-        <a href="#">雲が描いた月明かり</a>
+        <h3>ドラマから探す</h3>
+        <form action="list.php" method="POST">
+            <input type="hidden" name="id" value="<?= $user->id ?>">
+            <div><input type="submit" name="genre_name" value="愛の不時着"></div>
+            <div><input type="submit" name="genre_name" value="梨泰院クラス"></div>
+            <div><input type="submit" name="genre_name" value="雲が描いた月明かり"></div>
+        </form>
         
         
         <a href="logout.php">ログアウト</a>

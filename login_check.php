@@ -7,12 +7,12 @@
      
      $user = UserDAO::login($email, $password);
      
-     var_dump($user);
+    //  var_dump($user);
      
      if($user !== false){
          $_SESSION['login_user'] = $user;
          $_SESSION['flash_message'] = $user->name . 'さん、ようこそ！';
-         header('Location: index.php?id=' . $user->id);
+         header('Location: index.php?user_id=' . $user->id);
          exit;
      }else{
          $_SESSION['error_message'] = 'ログインできません';

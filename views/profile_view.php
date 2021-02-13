@@ -11,14 +11,15 @@
     <p><?= $flash_message ?></p>
     <?php endif; ?>
     
-    
+    <?php var_dump($user) ?>
     <img src='upload/<?= $user->image ?>' style="width:200px;">
     <a href="profile_pic_edit.php?id=<?= $user->id ?>">編集</a>
     
-    <p><?= $user->get_user()->name ?></p>
-    <p><?= $user->self_introduction ?></p>
-    <p><?= $user->favorite_person ?></p>
+    <p>名前：<?= $user->name ?></p>
+    <p>プロフィール：<?= $user->self_introduction ?></p>
+    <p>推し：<?= $user->favorite_person ?></p>
     
+    <a href="index.php?id=<?= $user->id ?>">戻る</a>
     <a href="profile_edit.php?id=<?= $user->id ?>">編集</a>
 </body>
 </html>

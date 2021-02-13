@@ -50,7 +50,7 @@ create table reviews (
     month int not null,
     title varchar(100) not null,
     content varchar(300) not null, 
-    image1 varchar(100) not null,
+    image1 varchar(100),
     image2 varchar(100),
     image3 varchar(100),
     image4 varchar(100),

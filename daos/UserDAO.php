@@ -86,6 +86,20 @@
                 self::close_connection($dbh, $stmt);
             }
         }
+        //IDを指定してプロフィールアイコンを変更するメソッド
+        public static function update_pic($id, $image){
+            try{
+                $dbh = self::get_connection();
+                $stmt = $dbh->prepare('UPDATE users SET image= :image WHERE id= :id');
+                $stmt->bindValue(':image', $image);
+                $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+                $stmt->execute();
+                
+            }catch(PDOException $e){
+            }finally{
+                self::close_connection($dbh, $stmt);
+            }
+        }
         
         //会員登録入力チェック
         public static function check_new_user($name, $email, $password, $birthday, $image){

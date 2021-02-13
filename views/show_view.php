@@ -23,8 +23,28 @@
     <br/>
     <h2>クチコミ一覧</h2>
     
+    <?php foreach($reviews as $review): ?>
+    <p>名前：<?= $review->get_user()->name ?></p>
+    <p>タイトル：<?= $review->title ?></p>
+    <p>訪れた月：<?= $review->month ?>月</p>
+    <p>内容：<?= $review->content ?></p>
+    <p>更新日：<?= $review->created_at ?></p>
+    <?php endforeach; ?>
     
-    <a href="index.php">ホーム画面へ戻る</a>
+    <!--<form action="index.php" method="POST">-->
+    <!--    <input type="submit" value="ホーム画面へ">-->
+    <!--    <input type="hidden" name="user_id" value="<?= $user->id ?>">-->
+    <!--</form>-->
+    
+    <a href="index.php?user_id=<?= $user->id ?>">ホーム画面へ戻る</a>
+    <a href="review.php?id=<?= $place->id ?>">クチコミ投稿</a>
+    
+    <form action="list.php" method="POST">
+        <input type="submit" value="戻る">
+        <input type="hidden" name="genre_name" value="<?= $place->genre_name ?>">
+        <input type="hidden" name="user_id" value="<?= $user->id ?>">
+    </form>
+    <!--<a href="list.php?genre_name=<?= $place->genre_name ?>">聖地一覧へ戻る</a>-->
     
 </body>
 </html>

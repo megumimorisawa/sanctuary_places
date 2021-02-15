@@ -20,7 +20,7 @@
     if(count($errors) === 0){
         ReviewDAO::insert_review($review);
         $_SESSION['flash_message'] = 'レビューを投稿しました';
-        header('Location: show.php?id=' . $place_id . '&user_id=' . $login_user->id);
+        header('Location: show.php?place_id=' . $place_id . '&user_id=' . $login_user->id);
         exit();
     }else{
         $_SESSION['errors'] = $errors;

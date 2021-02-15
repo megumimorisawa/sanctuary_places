@@ -41,11 +41,11 @@
         }
         
         //データベースから注目する聖地に対する全レビューを取得するメソッド
-        public static function get_all_reviews($id){
+        public static function get_all_reviews($place_id){
             try{
                 $dbh = self::get_connection();
                 $stmt = $dbh->prepare('SELECT * FROM reviews WHERE place_id = :place_id ORDER BY ID DESC');
-                $stmt->bindValue(':place_id', $id, PDO::PARAM_INT);
+                $stmt->bindValue(':place_id', $place_id, PDO::PARAM_INT);
                 $stmt->execute();
                 $stmt->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'Review');
                 $reviews = $stmt->fetchAll();

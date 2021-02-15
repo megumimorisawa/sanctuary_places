@@ -34,6 +34,8 @@
     }else{
         PlaceDAO::insert($place);
         $_SESSION['flash_message'] = '投稿が完了しました';
-        header('Location: index.php?user_id=' . $id );
+        $_SESSION['user_id'] = $id;
+        $_SESSION['genre_name'] = $genre_name;
+        header('Location: list.php');
         exit;
     }

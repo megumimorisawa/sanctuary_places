@@ -5,15 +5,18 @@
     require_once 'daos/UserDAO.php';
     require_once 'daos/ReviewDAO.php';
     
-    $id = $_GET['id'];
-    $place = PlaceDAO::get_place_by_id($id);
+    session_start();
     
-    $reviews = ReviewDAO::get_all_reviews($id);
+    $place_id = $_GET['place_id'];
+    $place = PlaceDAO::get_place_by_id($place_id);
     
+    $reviews = ReviewDAO::get_all_reviews($place_id);
     
     $user_id = $_GET['user_id'];
     $user = UserDAO::get_user_by_id($user_id);
     
+    $flash_message = $_SESSION['flash_message'];
+    $_SESSION['flash_message'] = null;
     
     // var_dump($place);
     // var_dump($user);

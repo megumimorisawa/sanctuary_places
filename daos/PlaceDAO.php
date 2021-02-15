@@ -153,7 +153,7 @@
                 $image = uniqid(mt_rand(), true);
                 $image .= '.' . substr(strrchr($_FILES['image1']['name'], '.'), 1);
                 $file = 'upload/' . $image;
-                move_uploaded_file($_FILES['image1']['tmp_name'], $file);
+                move_uploaded_file($_FILES['image']['tmp_name'], $file);
                 
                 return $image;
             }else{

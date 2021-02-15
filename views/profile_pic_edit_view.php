@@ -13,7 +13,6 @@
         <p>新しい画像を選択</p>
         <div><input type="file" name="image"></div>
     
-        <input type="hidden" name="id" value="<?= $user->id ?>">
         <input type="submit" value="更新">
     </form>
     

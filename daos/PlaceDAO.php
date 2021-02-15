@@ -148,12 +148,60 @@
         }
         
         //ファイルをアップデートするメソッド
-        public function upload(){
+        public function upload1(){
             if(!empty($_FILES['image1']['name'])){
                 $image = uniqid(mt_rand(), true);
                 $image .= '.' . substr(strrchr($_FILES['image1']['name'], '.'), 1);
                 $file = 'upload/' . $image;
-                move_uploaded_file($_FILES['image']['tmp_name'], $file);
+                move_uploaded_file($_FILES['image1']['tmp_name'], $file);
+                
+                return $image;
+            }else{
+                return '';
+            }
+        }
+        public function upload2(){
+            if(!empty($_FILES['image2']['name'])){
+                $image = uniqid(mt_rand(), true);
+                $image .= '.' . substr(strrchr($_FILES['image2']['name'], '.'), 1);
+                $file = 'upload/' . $image;
+                move_uploaded_file($_FILES['image2']['tmp_name'], $file);
+                
+                return $image;
+            }else{
+                return '';
+            }
+        }
+        public function upload3(){
+            if(!empty($_FILES['image3']['name'])){
+                $image = uniqid(mt_rand(), true);
+                $image .= '.' . substr(strrchr($_FILES['image3']['name'], '.'), 1);
+                $file = 'upload/' . $image;
+                move_uploaded_file($_FILES['image3']['tmp_name'], $file);
+                
+                return $image;
+            }else{
+                return '';
+            }
+        }
+        public function upload4(){
+            if(!empty($_FILES['image4']['name'])){
+                $image = uniqid(mt_rand(), true);
+                $image .= '.' . substr(strrchr($_FILES['image4']['name'], '.'), 1);
+                $file = 'upload/' . $image;
+                move_uploaded_file($_FILES['image4']['tmp_name'], $file);
+                
+                return $image;
+            }else{
+                return '';
+            }
+        }
+        public function upload5(){
+            if(!empty($_FILES['image5']['name'])){
+                $image = uniqid(mt_rand(), true);
+                $image .= '.' . substr(strrchr($_FILES['image5']['name'], '.'), 1);
+                $file = 'upload/' . $image;
+                move_uploaded_file($_FILES['image5']['tmp_name'], $file);
                 
                 return $image;
             }else{

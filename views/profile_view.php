@@ -12,21 +12,27 @@
     <?php endif; ?>
     
     <img src='upload/<?= $user->image ?>' style="width:200px;">
-    <a href="profile_pic_edit.php?id=<?= $user->id ?>">編集</a>
+    <a href="profile_pic_edit.php">編集</a>
     
     <p>名前：<?= $user->name ?></p>
     <p>プロフィール：<?= $user->self_introduction ?></p>
     <p>推し：<?= $user->favorite_person ?></p>
     
-    <a href="index.php?id=<?= $user->id ?>">戻る</a>
-    <a href="profile_edit.php?id=<?= $user->id ?>">編集</a>
+    <a href="index.php">戻る</a>
+    <a href="profile_edit.php">編集</a>
     
     <p>お気に入りの場所</p>
-    <p><?= $place->name ?></p>
-    <img src='upload/<?= $place->image1 ?>' style="width:200px;">
-    <p><?= $place->introduction ?></p>
-    <p><?= $place->nearest_station ?></p>
-    <p><?= $place->price ?></p>
+    <?php if(count($favorites) !== 0): ?>
+    <?php foreach($favorites as $favorite): ?>
+    <p><?= $favorite->get_place()->name ?></p>
+    <img src='upload/<?= $favorite->get_place()->image1 ?>' style="width:200px;">
+    <p><?= $favorite->get_place()->introduction ?></p>
+    <p><?= $favorite->get_place()->nearest_station ?></p>
+    <p><?= $favorite->get_place()->price ?></p>
+    <?php endforeach; ?>
+    <?php else: ?>
+    <p>まだお気に入りはありません</p>
+    <?php endif; ?>
     
     
     

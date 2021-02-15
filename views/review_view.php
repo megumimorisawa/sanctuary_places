@@ -7,8 +7,15 @@
 </head>
 <body>
     <h1>クチコミ投稿</h1>
+    <?php if($errors !== null): ?>
+    <ul>
+        <?php foreach($errors as $error): ?>
+        <li><?= $error ?></li>
+        <?php endforeach; ?>
+    </ul>
+    <?php endif; ?>
     
-    <form action="review_done.php" method="POST">
+    <form action="review_done.php" method="POST" enctype="multipart/form-data">
         タイトル：<input type="text" name="title"><br/>
         行った時期：<select name="month">
                         <option value="1">1月</option>
@@ -31,7 +38,7 @@
             <input type="file" name="image3"><br/>
             <input type="file" name="image4"><br/>
             
-        <input type="hidden" name="id" value="<?= $place->id ?>">
+        <input type="hidden" name="place_id" value="<?= $place->id ?>">
         <input type="button" onclick="history.back()" value="戻る">
         <input type="submit" value="登録">
     </form>

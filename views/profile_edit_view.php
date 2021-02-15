@@ -8,12 +8,11 @@
 <body>
     <form action="profile_edit_done.php" method="post" enctype="multipart/form-data">
         <p>ニックネーム</p>
-        <div><input type="text" name="neme" value="<?= $user->name ?>"></div>
+        <div><input type="text" name="neme" value="<?= $login_user->name ?>"></div>
         <p>プロフィール</p>
         <div><input type="text" name="self_introduction" value="<?= $user->self_introduction ?>"></div>
         <p>推し</p>
         <div><input type="text" name="favorite_person" value="<?= $user->favorite_person ?>"></div>
-        <input type="hidden" name="id" value="<?= $user->id ?>">
         <input type="submit" value="更新">
     </form>
     

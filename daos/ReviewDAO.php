@@ -23,16 +23,16 @@
         public static function insert_review($review){
             try{
                 $dbh = self::get_connection();
-                $stmt = $dbh->prepare('INSERT INTO reviews (user_id, place_id, title, month, content)VALUES(:user_id, :place_id, :title, :month, :content)');
+                $stmt = $dbh->prepare('INSERT INTO reviews (user_id, place_id, title, month, content, image1, image2, image3, image4)VALUES(:user_id, :place_id, :title, :month, :content, :image1, :image2, :image3, :image4)');
                 $stmt->bindValue(':user_id', $review->user_id, PDO::PARAM_INT);
                 $stmt->bindValue(':place_id', $review->place_id, PDO::PARAM_INT);
                 $stmt->bindValue(':title', $review->title, PDO::PARAM_STR);
                 $stmt->bindValue(':month', $review->month, PDO::PARAM_INT);
                 $stmt->bindValue(':content', $review->content, PDO::PARAM_STR);
-                // $stmt->bindValue(':image1', $review->image1);
-                // $stmt->bindValue(':image2', $review->image2);
-                // $stmt->bindValue(':image3', $review->image3);
-                // $stmt->bindValue(':image4', $review->image4);
+                $stmt->bindValue(':image1', $review->image1);
+                $stmt->bindValue(':image2', $review->image2);
+                $stmt->bindValue(':image3', $review->image3);
+                $stmt->bindValue(':image4', $review->image4);
                 $stmt->execute();
             }catch(PDOException $e){
             }finally{
@@ -57,16 +57,53 @@
         }
         
         //ファイルをアップデートするメソッド
-        public function upload(){
-            if(!empty($_FILES['image']['name'])){
+        public function upload1(){
+            if(!empty($_FILES['image1']['name'])){
                 $image = uniqid(mt_rand(), true);
-                $image .= '.' . substr(strrchr($_FILES['image']['name'], '.'), 1);
+                $image .= '.' . substr(strrchr($_FILES['image1']['name'], '.'), 1);
                 $file = 'upload/' . $image;
-                move_uploaded_file($_FILES['image']['tmp_name'], $file);
+                move_uploaded_file($_FILES['image1']['tmp_name'], $file);
                 
                 return $image;
             }else{
                 return '';
             }
         }
+        public function upload2(){
+            if(!empty($_FILES['image2']['name'])){
+                $image = uniqid(mt_rand(), true);
+                $image .= '.' . substr(strrchr($_FILES['image2']['name'], '.'), 1);
+                $file = 'upload/' . $image;
+                move_uploaded_file($_FILES['image2']['tmp_name'], $file);
+                
+                return $image;
+            }else{
+                return '';
+            }
+        }
+        public function upload3(){
+            if(!empty($_FILES['image3']['name'])){
+                $image = uniqid(mt_rand(), true);
+                $image .= '.' . substr(strrchr($_FILES['image3']['name'], '.'), 1);
+                $file = 'upload/' . $image;
+                move_uploaded_file($_FILES['image3']['tmp_name'], $file);
+                
+                return $image;
+            }else{
+                return '';
+            }
+        }
+        public function upload4(){
+            if(!empty($_FILES['image4']['name'])){
+                $image = uniqid(mt_rand(), true);
+                $image .= '.' . substr(strrchr($_FILES['image4']['name'], '.'), 1);
+                $file = 'upload/' . $image;
+                move_uploaded_file($_FILES['image4']['tmp_name'], $file);
+                
+                return $image;
+            }else{
+                return '';
+            }
+        }
+        
     }

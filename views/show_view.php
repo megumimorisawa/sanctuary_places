@@ -12,7 +12,11 @@
     <?php endif; ?>
     
     場所の名称：<?= $place->name ?><br/>
-    <img src='upload/<?= $place->image1 ?>'><br/>
+    <img src='upload/<?= $place->image1 ?>'>
+    <img src='upload/<?= $place->image2 ?>'>
+    <img src='upload/<?= $place->image3 ?>'>
+    <img src='upload/<?= $place->image4 ?>'>
+    <img src='upload/<?= $place->image5 ?>'><br/>
     紹介文：<?= $place->introduction ?><br/>
     郵便番号：<?= $place->postal_code ?><br/>
     住所：<?= $place->address ?><br/>
@@ -24,7 +28,6 @@
     価格帯：<?= $place->price ?><br/>
     <form action="favorite.php" method="POST">
         <input type="submit" value="お気に入り">
-        <input type="hidden" name="user_id" value="<?= $user->id ?>">
         <input type="hidden" name="place_id" value="<?= $place->id ?>">
     </form>
     
@@ -32,28 +35,27 @@
     <br/>
     <h2>クチコミ一覧</h2>
     
+    <?php if(count($reviews) !== 0): ?>
     <?php foreach($reviews as $review): ?>
-    <p>名前：<?= $review->get_user()->name ?></p>
+    <p>名前：<a href="#"><?= $review->get_user()->name ?></a></p>
+    <img src='upload/<?= $review->image1 ?>'><img src='upload/<?= $review->image2 ?>'><img src='upload/<?= $review->image3 ?>'><img src='upload/<?= $review->image4 ?>'>
     <p>タイトル：<?= $review->title ?></p>
     <p>訪れた月：<?= $review->month ?>月</p>
     <p>内容：<?= $review->content ?></p>
     <p>更新日：<?= $review->created_at ?></p>
     <?php endforeach; ?>
+    <?php else: ?>
+    <p>口コミはまだありません</p>
+    <?php endif;?>
     
-    <!--<form action="index.php" method="POST">-->
-    <!--    <input type="submit" value="ホーム画面へ">-->
-    <!--    <input type="hidden" name="user_id" value="<?= $user->id ?>">-->
-    <!--</form>-->
-    
-    <a href="index.php?user_id=<?= $user->id ?>">ホーム画面へ戻る</a>
+    <a href="index.php">ホーム画面へ戻る</a>
     <a href="review.php?place_id=<?= $place->id ?>">クチコミ投稿</a>
     
     <form action="list.php" method="POST">
         <input type="submit" value="戻る">
         <input type="hidden" name="genre_name" value="<?= $place->genre_name ?>">
-        <input type="hidden" name="user_id" value="<?= $user->id ?>">
     </form>
-    <!--<a href="list.php?genre_name=<?= $place->genre_name ?>">聖地一覧へ戻る</a>-->
+
     
 </body>
 </html>

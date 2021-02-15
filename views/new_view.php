@@ -68,7 +68,6 @@
             <div><input type="file" name="image4"></div>
             <div><input type="file" name="image5"></div><br/>
             
-            <input type="hidden" name="user_id" value="<?= $user->id ?>">
             <input type="button" onclick="history.back()" value="戻る">
             <input type="submit" value="登録">
         </form>

@@ -4,14 +4,16 @@
     
     session_start();
     
-    $id = $_POST['id'];
+    $login_user = $_SESSION['login_user'];
     $name = $_POST['name'];
     $self_introduction = $_POST['self_introduction'];
     $favorite_person = $_POST['favorite_person'];
     
+    var_dump($name);
     
-    UserDAO::update($id, $name, $self_introduction, $favorite_person);
+    UserDAO::update($login_user->id, $name, $self_introduction, $favorite_person);
     
+    var_dump($login_user->name);
     $_SESSION['flash_message'] = '編集を完了しました';
-    header('Location: profile.php?id=' . $id);
+    header('Location: profile.php');
     exit;

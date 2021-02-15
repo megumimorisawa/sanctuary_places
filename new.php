@@ -6,7 +6,4 @@
     $errors = $_SESSION['errors'];
     $_SESSION['errors'] = null;
     
-    $id = $_GET['user_id'];
-    $user = UserDAO::get_user_by_id($id);
-    
     include_once 'views/new_view.php';

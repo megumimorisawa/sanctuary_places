@@ -9,11 +9,7 @@
     $flash_message = $_SESSION['flash_message'];
     $_SESSION['flash_message'] = null;
     
-    $id = $_GET['id'];
-    $user = UserDAO::get_user_by_id($id);
-    
-    $favorites = FavoriteDAO::get_all_favorites($id);
-    
-    var_dump($favorites);
+    $user = $_SESSION['login_user'];
+    $favorites = FavoriteDAO::get_all_favorites($user->id);
     
     include_once 'views/profile_view.php';

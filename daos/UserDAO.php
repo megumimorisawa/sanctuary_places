@@ -156,7 +156,7 @@
                 $stmt->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'User');
                 
                 $user = $stmt->fetch();
-                var_dump($user);
+                
                 if($user){
                     return true;
                 }else{

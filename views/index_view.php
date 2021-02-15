@@ -10,7 +10,7 @@
         <ul>
             <li><a href="#">about</a></li>
             <li><a href="#">search</a></li>
-            <li><a href="profile.php?id=<?= $user->id ?>">my page</a></li>
+            <li><a href="profile.php">my page</a></li>
             <li><a href="#">contact</a></li>
         </ul>
         
@@ -24,33 +24,24 @@
         <h1>「聖地さがし」</h1>
         <p>K-POPアイドル/韓国ドラマ好きのための聖地巡礼情報アプリ</p>
         
-        <a href="new.php?user_id=<?= $user->id ?>">新しく見つけた聖地を登録</a>
+        <a href="new.php">新しく見つけた聖地を登録</a>
         
         <h2>K-POPグループから探す</h2>
         <h3>男性</h3>
-        <form action="list.php" method="POST">
-            <input type="hidden" name="user_id" value="<?= $user->id ?>">
-            <div><input type="submit" name="genre_name" value="BTS"></div>
-            <div><input type="submit" name="genre_name" value="BIGBANG"></div>
-            <div><input type="submit" name="genre_name" value="IKON"></div>
-        </form>
+        <div><a href="list.php?genre_name=BTS">BTS</a></div>
+        <div><a href="list.php?genre_name=BIGBANG">BIGBANG</a></div>
+        <div><a href="list.php?genre_name=IKON">IKON</a></div>
         
         <h3>女性</h3>
-        <form action="list.php" method="POST">
-            <input type="hidden" name="id" value="<?= $user->id ?>">
-            <div><input type="submit" name="genre_name" value="BLACKPINK"></div>
-            <div><input type="submit" name="genre_name" value="TWICE"></div>
-            <div><input type="submit" name="genre_name" value="IU"></div>
-        </form>
-        
+        <div><a href="list.php?genre_name=BLACKPINK">BLACKPINK</a></div>
+        <div><a href="list.php?genre_name=TWICE">TWICE</a></div>
+        <div><a href="list.php?genre_name=IU">IU</a></div>
         
         <h3>ドラマから探す</h3>
-        <form action="list.php" method="POST">
-            <input type="hidden" name="id" value="<?= $user->id ?>">
-            <div><input type="submit" name="genre_name" value="愛の不時着"></div>
-            <div><input type="submit" name="genre_name" value="梨泰院クラス"></div>
-            <div><input type="submit" name="genre_name" value="雲が描いた月明かり"></div>
-        </form>
+        <div><a href="list.php?genre_name=愛の不時着">愛の不時着</a></div>
+        <div><a href="list.php?genre_name=梨泰院クラス">梨泰院クラス</a></div>
+        <div><a href="list.php?genre_name=冬のソナタ">冬のソナタ</a></div>
+        
         
         
         <a href="logout.php">ログアウト</a>

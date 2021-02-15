@@ -11,4 +11,8 @@
             $this->user_id = $user_id;
             $this->place_id = $place_id;
         }
+        public function get_place(){
+            $place = PlaceDAO::get_place_by_id($this->place_id);
+            return $place;
+        }
     }

@@ -11,7 +11,7 @@
     <?php endif; ?>
     
     <?php foreach($places as $place): ?>
-    <a href="show.php?place_id=<?= $place->id ?>&user_id=<?= $user->id ?>">
+    <a href="show.php?place_id=<?= $place->id ?> ?>">
         <p>場所の名称：<?= $place->name ?></p>
         <img src='upload/<?= $place->image1 ?>' style="width:200px;">
         <p>紹介文：<?= $place->introduction ?></p>
@@ -23,6 +23,6 @@
     <br/>
     <?php endforeach; ?>
     
-    <a href="index.php?user_id=<?= $user->id ?>">ホーム画面へ戻る</a>
+    <a href="index.php">ホーム画面へ戻る</a>
 </body>
 </html>

@@ -4,8 +4,8 @@
     
     session_start();
     
-    $id = $_GET['id'];
-    $user = UserDAO::get_user_by_id($id);
+    $login_user = $_SESSION['login_user'];
+    $user = UserDAO::get_user_by_id($login_user->id);
     
     // var_dump($user);
     // if($user->get_user()->id !== $login_user->id){

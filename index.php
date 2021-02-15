@@ -13,9 +13,6 @@
     $error_message = $_SESSION['error_message'];
     $_SESSION['error_message'] = null;
     
-    $id = $_GET['user_id'];
-    $user = UserDAO::get_user_by_id($id);
-    
     include_once 'views/index_view.php';
     
     

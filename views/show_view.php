@@ -26,6 +26,7 @@
     最寄駅：<?= $place->nearest_station ?><br/>
     予約可否：<?= $place->booking ?><br/>
     価格帯：<?= $place->price ?><br/>
+
     <form action="favorite.php" method="POST">
         <input type="submit" value="お気に入り">
         <input type="hidden" name="place_id" value="<?= $place->id ?>">
@@ -37,7 +38,7 @@
     
     <?php if(count($reviews) !== 0): ?>
     <?php foreach($reviews as $review): ?>
-    <p>名前：<a href="#"><?= $review->get_user()->name ?></a></p>
+    <p>名前：<a href="profile.php?id=<?= $review->user_id ?>"><?= $review->get_user()->name ?></a></p>
     <img src='upload/<?= $review->image1 ?>'><img src='upload/<?= $review->image2 ?>'><img src='upload/<?= $review->image3 ?>'><img src='upload/<?= $review->image4 ?>'>
     <p>タイトル：<?= $review->title ?></p>
     <p>訪れた月：<?= $review->month ?>月</p>
@@ -50,11 +51,7 @@
     
     <a href="index.php">ホーム画面へ戻る</a>
     <a href="review.php?place_id=<?= $place->id ?>">クチコミ投稿</a>
-    
-    <form action="list.php" method="POST">
-        <input type="submit" value="戻る">
-        <input type="hidden" name="genre_name" value="<?= $place->genre_name ?>">
-    </form>
+    <a href="list.php?genre_name=<?= $place->genre_name ?>">一覧へ戻る</a>
 
     
 </body>

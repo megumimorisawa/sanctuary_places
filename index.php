@@ -7,6 +7,10 @@
     
     $places = PlaceDAO::get_all_places();
     
+    $login_user = $_SESSION['login_user'];
+    // $user = UserDAO::get_user_by_id($user->id);
+    // var_dump($login_user);
+    
     $flash_message = $_SESSION['flash_message'];
     $_SESSION['flash_message'] = null;
     

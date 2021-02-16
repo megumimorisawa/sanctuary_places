@@ -4,6 +4,7 @@
     require_once 'daos/PlaceDAO.php';
     require_once 'daos/UserDAO.php';
     require_once 'daos/ReviewDAO.php';
+    require_once 'daos/FavoriteDAO.php';
     
     session_start();
     
@@ -11,6 +12,8 @@
     $place = PlaceDAO::get_place_by_id($place_id);
     
     $reviews = ReviewDAO::get_all_reviews($place_id);
+    
+    // var_dump($reviews);
     
     $flash_message = $_SESSION['flash_message'];
     $_SESSION['flash_message'] = null;

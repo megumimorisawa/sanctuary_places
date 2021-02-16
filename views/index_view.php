@@ -8,10 +8,8 @@
     <body>
         <img src="#" alt="ロゴ">
         <ul>
-            <li><a href="#">about</a></li>
-            <li><a href="#">search</a></li>
-            <li><a href="profile.php">my page</a></li>
-            <li><a href="#">contact</a></li>
+            <li><a href="profile.php?id=<?= $login_user->id ?>">my page</a></li>
+            <li><a href="contact.php">contact</a></li>
         </ul>
         
         <?php if($flash_message !== null): ?>

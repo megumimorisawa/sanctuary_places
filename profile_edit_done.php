@@ -9,11 +9,11 @@
     $self_introduction = $_POST['self_introduction'];
     $favorite_person = $_POST['favorite_person'];
     
-    var_dump($name);
+    // var_dump($_POST);
     
     UserDAO::update($login_user->id, $name, $self_introduction, $favorite_person);
     
-    var_dump($login_user->name);
+    // var_dump($name);
     $_SESSION['flash_message'] = '編集を完了しました';
-    header('Location: profile.php');
+    header('Location: profile.php?id='.$login_user->id);
     exit;

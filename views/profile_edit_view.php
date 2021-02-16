@@ -6,9 +6,10 @@
     <title>マイページ編集</title>
 </head>
 <body>
-    <form action="profile_edit_done.php" method="post" enctype="multipart/form-data">
+    <form action="profile_edit_done.php" method="POST">
         <p>ニックネーム</p>
-        <div><input type="text" name="neme" value="<?= $login_user->name ?>"></div>
+        <div><input type="text" name="name" value="<?= $user->name ?>"></div>
+        
         <p>プロフィール</p>
         <div><input type="text" name="self_introduction" value="<?= $user->self_introduction ?>"></div>
         <p>推し</p>

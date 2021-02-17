@@ -10,6 +10,7 @@
     <p><?= $flash_message ?></p>
     <?php endif; ?>
     
+    <?php if(count($places) !== 0): ?>
     <?php foreach($places as $place): ?>
     <a href="show.php?place_id=<?= $place->id ?> ?>">
         <p>場所の名称：<?= $place->name ?></p>
@@ -18,10 +19,13 @@
         <p>最寄駅：<?= $place->nearest_station ?></p>
         <p>価格帯：<?= $place->price ?></p>
     </a>
-    
     <br/>
     <br/>
     <?php endforeach; ?>
+    
+    <?php else: ?>
+    <p>登録された聖地はまだありません</p>
+    <?php endif; ?>
     
     <a href="index.php">ホーム画面へ戻る</a>
 </body>

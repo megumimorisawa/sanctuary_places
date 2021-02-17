@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>聖地詳細情報</title>
+    
 </head>
 <body>
+    
     <h1>聖地詳細情報</h1>
     <?php if($flash_message !== null): ?>
     <p><?= $flash_message ?></p>
@@ -26,11 +28,21 @@
     最寄駅：<?= $place->nearest_station ?><br/>
     予約可否：<?= $place->booking ?><br/>
     価格帯：<?= $place->price ?><br/>
-
+    
+    <?php if($place->is_favorite($login_user->id) === false): ?>
+    
     <form action="favorite.php" method="POST">
         <input type="submit" value="お気に入り">
         <input type="hidden" name="place_id" value="<?= $place->id ?>">
     </form>
+    <?php else: ?>
+    <form action="favorite_delete.php" method="POST">
+        <input type="submit" value="お気に入り解除">
+        <input type="hidden" name="place_id" value="<?= $place->id ?>">
+    </form>
+    <?php endif; ?>
+    
+    
     
     <br/>
     <br/>
@@ -52,7 +64,9 @@
     <a href="index.php">ホーム画面へ戻る</a>
     <a href="review.php?place_id=<?= $place->id ?>">クチコミ投稿</a>
     <a href="list.php?genre_name=<?= $place->genre_name ?>">一覧へ戻る</a>
-
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/portfolio2/favorite.js"></script>
     
 </body>
 </html>

@@ -8,6 +8,8 @@
     
     session_start();
     
+    $login_user = $_SESSION['login_user'];
+    
     $place_id = $_GET['place_id'];
     $place = PlaceDAO::get_place_by_id($place_id);
     
@@ -18,4 +20,8 @@
     $flash_message = $_SESSION['flash_message'];
     $_SESSION['flash_message'] = null;
     
+    
+    // FavoriteDAO::is_favorite($login_user->id,$place_id);
+    
+    // var_dump($place->is_favorite($login_user->id));
     include_once 'views/show_view.php';

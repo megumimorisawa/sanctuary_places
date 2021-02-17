@@ -67,7 +67,7 @@
                 $errors[] = '電話番号を入力してください';
             // }else if(!preg_match('/^[0-9]{2,4}-[0-9]{2,4}-[0-9]{3,4}$/', $this->tel)){
             //     $errors[] = '電話番号は「-」を入れて入力してください';
-            // }
+            }
             if($this->open_time === ''){
                 $errors[] = '開店時間を選択してください';
             }
@@ -82,7 +82,14 @@
             }
             return $errors;
         }
-    }
-    }
+        //この投稿にいいねしているか判定するメソッド
+        public function is_favorite($login_user_id){
+            //ログインしている人のidとこの投稿のidに与えて判定
+            $is_favorite = FavoriteDAO::is_favorite($login_user_id, $this->id);
+            return $is_favorite;
+            
+        }
+    
+}
     
     

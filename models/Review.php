@@ -37,11 +37,11 @@
                 $errors[] = '訪れた月を選択してください';
             }
             if($this->content === ''){
-                $errors[] = '内容を入力してください';
+                $errors[] = 'コメントを入力してください';
             }
-            // if($this->image1 === ''){
-            //     $errors[] = '写真を1枚は選択してください';
-            // }
+            if($this->image1 === ''){
+                $errors[] = '写真を1枚は選択してください';
+            }
             return $errors;
         }
         

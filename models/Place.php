@@ -54,6 +54,9 @@
             if($this->genre_name === ''){
                 $errors[] = 'グループ名・ドラマ名を選択してください';
             }
+            if($this->name === ''){
+                $errors[] = '場所の名前をを入力してください';
+            }
             if($this->introduction === ''){
                 $errors[] = '紹介文を入力してください';
             }
@@ -63,17 +66,16 @@
             if($this->address === ''){
                 $errors[] = '住所を入力してください';
             }
-            if($this->tel === ''){
-                $errors[] = '電話番号を入力してください';
-            // }else if(!preg_match('/^[0-9]{2,4}-[0-9]{2,4}-[0-9]{3,4}$/', $this->tel)){
-            //     $errors[] = '電話番号は「-」を入れて入力してください';
-            }
-            if($this->open_time === ''){
-                $errors[] = '開店時間を選択してください';
-            }
-            if($this->close_time === ''){
-                $errors[] = '閉店時間を選択してください';
-            }
+            // $preg_tel = "/\A[0-9]{2,4} - [0-9]{2,4} - [0-9]{3,4}\z/";
+            // if(preg_match($preg_tel, $this->tel) == 0){
+            //     $errors[] = '電話番号を正しく入力してください';
+            // }
+            // if($this->open_time === ''){
+            //     $errors[] = '開店時間を選択してください';
+            // }
+            // if($this->close_time === ''){
+            //     $errors[] = '閉店時間を選択してください';
+            // }
             if($this->close_date === ''){
                 $errors[] = '定休日を入力してください';
             }

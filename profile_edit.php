@@ -6,5 +6,4 @@
     $login_user = $_SESSION['login_user'];
     $user = UserDAO::get_user_by_id($login_user->id);
     
-
     include_once 'views/profile_edit_view.php';

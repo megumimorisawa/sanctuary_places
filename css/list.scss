@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #333;
+    font-weight: bold;
+}
+
+.list {
+    .header {
+        position: fixed;
+        top: 0;
+        z-index: 9999;
+        width: 100%;
+        height: 55px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        background-color: #fff;
+      
+        &-inner {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            
+            img {
+                width: 200px;
+                height: 50px;
+                margin-left: 20px;
+            }
+        }
+        
+        ul {
+          display: flex;
+          justify-content: space-between;
+          margin-right: 20px;
+          
+          li {
+            text-align: center;
+            margin-left: 45px;
+            list-style: none;
+            
+            a {
+                font-size: 16px;
+                text-decoration: none;
+                color: #333;
+            }
+          }
+        }
+    }
+    
+    &-inner {
+        margin: 50px;
+        
+        
+        .message {
+            margin: 60px;
+            text-align: center;
+        }
+        
+        .main {
+            &-ttl {
+                text-align: center;
+                margin-top: 70px;
+                font-size: 26px;
+                
+                h1 {
+                
+                position: relative;
+                display: inline-block;
+                margin-bottom: 1em;
+            
+                }
+                
+                h1:before {
+                    content: '';
+                    position: absolute;
+                    bottom: -15px;
+                    display: inline-block;
+                    width: 60px;
+                    height: 5px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: #333;
+                    border-radius: 2px;
+                }
+            }
+            
+            &-box {
+                margin: 25px 0;
+                display: flex;
+                border-bottom: 1px solid #bbb;
+                
+                img {
+                    width: 250px;
+                    height: auto;
+                    margin-right: 20px;
+                }
+                
+                &-content {
+                    padding: 30px;
+                    
+                    a {
+                        font-size: 25px;
+                        color: #5507FF;
+                    }
+                    
+                    &-comment {
+                        color: #777;
+                    }
+                }
+            }
+        }
+    }
+    
+    .back-btn {
+        text-align: right;
+        margin-right: 50px;
+        
+        a {
+            color: #333;
+        }
+    }
+}

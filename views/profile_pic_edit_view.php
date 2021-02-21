@@ -3,18 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap">
+    <link rel="stylesheet" href="css/profile_pic_edit.css">
     <title>マイページ編集</title>
 </head>
 <body>
-    <form action="profile_pic_edit_done.php" method="post" enctype="multipart/form-data">
-        <p>現在の画像</p>
-        <img src='upload/<?= $user->image ?>' style="width:200px;">
+    <div class="profile-pic-edit">
+        <section class="header">
+            <div class="header-inner">
+                <img src="css/image/logo.png" alt="ロゴ画像">
+                <ul>
+                    <li><a href="profile.php?id=<?= $login_user->id ?>">マイページ</a></li>
+                    <li><a href="contact.php">お問い合わせ</a></li>
+                    <li><a href="logout.php">ログアウト</a></li>
+                </ul>
+            </div>
+        </section>
         
-        <p>新しい画像を選択</p>
-        <div><input type="file" name="image"></div>
-    
-        <input type="submit" value="更新">
-    </form>
+        <section class="main">
+            <div class="main-inner">
+                <div class="main-ttl">
+                    <h1>プロフィール画像編集</h1>
+                </div>
+                
+                <div class="form">
+                    <form action="profile_pic_edit_done.php" method="post" enctype="multipart/form-data">
+                        <p class="form-name">現在の画像</p>
+                        <img src='upload/<?= $user->image ?>' style="width:200px;">
+                        
+                        <p class="form-name">新しい画像を選択</p>
+                        <div class="form-input"><input type="file" name="image"></div>
+                        
+                        <div class="form-btn">
+                            <input class="form-btn-update" type="submit" value="更新"><br/>
+                            <input class="form-btn-back" type="button" onclick="history.back()" value="戻る">
+                        </div>
+                    
+                    </form>
+                </div>
+            </div>
+            
+        </section>
+    </div>
     
 </body>
 </html>

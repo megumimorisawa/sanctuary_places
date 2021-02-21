@@ -15,13 +15,7 @@
     
     $reviews = ReviewDAO::get_all_reviews($place_id);
     
-    // var_dump($reviews);
-    
     $flash_message = $_SESSION['flash_message'];
     $_SESSION['flash_message'] = null;
     
-    
-    // FavoriteDAO::is_favorite($login_user->id,$place_id);
-    
-    // var_dump($place->is_favorite($login_user->id));
     include_once 'views/show_view.php';

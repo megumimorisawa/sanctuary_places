@@ -12,12 +12,15 @@
         public $updated_at;
         public $created_at;
         
-        public function __construct($name="", $email="", $password="", $birthday="", $image=""){
+        public function __construct($name="", $email="", $password="", $birthday="", $image="", $self_introduction="", $favorite_person="", $favorite_place=""){
             $this->name = $name;
             $this->email = $email;
             $this->password = $password;
             $this->birthday = $birthday;
             $this->image = $image;
+            $this->self_introduction = $self_introduction;
+            $this->favorite_person = $favorite_person;
+            $this->favorite_place = $favorite_place;
         }
         
         public function get_id(){

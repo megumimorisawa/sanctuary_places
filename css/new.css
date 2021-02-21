@@ -1,0 +1,92 @@
+body {
+  margin: 0; }
+
+.new {
+  color: #333;
+  font-weight: bold;
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif; }
+  .new .header {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 55px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    background-color: #fff; }
+    .new .header-inner {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%; }
+      .new .header-inner img {
+        width: 200px;
+        height: 50px;
+        margin-left: 20px; }
+    .new .header ul {
+      display: flex;
+      justify-content: space-between;
+      margin-right: 20px; }
+      .new .header ul li {
+        text-align: center;
+        margin-left: 45px;
+        list-style: none; }
+        .new .header ul li a {
+          font-size: 16px;
+          text-decoration: none;
+          color: #333; }
+  .new .top {
+    font-size: 30px;
+    text-align: center; }
+    .new .top h1 {
+      margin: 100px 0 60px; }
+  .new-inner {
+    margin: 0 auto; }
+    .new-inner .error ul {
+      color: #f30;
+      text-align: center; }
+    .new-inner .error li {
+      list-style: none; }
+    .new-inner .form {
+      width: 45%;
+      height: auto;
+      text-align: left;
+      margin: 0 auto 100px;
+      padding: 0 0 20px;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); }
+      .new-inner .form-name {
+        margin: 0;
+        background-color: #eee;
+        padding: 10px; }
+        .new-inner .form-name .any {
+          color: #aaa;
+          font-weight: normal; }
+        .new-inner .form-name .must {
+          color: red;
+          font-weight: normal; }
+      .new-inner .form-input {
+        margin: 10px 10px 20px; }
+      .new-inner .form-btn {
+        text-align: center; }
+        .new-inner .form-btn-entry {
+          width: 120px;
+          height: 40px;
+          background: linear-gradient(to right, #87ceeb, #0bf);
+          border-radius: 50px;
+          box-shadow: 0 5px 4px rgba(0, 0, 0, 0.14);
+          font-size: 20px;
+          border: none;
+          color: #fff; }
+        .new-inner .form-btn-back {
+          margin-top: 25px;
+          border: none;
+          font-size: 16px;
+          border-radius: 50px;
+          width: 60px; }
+
+/*# sourceMappingURL=new.css.map */

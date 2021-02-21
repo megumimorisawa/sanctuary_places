@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #333;
+  font-weight: bold; }
+
+.list .header {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 55px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  background-color: #fff; }
+  .list .header-inner {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%; }
+    .list .header-inner img {
+      width: 200px;
+      height: 50px;
+      margin-left: 20px; }
+  .list .header ul {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px; }
+    .list .header ul li {
+      text-align: center;
+      margin-left: 45px;
+      list-style: none; }
+      .list .header ul li a {
+        font-size: 16px;
+        text-decoration: none;
+        color: #333; }
+.list-inner {
+  margin: 50px; }
+  .list-inner .message {
+    margin: 60px;
+    text-align: center; }
+  .list-inner .main-ttl {
+    text-align: center;
+    margin-top: 70px;
+    font-size: 26px; }
+    .list-inner .main-ttl h1 {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 1em; }
+    .list-inner .main-ttl h1:before {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      display: inline-block;
+      width: 60px;
+      height: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333;
+      border-radius: 2px; }
+  .list-inner .main-box {
+    margin: 25px 0;
+    display: flex;
+    border-bottom: 1px solid #bbb; }
+    .list-inner .main-box img {
+      width: 250px;
+      height: auto;
+      margin-right: 20px; }
+    .list-inner .main-box-content {
+      padding: 30px; }
+      .list-inner .main-box-content a {
+        font-size: 25px;
+        color: #5507FF; }
+      .list-inner .main-box-content-comment {
+        color: #777; }
+.list .back-btn {
+  text-align: right;
+  margin-right: 50px; }
+  .list .back-btn a {
+    color: #333; }
+
+/*# sourceMappingURL=list.css.map */

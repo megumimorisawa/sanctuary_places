@@ -11,7 +11,7 @@
     <body>
         <section class="header">
             <div class="header-inner">
-                <a href=""><img src="https://placehold.jp/50x50.png" alt="ヘッダーロゴ"></a>
+                <img src="css/image/logo.png" alt="ロゴ画像">
                 <nav class="header-nav">
                     <ul>
                         <li><a href="signup.php">新規登録</a></li>
@@ -56,7 +56,7 @@
                     <div class="feature-content-box-ttx">
                         <h2><span>3,</span>&emsp;聖地に行ったらレビューを書いてみよう！</h2>
                         <p>写真や感想をコメントすることができます。</p>
-                        <p></p>
+                        <p>みんなのレビューも見れるので、現地の雰囲気などわかります！</p>
                     </div>
                     <img src="css/image/main3.png" alt="コンテンツ画像3" style="width:500px">
                 </div>

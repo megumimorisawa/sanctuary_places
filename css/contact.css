@@ -1,12 +1,12 @@
 body {
   margin: 0; }
 
-.new {
+.contact {
   color: #333;
   font-weight: bold;
   margin: 0;
   font-family: 'Noto Sans JP', sans-serif; }
-  .new .header {
+  .contact .header {
     position: fixed;
     top: 0;
     z-index: 9999;
@@ -15,9 +15,9 @@ body {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     background-color: #fff; }
     @media screen and (max-width: 896px) {
-      .new .header {
+      .contact .header {
         height: auto; } }
-    .new .header-inner {
+    .contact .header-inner {
       max-width: 1024px;
       margin: 0 auto;
       padding: 0 20px;
@@ -26,19 +26,19 @@ body {
       justify-content: space-between;
       height: 100%; }
       @media screen and (max-width: 896px) {
-        .new .header-inner {
+        .contact .header-inner {
           display: inline; } }
-      .new .header-inner img {
+      .contact .header-inner img {
         width: 200px;
         height: 50px;
         margin-left: 20px; }
         @media screen and (max-width: 896px) {
-          .new .header-inner img {
+          .contact .header-inner img {
             margin-top: 7px; } }
-    .new .header button {
+    .contact .header button {
       display: none; }
     @media screen and (max-width: 896px) {
-      .new .header #header-btn {
+      .contact .header #header-btn {
         display: inline;
         position: absolute;
         top: 10px;
@@ -46,49 +46,49 @@ body {
         background-color: transparent;
         border: none;
         cursor: pointer; }
-        .new .header #header-btn img {
+        .contact .header #header-btn img {
           width: 40px;
           height: 40px; } }
-    .new .header ul {
+    .contact .header ul {
       display: flex;
       justify-content: space-between;
       margin-right: 20px; }
       @media screen and (max-width: 896px) {
-        .new .header ul {
+        .contact .header ul {
           display: none;
           list-style: none;
           margin-top: 40px; } }
-      .new .header ul li {
+      .contact .header ul li {
         text-align: center;
         margin-left: 45px;
         list-style: none; }
         @media screen and (max-width: 896px) {
-          .new .header ul li {
+          .contact .header ul li {
             margin: 10px 0;
             position: relative;
             padding: 0.6em 0;
             text-align: left; }
-            .new .header ul li :after {
+            .contact .header ul li :after {
               content: "";
               display: block;
               height: 2px;
               background: linear-gradient(to right, #bbbbbb, transparent); } }
-        .new .header ul li a {
+        .contact .header ul li a {
           font-size: 16px;
           text-decoration: none;
           color: #333; }
-  .new .top {
-    margin: 100px 0 60px;
+  .contact-ttl {
+    margin-top: 100px;
     font-size: 26px;
     text-align: center; }
     @media screen and (max-width: 896px) {
-      .new .top {
+      .contact-ttl {
         font-size: 18px; } }
-    .new .top h1 {
+    .contact-ttl h1 {
       position: relative;
       display: inline-block;
       margin-bottom: 1em; }
-    .new .top h1:before {
+    .contact-ttl h1:before {
       content: '';
       position: absolute;
       bottom: -15px;
@@ -99,53 +99,46 @@ body {
       transform: translateX(-50%);
       background-color: #333;
       border-radius: 2px; }
-  .new-inner {
+  .contact .form {
+    width: 45%;
+    height: auto;
+    text-align: left;
+    margin: 30px auto 50px;
+    padding: 0 0 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); }
+    @media screen and (max-width: 1024px) {
+      .contact .form {
+        width: 90%; } }
+    .contact .form-name {
+      margin: 0;
+      background-color: #eee;
+      padding: 10px; }
+    .contact .form-input {
+      margin: 10px 10px 20px; }
+    .contact .form-btn {
+      text-align: center;
+      margin: 30px auto 15px;
+      padding: 3px 10px;
+      width: 120px;
+      height: 40px;
+      background: linear-gradient(to right, #87ceeb, #0bf);
+      border-radius: 50px;
+      box-shadow: 0 5px 4px rgba(0, 0, 0, 0.14); }
+      .contact .form-btn-send {
+        font-size: 20px;
+        border: none;
+        color: #fff;
+        background-color: initial; }
+  .contact .home-btn {
+    text-align: right;
+    width: 45%;
     margin: 0 auto; }
-    .new-inner .error ul {
-      color: #f30;
-      text-align: center; }
-    .new-inner .error li {
-      list-style: none; }
-    .new-inner .form {
-      width: 45%;
-      height: auto;
-      text-align: left;
-      margin: 0 auto 100px;
-      padding: 0 0 20px;
-      border: 1px solid #eee;
-      border-radius: 10px;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); }
-      @media screen and (max-width: 1024px) {
-        .new-inner .form {
-          width: 90%; } }
-      .new-inner .form-name {
-        margin: 0;
-        background-color: #eee;
-        padding: 10px; }
-        .new-inner .form-name .any {
-          color: #aaa;
-          font-weight: normal; }
-        .new-inner .form-name .must {
-          color: red;
-          font-weight: normal; }
-      .new-inner .form-input {
-        margin: 10px 10px 20px; }
-      .new-inner .form-btn {
-        text-align: center; }
-        .new-inner .form-btn-entry {
-          width: 120px;
-          height: 40px;
-          background: linear-gradient(to right, #87ceeb, #0bf);
-          border-radius: 50px;
-          box-shadow: 0 5px 4px rgba(0, 0, 0, 0.14);
-          font-size: 20px;
-          border: none;
-          color: #fff; }
-        .new-inner .form-btn-back {
-          margin-top: 25px;
-          border: none;
-          font-size: 16px;
-          border-radius: 50px;
-          width: 60px; }
+    @media screen and (max-width: 1024px) {
+      .contact .home-btn {
+        width: 90%; } }
+    .contact .home-btn a {
+      color: #333; }
 
-/*# sourceMappingURL=new.css.map */
+/*# sourceMappingURL=contact.css.map */

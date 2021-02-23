@@ -14,6 +14,9 @@ body {
         height: 55px;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
         background-color: #fff;
+        @media screen and (max-width: 896px) {
+            height: auto;
+        }
       
         &-inner {
             max-width: 1024px;
@@ -23,11 +26,41 @@ body {
             align-items: center;
             justify-content: space-between;
             height: 100%;
+            @media screen and (max-width: 896px) {
+                display: inline;
+            }
             
             img {
                 width: 200px;
                 height: 50px;
                 margin-left: 20px;
+                @media screen and (max-width: 896px) {
+                    margin-top: 7px;
+                }
+            }
+        }
+        
+        &-nav {
+        }
+        
+        button {
+            display: none;
+        }
+        
+        @media screen and (max-width: 896px) {
+            #header-btn {
+                display: inline;
+                position: absolute;
+                top: 10px;
+                right: 25px;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
             }
         }
         
@@ -35,44 +68,67 @@ body {
           display: flex;
           justify-content: space-between;
           margin-right: 20px;
+          @media screen and (max-width: 896px){
+              display: none;
+              list-style: none;
+              margin-top: 40px;
+          }
           
           li {
             text-align: center;
             margin-left: 45px;
             list-style: none;
-            
-            a {
-                font-size: 16px;
-                text-decoration: none;
-                color: #333;
-            }
+            @media screen and (max-width: 896px){
+                  margin: 10px 0;
+                  position: relative;
+                  padding: 0.6em 0;
+                  text-align: left;
+                
+                  :after {
+                      content: "";
+                      display: block;
+                      height: 2px;
+                      background: linear-gradient(to right, rgb(187, 187, 187), transparent);
+                  }
           }
+            
+          a {
+              
+              font-size: 16px;
+              text-decoration: none;
+              color: #333;
+          }
+    
         }
     }
+}
     
-    &-inner {
-        margin: 50px;
-        
-        
-        .message {
-            margin: 60px;
+&-inner {
+    margin: 50px;
+    
+    
+    .message {
+        margin: 60px;
+        text-align: center;
+    }
+    
+    .main {
+        &-ttl {
             text-align: center;
-        }
-        
-        .main {
-            &-ttl {
-                text-align: center;
-                margin-top: 70px;
-                font-size: 26px;
-                
-                h1 {
-                
+            margin-top: 70px;
+            font-size: 26px;
+            @media screen and (max-width: 896px){
+                font-size: 18px;
+            }
+            
+            
+            h1 {
                 position: relative;
                 display: inline-block;
                 margin-bottom: 1em;
             
                 }
-                
+            
                 h1:before {
                     content: '';
                     position: absolute;
@@ -86,11 +142,17 @@ body {
                     border-radius: 2px;
                 }
             }
-            
+        
             &-box {
                 margin: 25px 0;
                 display: flex;
                 border-bottom: 1px solid #bbb;
+                @media screen and (max-width: 896px){
+                    text-align: center;
+                    margin: 0 auto;
+                    display: block;
+                    width: 90%;
+                }
                 
                 img {
                     width: 250px;
@@ -100,6 +162,9 @@ body {
                 
                 &-content {
                     padding: 30px;
+                    @media screen and (max-width: 896px){
+                        padding: 0;
+                    }
                     
                     a {
                         font-size: 25px;
@@ -113,7 +178,7 @@ body {
             }
         }
     }
-    
+
     .back-btn {
         text-align: right;
         margin-right: 50px;

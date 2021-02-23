@@ -1,8 +1,12 @@
+body {
+    margin: 0;
+}
 
 .login {
     text-align: center;
     font-weight: bold;
     color: #333;
+    font-family: 'Noto Sans JP', sans-serif;
     
     &-header {
         width: 100%;
@@ -28,8 +32,30 @@
     &-main {
         
         &-ttl {
-            font-size: 30px;
+            font-size: 26px;
             text-align: center;
+            @media screen and (max-width: 896px){
+                font-size: 18px;
+            }
+            
+            h1 {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1em;
+            }
+                
+            h1:before {
+                content: '';
+                position: absolute;
+                bottom: -15px;
+                display: inline-block;
+                width: 60px;
+                height: 5px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #333;
+                border-radius: 2px;
+            }
         }
         
         &-message {
@@ -63,7 +89,7 @@
         }
         
         &-form {
-            width: 38%;
+            width: 40%;
             height: auto;
             text-align: left;
             margin: 0 auto 100px;
@@ -71,6 +97,9 @@
             border: 1px solid #eee;
             border-radius: 10px;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+            @media screen and (max-width: 1024px){
+                width: 90%;
+            }
             
             &-ttx {
                 margin: 0;

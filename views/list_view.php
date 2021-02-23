@@ -13,11 +13,14 @@
             <section class="header">
                 <div class="header-inner">
                     <img src="css/image/logo.png" alt="ロゴ画像">
-                    <ul>
-                        <li><a href="profile.php?id=<?= $login_user->id ?>">マイページ</a></li>
-                        <li><a href="contact.php">お問い合わせ</a></li>
-                        <li><a href="logout.php">ログアウト</a></li>
-                    </ul>
+                    <nav class="header-nav">
+                        <button><img src="css/image/button.png" alt="ボタン画像"></button>
+                        <ul>
+                            <li><a href="profile.php?id=<?= $login_user->id ?>">マイページ</a></li>
+                            <li><a href="contact.php">お問い合わせ</a></li>
+                            <li><a href="logout.php">ログアウト</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </section>
                 
@@ -30,7 +33,7 @@
                 
                 <section class="main">
                     <div class="main-ttl">
-                        <h1>聖地一覧</h1>
+                        <h1><?= $genre_name; ?>の聖地一覧</h1>
                     </div>
                     <?php if(count($places) !== 0): ?>
                     <?php foreach($places as $place): ?>
@@ -57,5 +60,7 @@
                 <a href="index.php">ホーム画面へ戻る</a>
             </div>    
         </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>

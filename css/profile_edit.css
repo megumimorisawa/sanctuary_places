@@ -12,6 +12,9 @@ body {
   height: 55px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   background-color: #fff; }
+  @media screen and (max-width: 896px) {
+    .profile-edit .header {
+      height: auto; } }
   .profile-edit .header-inner {
     max-width: 1024px;
     margin: 0 auto;
@@ -20,28 +23,82 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 100%; }
+    @media screen and (max-width: 896px) {
+      .profile-edit .header-inner {
+        display: inline; } }
     .profile-edit .header-inner img {
       width: 200px;
       height: 50px;
       margin-left: 20px; }
+      @media screen and (max-width: 896px) {
+        .profile-edit .header-inner img {
+          margin-top: 7px; } }
+  .profile-edit .header button {
+    display: none; }
+  @media screen and (max-width: 896px) {
+    .profile-edit .header #header-btn {
+      display: inline;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer; }
+      .profile-edit .header #header-btn img {
+        width: 40px;
+        height: 40px; } }
   .profile-edit .header ul {
     display: flex;
     justify-content: space-between;
     margin-right: 20px; }
+    @media screen and (max-width: 896px) {
+      .profile-edit .header ul {
+        display: none;
+        list-style: none;
+        margin-top: 40px; } }
     .profile-edit .header ul li {
       text-align: center;
       margin-left: 45px;
       list-style: none; }
+      @media screen and (max-width: 896px) {
+        .profile-edit .header ul li {
+          margin: 10px 0;
+          position: relative;
+          padding: 0.6em 0;
+          text-align: left; }
+          .profile-edit .header ul li :after {
+            content: "";
+            display: block;
+            height: 2px;
+            background: linear-gradient(to right, #bbbbbb, transparent); } }
       .profile-edit .header ul li a {
         font-size: 16px;
         text-decoration: none;
         color: #333; }
 .profile-edit .main-ttl {
-  font-size: 30px;
+  font-size: 26px;
   text-align: center;
   margin: 100px 0 50px; }
+  @media screen and (max-width: 896px) {
+    .profile-edit .main-ttl {
+      font-size: 18px; } }
+  .profile-edit .main-ttl h1 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1em; }
+  .profile-edit .main-ttl h1:before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    display: inline-block;
+    width: 60px;
+    height: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    border-radius: 2px; }
 .profile-edit .main .form {
-  width: 38%;
+  width: 45%;
   height: auto;
   text-align: left;
   margin: 0 auto 100px;
@@ -49,6 +106,9 @@ body {
   border: 1px solid #eee;
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); }
+  @media screen and (max-width: 1024px) {
+    .profile-edit .main .form {
+      width: 90%; } }
   .profile-edit .main .form-name {
     margin: 0;
     background-color: #eee;

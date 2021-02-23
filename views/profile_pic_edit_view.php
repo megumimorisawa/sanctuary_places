@@ -13,11 +13,16 @@
         <section class="header">
             <div class="header-inner">
                 <img src="css/image/logo.png" alt="ロゴ画像">
-                <ul>
-                    <li><a href="profile.php?id=<?= $login_user->id ?>">マイページ</a></li>
-                    <li><a href="contact.php">お問い合わせ</a></li>
-                    <li><a href="logout.php">ログアウト</a></li>
-                </ul>
+                
+                <nav class="header-nav">
+                    <button><img src="css/image/button.png" alt="ボタン画像"></button>
+                    <ul>
+                        <li><a href="profile.php?id=<?= $login_user->id ?>">マイページ</a></li>
+                        <li><a href="contact.php">お問い合わせ</a></li>
+                        <li><a href="logout.php">ログアウト</a></li>
+                    </ul>
+                </nav>
+                
             </div>
         </section>
         
@@ -46,6 +51,8 @@
             
         </section>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="main.js"></script>
     
 </body>
 </html>

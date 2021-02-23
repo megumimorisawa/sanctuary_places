@@ -15,6 +15,9 @@ body {
         height: 55px;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
         background-color: #fff;
+        @media screen and (max-width: 896px) {
+            height: auto;
+        }
       
         &-inner {
             max-width: 1024px;
@@ -24,11 +27,41 @@ body {
             align-items: center;
             justify-content: space-between;
             height: 100%;
+            @media screen and (max-width: 896px) {
+                display: inline;
+            }
             
             img {
                 width: 200px;
                 height: 50px;
                 margin-left: 20px;
+                @media screen and (max-width: 896px) {
+                    margin-top: 7px;
+                }
+            }
+        }
+        
+        &-nav {
+        }
+        
+        button {
+            display: none;
+        }
+        
+        @media screen and (max-width: 896px) {
+            #header-btn {
+                display: inline;
+                position: absolute;
+                top: 10px;
+                right: 25px;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
             }
         }
         
@@ -36,11 +69,29 @@ body {
           display: flex;
           justify-content: space-between;
           margin-right: 20px;
+          @media screen and (max-width: 896px){
+              display: none;
+              list-style: none;
+              margin-top: 40px;
+          }
           
           li {
             text-align: center;
             margin-left: 45px;
             list-style: none;
+            @media screen and (max-width: 896px){
+                  margin: 10px 0;
+                  position: relative;
+                  padding: 0.6em 0;
+                  text-align: left;
+                
+                  :after {
+                      content: "";
+                      display: block;
+                      height: 2px;
+                      background: linear-gradient(to right, rgb(187, 187, 187), transparent);
+                  }
+              }
             
             a {
                 font-size: 16px;
@@ -54,7 +105,6 @@ body {
     .show-ttl {
         text-align: center;
         margin-top: 100px;
-        
         
         h1 {
             position: relative;
@@ -133,6 +183,9 @@ body {
         &-content {
             display: flex;
             justify-content: space-between;
+            @media screen and (max-width: 896px){
+                display: block;
+            }
             
             &-favorite-btn {
                 
@@ -144,6 +197,10 @@ body {
                     text-shadow: 0 0 5px white;
                     padding: 0.3em 1em;
                     background: repeating-linear-gradient(-45deg, #FFABCE, #FFABCE 3px,#FFD5EC 3px, #FFD5EC 7px);
+                    @media screen and (max-width: 896px){
+                        float: right;
+                        margin: 10px 0;
+                    }
                 }
             }
             
@@ -151,6 +208,9 @@ body {
                 width: 100%;
                 background: rgba(0, 0, 0, 0.05);
                 padding: 10px;
+                @media screen and (max-width: 896px){
+                    clear: both;
+                }
                 
                 p {
                     margin: 0;
@@ -238,6 +298,10 @@ body {
             margin: 0;
             margin-bottom: 20px;
             float: right;
+            @media screen and (max-width: 480px) {
+                margin: 0 auto;
+                float: none;
+            }
             
             a {
                 color: #fff;

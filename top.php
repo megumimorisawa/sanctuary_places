@@ -13,6 +13,7 @@
             <div class="header-inner">
                 <img src="css/image/logo.png" alt="ロゴ画像">
                 <nav class="header-nav">
+                    <button><img src="css/image/button.png" alt="ボタン画像"></button>
                     <ul>
                         <li><a href="signup.php">新規登録</a></li>
                         <li><a href="login.php">ログイン</a></li>
@@ -54,7 +55,7 @@
                 </div>
                 <div class="feature-content-box">
                     <div class="feature-content-box-ttx">
-                        <h2><span>3,</span>&emsp;聖地に行ったらレビューを書いてみよう！</h2>
+                        <h2><span>3,</span>&emsp;聖地に行ったらレビューを書こう！</h2>
                         <p>写真や感想をコメントすることができます。</p>
                         <p>みんなのレビューも見れるので、現地の雰囲気などわかります！</p>
                     </div>
@@ -84,5 +85,7 @@
                 <a href="login.php">ログイン</a>
             </div>
         </section>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>

@@ -8,20 +8,20 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap">
         <link rel="stylesheet" href="css/show.css">
         <title>聖地詳細情報</title>
-        <style>
-            
-        </style>
     </head>
     <body>
         <div class="show">
             <section class="header">
                 <div class="header-inner">
                     <img src="css/image/logo.png" alt="ロゴ画像">
-                    <ul>
-                        <li><a href="profile.php?id=<?= $login_user->id ?>">マイページ</a></li>
-                        <li><a href="contact.php">お問い合わせ</a></li>
-                        <li><a href="logout.php">ログアウト</a></li>
-                    </ul>
+                    <nav class="header-nav">
+                        <button><img src="css/image/button.png" alt="ボタン画像"></button>
+                        <ul>
+                            <li><a href="profile.php?id=<?= $login_user->id ?>">マイページ</a></li>
+                            <li><a href="contact.php">お問い合わせ</a></li>
+                            <li><a href="logout.php">ログアウト</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </section>
             
@@ -58,7 +58,6 @@
                             <p><?= $place->introduction ?></p>
                         </div>
                             
-                        
                         <img src='upload/<?= $place->image1 ?>'>
                         <?php if($place->image2 === ''): ?>
                         <?php print '' ?>
@@ -117,7 +116,9 @@
                     <a href="review.php?place_id=<?= $place->id ?>">クチコミ投稿</a>
                 </div>
                 
-                <?php if(count($reviews) !== 0): ?>
+                <?php if(count($reviews) == 0): ?>
+                <?php print "<p>レビューはまだありません</p>"; ?>
+                <?php else: ?>
                 <?php foreach($reviews as $review): ?>
                 <div class="review-box">
                     <div class="review-content">
@@ -273,7 +274,9 @@
            });
         }
         </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALg70uaMcYjkzto9oPmiXyODIXCvpvAzg&callback=initMap"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2qi6Rr9OTuGMClC8RSYlkDrHz_MeV3iM&callback=initMap"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="main.js"></script>
         </div>
     </body>
 </html>

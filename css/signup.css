@@ -1,11 +1,11 @@
 body {
-  margin: 0;
-  font-family: 'Noto Sans JP', sans-serif; }
+  margin: 0; }
 
 .signup {
   text-align: center;
   font-weight: bold;
-  color: #333; }
+  color: #333;
+  font-family: 'Noto Sans JP', sans-serif; }
   .signup-header {
     width: 100%;
     height: 55px;
@@ -26,13 +26,31 @@ body {
       color: #333;
       margin-right: 20px; }
   .signup-ttl {
-    font-size: 20px; }
+    font-size: 26px; }
+    @media screen and (max-width: 896px) {
+      .signup-ttl {
+        font-size: 18px; } }
+    .signup-ttl h1 {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 1em; }
+    .signup-ttl h1:before {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      display: inline-block;
+      width: 60px;
+      height: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333;
+      border-radius: 2px; }
   .signup-error ul {
     color: #f30; }
   .signup-error li {
     list-style: none; }
   .signup-form {
-    width: 38%;
+    width: 40%;
     height: auto;
     text-align: left;
     margin: 0 auto 100px;
@@ -40,6 +58,9 @@ body {
     border: 1px solid #eee;
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); }
+    @media screen and (max-width: 1024px) {
+      .signup-form {
+        width: 90%; } }
   .signup-ttx {
     margin: 0;
     background-color: #eee;

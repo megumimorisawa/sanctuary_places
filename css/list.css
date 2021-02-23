@@ -12,6 +12,9 @@ body {
   height: 55px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   background-color: #fff; }
+  @media screen and (max-width: 896px) {
+    .list .header {
+      height: auto; } }
   .list .header-inner {
     max-width: 1024px;
     margin: 0 auto;
@@ -20,18 +23,54 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 100%; }
+    @media screen and (max-width: 896px) {
+      .list .header-inner {
+        display: inline; } }
     .list .header-inner img {
       width: 200px;
       height: 50px;
       margin-left: 20px; }
+      @media screen and (max-width: 896px) {
+        .list .header-inner img {
+          margin-top: 7px; } }
+  .list .header button {
+    display: none; }
+  @media screen and (max-width: 896px) {
+    .list .header #header-btn {
+      display: inline;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer; }
+      .list .header #header-btn img {
+        width: 40px;
+        height: 40px; } }
   .list .header ul {
     display: flex;
     justify-content: space-between;
     margin-right: 20px; }
+    @media screen and (max-width: 896px) {
+      .list .header ul {
+        display: none;
+        list-style: none;
+        margin-top: 40px; } }
     .list .header ul li {
       text-align: center;
       margin-left: 45px;
       list-style: none; }
+      @media screen and (max-width: 896px) {
+        .list .header ul li {
+          margin: 10px 0;
+          position: relative;
+          padding: 0.6em 0;
+          text-align: left; }
+          .list .header ul li :after {
+            content: "";
+            display: block;
+            height: 2px;
+            background: linear-gradient(to right, #bbbbbb, transparent); } }
       .list .header ul li a {
         font-size: 16px;
         text-decoration: none;
@@ -45,6 +84,9 @@ body {
     text-align: center;
     margin-top: 70px;
     font-size: 26px; }
+    @media screen and (max-width: 896px) {
+      .list-inner .main-ttl {
+        font-size: 18px; } }
     .list-inner .main-ttl h1 {
       position: relative;
       display: inline-block;
@@ -64,12 +106,21 @@ body {
     margin: 25px 0;
     display: flex;
     border-bottom: 1px solid #bbb; }
+    @media screen and (max-width: 896px) {
+      .list-inner .main-box {
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        width: 90%; } }
     .list-inner .main-box img {
       width: 250px;
       height: auto;
       margin-right: 20px; }
     .list-inner .main-box-content {
       padding: 30px; }
+      @media screen and (max-width: 896px) {
+        .list-inner .main-box-content {
+          padding: 0; } }
       .list-inner .main-box-content a {
         font-size: 25px;
         color: #5507FF; }

@@ -8,7 +8,7 @@
     
     $genre_name = $_GET['genre_name'];
     $places = PlaceDAO::get_place_by_genre_name($genre_name);
-
+    
     $flash_message = $_SESSION['flash_message'];
     $_SESSION['flash_message'] = null;
     

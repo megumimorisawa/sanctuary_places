@@ -6,7 +6,6 @@ body {
 }
 
 .profile {
-    text-align: center;
     
     .header {
         position: fixed;
@@ -16,6 +15,9 @@ body {
         height: 55px;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
         background-color: #fff;
+        @media screen and (max-width: 896px) {
+            height: auto;
+        }
       
         &-inner {
             max-width: 1024px;
@@ -25,11 +27,41 @@ body {
             align-items: center;
             justify-content: space-between;
             height: 100%;
+            @media screen and (max-width: 896px) {
+                display: inline;
+            }
             
             img {
                 width: 200px;
                 height: 50px;
                 margin-left: 20px;
+                @media screen and (max-width: 896px) {
+                    margin-top: 7px;
+                }
+            }
+        }
+        
+        &-nav {
+        }
+        
+        button {
+            display: none;
+        }
+        
+        @media screen and (max-width: 896px) {
+            #header-btn {
+                display: inline;
+                position: absolute;
+                top: 10px;
+                right: 25px;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
             }
         }
         
@@ -37,25 +69,39 @@ body {
           display: flex;
           justify-content: space-between;
           margin-right: 20px;
+          @media screen and (max-width: 896px){
+              display: none;
+              list-style: none;
+              margin-top: 40px;
+          }
           
           li {
-            text-align: center;
-            margin-left: 45px;
-            list-style: none;
+              text-align: center;
+              margin-left: 45px;
+              list-style: none;
+              @media screen and (max-width: 896px){
+                  margin: 10px 0;
+                  position: relative;
+                  padding: 0.6em 0;
+                  text-align: left;
+                
+                  :after {
+                      content: "";
+                      display: block;
+                      height: 2px;
+                      background: linear-gradient(to right, rgb(187, 187, 187), transparent);
+                  }
+              }
             
-            a {
-                font-size: 16px;
-                text-decoration: none;
-                color: #333;
+              a {
+                  font-size: 16px;
+                  text-decoration: none;
+                  color: #333;
+              }
             }
-          }
         }
     }
     
-    
-    
-    
-        
     .main {
         background-image: url(/portfolio2/css/image/profile_back.jpeg);
         background-size: cover;
@@ -66,13 +112,16 @@ body {
         &-inner {
             width: 40%;
             margin: 0 auto;
+            text-align: center;
     
         .ttl {
             font-size: 26px;
             padding: 100px 0 30px;
+            @media screen and (max-width: 896px){
+                font-size: 18px;
+            }
             
             h1 {
-                
                 position: relative;
                 display: inline-block;
                 margin-bottom: 1em;
@@ -87,7 +136,7 @@ body {
                 height: 5px;
                 left: 50%;
                 transform: translateX(-50%);
-                background-color: black;
+                background-color: #333;
                 border-radius: 2px;
             }
         }
@@ -110,21 +159,20 @@ body {
         }
         
         p:before {
-          content: "";
-          position: absolute;
-          background: #9de5ff;
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          top: 50%;
-          left: -15px;
-          -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-          z-index: -1;
+            content: "";
+            position: absolute;
+            background: #9de5ff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            top: 50%;
+            left: -15px;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            z-index: -1;
         }
-    
     }
-        }
+}
         
         &-image {
             
@@ -153,6 +201,10 @@ body {
             background: rgba(255,255,255,0.4);
             padding: 20px;
             margin: 20px;
+            @media screen and (max-width: 896px){
+                text-align: center;
+                width: 90%;
+            }
             
             &-ttl {
                 font-size: 16px;
@@ -215,6 +267,12 @@ body {
                 margin: 40px 70px;
                 border-bottom: 1px solid #bbb;
                 padding-bottom: 40px;
+                @media screen and (max-width: 896px){
+                    text-align: center;
+                    margin: 0 auto;
+                    display: block;
+                    width: 90%;
+                }
             }
         }
         

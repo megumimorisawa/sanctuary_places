@@ -1,7 +1,11 @@
+body {
+  margin: 0; }
+
 .login {
   text-align: center;
   font-weight: bold;
-  color: #333; }
+  color: #333;
+  font-family: 'Noto Sans JP', sans-serif; }
   .login-header {
     width: 100%;
     height: 55px;
@@ -18,8 +22,26 @@
       height: 50px;
       margin-left: 20px; }
   .login-main-ttl {
-    font-size: 30px;
+    font-size: 26px;
     text-align: center; }
+    @media screen and (max-width: 896px) {
+      .login-main-ttl {
+        font-size: 18px; } }
+    .login-main-ttl h1 {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 1em; }
+    .login-main-ttl h1:before {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      display: inline-block;
+      width: 60px;
+      height: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333;
+      border-radius: 2px; }
   .login-main-message {
     width: 30%;
     text-align: center;
@@ -45,7 +67,7 @@
       transform: translateY(-50%);
       z-index: -1; }
   .login-main-form {
-    width: 38%;
+    width: 40%;
     height: auto;
     text-align: left;
     margin: 0 auto 100px;
@@ -53,6 +75,9 @@
     border: 1px solid #eee;
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); }
+    @media screen and (max-width: 1024px) {
+      .login-main-form {
+        width: 90%; } }
     .login-main-form-ttx {
       margin: 0;
       background-color: #eee;

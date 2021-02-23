@@ -18,7 +18,9 @@
             
             <section class="login-main">
                 <div class="login-main-inner">
-                    <h1 class="login-main-ttl">ログイン</h1>
+                    <div class="login-main-ttl">
+                        <h1>ログイン</h1>
+                    </div>
                     <div class="login-main-message">
                         <?php if($flash_message !== null): ?>
                         <p><?= $flash_message ?></p>

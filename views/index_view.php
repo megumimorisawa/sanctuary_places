@@ -13,7 +13,7 @@
         <div class="index">
             <section class="header">
                 <div class="header-inner">
-                    <img src="css/image/logo.png" alt="ロゴ画像">
+                    <a href="index.php"><img src="css/image/logo.png" alt="ロゴ画像"></a>
                     <nav class="header-nav">
                         <button><img src="css/image/button.png" alt="ボタン画像"></button>
                         <ul>
@@ -115,16 +115,8 @@
                     </div>
                     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
                     <script src="main.js"></script>
-                     https://streamlinehq.com
-        
                 </div>
             </section>
-            
-            
-            
-            
-            
-        </div>
-        
+        </div>    
     </body>
 </html>

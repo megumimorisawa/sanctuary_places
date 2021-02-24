@@ -17,7 +17,7 @@ body {
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
         background-color: #fff;
         @media screen and (max-width: 896px) {
-            height: auto;
+            height: 63px;
         }
       
         &-inner {
@@ -37,14 +37,14 @@ body {
                 height: 50px;
                 margin-left: 20px;
                 @media screen and (max-width: 896px) {
-                    margin-top: 7px;
+                    width: 150px;
+                    height: 35px;
+                    margin: 0;
+                    margin-top: 13px;
                 }
             }
         }
-        
-        &-nav {
-        }
-        
+    
         button {
             display: none;
         }
@@ -62,6 +62,9 @@ body {
                 img {
                     width: 40px;
                     height: 40px;
+                    @media screen and (max-width: 896px){
+                        margin: 0;
+                    }
                 }
             }
         }
@@ -73,7 +76,8 @@ body {
           @media screen and (max-width: 896px){
               display: none;
               list-style: none;
-              margin-top: 40px;
+              margin: 0;
+              background: #fff;
           }
           
           li {
@@ -81,9 +85,9 @@ body {
             margin-left: 45px;
             list-style: none;
             @media screen and (max-width: 896px){
-                margin: 10px 0;
+                margin: 0 auto;
                 position: relative;
-                padding: 0.6em 0;
+                padding: 1em 0;
                 text-align: left;
                 
                 :after {
@@ -104,7 +108,7 @@ body {
     }
     
     .top {
-        margin: 100px 0 60px;
+        margin: 100px 0 30px;
         font-size: 26px;
         text-align: center;
         @media screen and (max-width: 896px){
@@ -135,10 +139,16 @@ body {
         margin: 0 auto;
         
         .error {
+            margin-bottom: 30px;
             
             ul {
                 color: #f30;
                 text-align: center;
+                @media screen and (max-width: 480px){
+                    text-align: left;
+                    width: 90%;
+                    margin: 0 auto;
+                }
             }
             
             li {
@@ -157,6 +167,9 @@ body {
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
             @media screen and (max-width: 1024px){
                 width: 90%;
+            }
+            @media screen and (max-width: 480px){
+                width: 100%;
             }
             
             &-name {

@@ -11,6 +11,9 @@ body {
     height: 55px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     background-color: #fff; }
+    @media screen and (max-width: 896px) {
+      .signup-header {
+        height: 63px; } }
     .signup-header-inner {
       max-width: 1024px;
       margin: 0 auto;
@@ -21,10 +24,19 @@ body {
       width: 200px;
       height: 50px;
       margin-left: 20px; }
+      @media screen and (max-width: 896px) {
+        .signup-header img {
+          width: 150px;
+          height: 35px;
+          margin: 0;
+          margin-top: 13px; } }
     .signup-header a {
       text-decoration: none;
       color: #333;
       margin-right: 20px; }
+      @media screen and (max-width: 896px) {
+        .signup-header a {
+          margin-top: 13px; } }
   .signup-ttl {
     font-size: 26px; }
     @media screen and (max-width: 896px) {
@@ -47,13 +59,18 @@ body {
       border-radius: 2px; }
   .signup-error ul {
     color: #f30; }
+    @media screen and (max-width: 480px) {
+      .signup-error ul {
+        text-align: left;
+        width: 90%;
+        margin: 0 auto; } }
   .signup-error li {
     list-style: none; }
   .signup-form {
     width: 40%;
     height: auto;
     text-align: left;
-    margin: 0 auto 100px;
+    margin: 30px auto 100px;
     padding: 0 0 20px;
     border: 1px solid #eee;
     border-radius: 10px;
@@ -61,6 +78,9 @@ body {
     @media screen and (max-width: 1024px) {
       .signup-form {
         width: 90%; } }
+    @media screen and (max-width: 480px) {
+      .signup-form {
+        width: 100%; } }
   .signup-ttx {
     margin: 0;
     background-color: #eee;

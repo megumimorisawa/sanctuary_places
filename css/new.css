@@ -16,7 +16,7 @@ body {
     background-color: #fff; }
     @media screen and (max-width: 896px) {
       .new .header {
-        height: auto; } }
+        height: 63px; } }
     .new .header-inner {
       max-width: 1024px;
       margin: 0 auto;
@@ -34,7 +34,10 @@ body {
         margin-left: 20px; }
         @media screen and (max-width: 896px) {
           .new .header-inner img {
-            margin-top: 7px; } }
+            width: 150px;
+            height: 35px;
+            margin: 0;
+            margin-top: 13px; } }
     .new .header button {
       display: none; }
     @media screen and (max-width: 896px) {
@@ -49,6 +52,10 @@ body {
         .new .header #header-btn img {
           width: 40px;
           height: 40px; } }
+    @media screen and (max-width: 896px) and (max-width: 896px) {
+      .new .header #header-btn img {
+        margin: 0; } }
+
     .new .header ul {
       display: flex;
       justify-content: space-between;
@@ -57,16 +64,17 @@ body {
         .new .header ul {
           display: none;
           list-style: none;
-          margin-top: 40px; } }
+          margin: 0;
+          background: #fff; } }
       .new .header ul li {
         text-align: center;
         margin-left: 45px;
         list-style: none; }
         @media screen and (max-width: 896px) {
           .new .header ul li {
-            margin: 10px 0;
+            margin: 0 auto;
             position: relative;
-            padding: 0.6em 0;
+            padding: 1em 0;
             text-align: left; }
             .new .header ul li :after {
               content: "";
@@ -78,7 +86,7 @@ body {
           text-decoration: none;
           color: #333; }
   .new .top {
-    margin: 100px 0 60px;
+    margin: 100px 0 30px;
     font-size: 26px;
     text-align: center; }
     @media screen and (max-width: 896px) {
@@ -101,11 +109,18 @@ body {
       border-radius: 2px; }
   .new-inner {
     margin: 0 auto; }
-    .new-inner .error ul {
-      color: #f30;
-      text-align: center; }
-    .new-inner .error li {
-      list-style: none; }
+    .new-inner .error {
+      margin-bottom: 30px; }
+      .new-inner .error ul {
+        color: #f30;
+        text-align: center; }
+        @media screen and (max-width: 480px) {
+          .new-inner .error ul {
+            text-align: left;
+            width: 90%;
+            margin: 0 auto; } }
+      .new-inner .error li {
+        list-style: none; }
     .new-inner .form {
       width: 45%;
       height: auto;
@@ -118,6 +133,9 @@ body {
       @media screen and (max-width: 1024px) {
         .new-inner .form {
           width: 90%; } }
+      @media screen and (max-width: 480px) {
+        .new-inner .form {
+          width: 100%; } }
       .new-inner .form-name {
         margin: 0;
         background-color: #eee;

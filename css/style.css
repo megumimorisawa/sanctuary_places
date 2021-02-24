@@ -21,7 +21,7 @@ li {
   background-color: #fff; }
   @media screen and (max-width: 896px) {
     .header {
-      height: auto; } }
+      height: 63px; } }
   .header-inner {
     max-width: 1024px;
     margin: 0 auto;
@@ -39,7 +39,10 @@ li {
       margin-left: 20px; }
       @media screen and (max-width: 896px) {
         .header-inner img {
-          margin-top: 7px; } }
+          width: 150px;
+          height: 35px;
+          margin: 0;
+          margin-top: 13px; } }
   .header button {
     display: none; }
   @media screen and (max-width: 896px) {
@@ -54,6 +57,10 @@ li {
       .header #header-btn img {
         width: 40px;
         height: 40px; } }
+    @media screen and (max-width: 896px) and (max-width: 896px) {
+      .header #header-btn img {
+        margin: 0; } }
+
   .header ul {
     display: flex;
     justify-content: space-between;
@@ -62,7 +69,8 @@ li {
       .header ul {
         display: none;
         list-style: none;
-        margin-top: 40px; } }
+        margin: 0;
+        background: #fff; } }
     .header ul li {
       text-align: center;
       margin-left: 45px; }
@@ -70,7 +78,7 @@ li {
         .header ul li {
           margin: 10px 0;
           position: relative;
-          padding: 0.6em 0;
+          padding: 1em 0;
           text-align: left; }
           .header ul li :after {
             content: "";
@@ -104,9 +112,17 @@ li {
       .main-start-btn {
         position: unset;
         margin: 60px auto 0; } }
+    @media screen and (max-width: 480px) {
+      .main-start-btn {
+        width: 130px;
+        height: 40px;
+        margin: 30px auto 0; } }
     .main-start-btn a {
       font-size: 30px;
       color: #fff; }
+      @media screen and (max-width: 480px) {
+        .main-start-btn a {
+          font-size: 25px; } }
 
 .feature-top {
   text-align: center;
@@ -129,7 +145,10 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 20px 93px 20px; }
+  margin: 0 20px 93px 20px;
+  opacity: 0;
+  transform: translate(0, 50%);
+  transition: all 500ms; }
   @media screen and (max-width: 1024px) {
     .feature-content-box {
       display: block;
@@ -167,6 +186,10 @@ li {
   @media screen and (max-width: 1024px) {
     .feature-content-box img {
       display: none; } }
+.feature .active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); }
 .feature-bottom {
   text-align: center;
   font-size: 30px;
@@ -204,8 +227,10 @@ li {
   width: 100%;
   height: 55px; }
   .footer-inner {
-    margin: 0 20px;
-    height: 100%; }
+    margin: 5px 20px;
+    height: 100%;
+    display: flex;
+    align-items: flex-end; }
   .footer a {
     font-size: 16px;
     margin-right: 30px;
@@ -224,6 +249,9 @@ body {
     height: 55px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     background-color: #fff; }
+    @media screen and (max-width: 896px) {
+      .signup-header {
+        height: 63px; } }
     .signup-header-inner {
       max-width: 1024px;
       margin: 0 auto;
@@ -234,10 +262,19 @@ body {
       width: 200px;
       height: 50px;
       margin-left: 20px; }
+      @media screen and (max-width: 896px) {
+        .signup-header img {
+          width: 150px;
+          height: 35px;
+          margin: 0;
+          margin-top: 13px; } }
     .signup-header a {
       text-decoration: none;
       color: #333;
       margin-right: 20px; }
+      @media screen and (max-width: 896px) {
+        .signup-header a {
+          margin-top: 13px; } }
   .signup-ttl {
     font-size: 26px; }
     @media screen and (max-width: 896px) {
@@ -260,13 +297,18 @@ body {
       border-radius: 2px; }
   .signup-error ul {
     color: #f30; }
+    @media screen and (max-width: 480px) {
+      .signup-error ul {
+        text-align: left;
+        width: 90%;
+        margin: 0 auto; } }
   .signup-error li {
     list-style: none; }
   .signup-form {
     width: 40%;
     height: auto;
     text-align: left;
-    margin: 0 auto 100px;
+    margin: 30px auto 100px;
     padding: 0 0 20px;
     border: 1px solid #eee;
     border-radius: 10px;
@@ -274,6 +316,9 @@ body {
     @media screen and (max-width: 1024px) {
       .signup-form {
         width: 90%; } }
+    @media screen and (max-width: 480px) {
+      .signup-form {
+        width: 100%; } }
   .signup-ttx {
     margin: 0;
     background-color: #eee;
@@ -315,6 +360,9 @@ body {
     height: 55px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     background-color: #fff; }
+    @media screen and (max-width: 896px) {
+      .login-header {
+        height: 63px; } }
     .login-header-inner {
       max-width: 1024px;
       margin: 0 auto;
@@ -325,6 +373,12 @@ body {
       width: 200px;
       height: 50px;
       margin-left: 20px; }
+      @media screen and (max-width: 896px) {
+        .login-header img {
+          width: 150px;
+          height: 35px;
+          margin: 0;
+          margin-top: 13px; } }
   .login-main-ttl {
     font-size: 26px;
     text-align: center; }
@@ -347,9 +401,12 @@ body {
       background-color: #333;
       border-radius: 2px; }
   .login-main-message {
-    width: 30%;
+    width: 40%;
     text-align: center;
     margin: 0 auto; }
+    @media screen and (max-width: 480px) {
+      .login-main-message {
+        width: 90%; } }
     .login-main-message p {
       position: relative;
       color: #333;
@@ -367,14 +424,13 @@ body {
       border-radius: 50%;
       top: 50%;
       left: -15px;
-      -webkit-transform: translateY(-50%);
       transform: translateY(-50%);
       z-index: -1; }
   .login-main-form {
     width: 40%;
     height: auto;
     text-align: left;
-    margin: 0 auto 100px;
+    margin: 20px auto 100px;
     padding: 0 0 40px;
     border: 1px solid #eee;
     border-radius: 10px;
@@ -382,6 +438,9 @@ body {
     @media screen and (max-width: 1024px) {
       .login-main-form {
         width: 90%; } }
+    @media screen and (max-width: 480px) {
+      .login-main-form {
+        width: 100%; } }
     .login-main-form-ttx {
       margin: 0;
       background-color: #eee;
@@ -425,7 +484,7 @@ body {
   background-color: #fff; }
   @media screen and (max-width: 896px) {
     .index .header {
-      height: auto; } }
+      height: 63px; } }
   .index .header-inner {
     max-width: 1024px;
     margin: 0 auto;
@@ -443,7 +502,10 @@ body {
       margin-left: 20px; }
       @media screen and (max-width: 896px) {
         .index .header-inner img {
-          margin-top: 7px; } }
+          width: 150px;
+          height: 35px;
+          margin: 0;
+          margin-top: 13px; } }
   .index .header button {
     display: none; }
   @media screen and (max-width: 896px) {
@@ -457,7 +519,8 @@ body {
       cursor: pointer; }
       .index .header #header-btn img {
         width: 40px;
-        height: 40px; } }
+        height: 40px;
+        margin: 0; } }
   .index .header ul {
     display: flex;
     justify-content: space-between;
@@ -466,16 +529,17 @@ body {
       .index .header ul {
         display: none;
         list-style: none;
-        margin-top: 40px; } }
+        margin: 0;
+        background: #fff; } }
     .index .header ul li {
       text-align: center;
       margin-left: 45px;
       list-style: none; }
       @media screen and (max-width: 896px) {
         .index .header ul li {
-          margin: 10px 0;
+          margin: 0 auto;
           position: relative;
-          padding: 0.6em 0;
+          padding: 1em 0;
           text-align: left; }
           .index .header ul li :after {
             content: "";
@@ -490,7 +554,10 @@ body {
   margin-top: 90px;
   margin-left: 20px;
   text-align: center;
-  width: 30%; }
+  width: 40%; }
+  @media screen and (max-width: 480px) {
+    .index .message {
+      width: 90%; } }
   .index .message p {
     position: relative;
     color: #333;
@@ -508,7 +575,6 @@ body {
     border-radius: 50%;
     top: 50%;
     left: -15px;
-    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: -1; }
 .index .main {
@@ -569,6 +635,9 @@ body {
     padding: 0.25em 1em;
     display: inline-block;
     top: 0; }
+    @media screen and (max-width: 480px) {
+      .index .search-top p {
+        margin: 0 10px; } }
   .index .search-top p:before, .index .search-top p:after {
     position: absolute;
     top: 0;
@@ -590,6 +659,9 @@ body {
   .index .search-top-ttl1 {
     font-size: 38px;
     margin-bottom: 0; }
+    @media screen and (max-width: 480px) {
+      .index .search-top-ttl1 {
+        font-size: 30px; } }
   .index .search-top-ttl2 {
     font-size: 20px;
     color: #bbb;
@@ -601,6 +673,9 @@ body {
 .index .search-ttl {
   font-size: 19px;
   margin-left: 50px; }
+  @media screen and (max-width: 480px) {
+    .index .search-ttl {
+      margin: 0; } }
   .index .search-ttl h2 {
     margin-bottom: 5px; }
 .index .search-man {
@@ -655,7 +730,7 @@ body {
     background-color: #fff; }
     @media screen and (max-width: 896px) {
       .new .header {
-        height: auto; } }
+        height: 63px; } }
     .new .header-inner {
       max-width: 1024px;
       margin: 0 auto;
@@ -673,7 +748,10 @@ body {
         margin-left: 20px; }
         @media screen and (max-width: 896px) {
           .new .header-inner img {
-            margin-top: 7px; } }
+            width: 150px;
+            height: 35px;
+            margin: 0;
+            margin-top: 13px; } }
     .new .header button {
       display: none; }
     @media screen and (max-width: 896px) {
@@ -688,6 +766,10 @@ body {
         .new .header #header-btn img {
           width: 40px;
           height: 40px; } }
+    @media screen and (max-width: 896px) and (max-width: 896px) {
+      .new .header #header-btn img {
+        margin: 0; } }
+
     .new .header ul {
       display: flex;
       justify-content: space-between;
@@ -696,16 +778,17 @@ body {
         .new .header ul {
           display: none;
           list-style: none;
-          margin-top: 40px; } }
+          margin: 0;
+          background: #fff; } }
       .new .header ul li {
         text-align: center;
         margin-left: 45px;
         list-style: none; }
         @media screen and (max-width: 896px) {
           .new .header ul li {
-            margin: 10px 0;
+            margin: 0 auto;
             position: relative;
-            padding: 0.6em 0;
+            padding: 1em 0;
             text-align: left; }
             .new .header ul li :after {
               content: "";
@@ -717,7 +800,7 @@ body {
           text-decoration: none;
           color: #333; }
   .new .top {
-    margin: 100px 0 60px;
+    margin: 100px 0 30px;
     font-size: 26px;
     text-align: center; }
     @media screen and (max-width: 896px) {
@@ -740,11 +823,18 @@ body {
       border-radius: 2px; }
   .new-inner {
     margin: 0 auto; }
-    .new-inner .error ul {
-      color: #f30;
-      text-align: center; }
-    .new-inner .error li {
-      list-style: none; }
+    .new-inner .error {
+      margin-bottom: 30px; }
+      .new-inner .error ul {
+        color: #f30;
+        text-align: center; }
+        @media screen and (max-width: 480px) {
+          .new-inner .error ul {
+            text-align: left;
+            width: 90%;
+            margin: 0 auto; } }
+      .new-inner .error li {
+        list-style: none; }
     .new-inner .form {
       width: 45%;
       height: auto;
@@ -757,6 +847,9 @@ body {
       @media screen and (max-width: 1024px) {
         .new-inner .form {
           width: 90%; } }
+      @media screen and (max-width: 480px) {
+        .new-inner .form {
+          width: 100%; } }
       .new-inner .form-name {
         margin: 0;
         background-color: #eee;
@@ -803,7 +896,7 @@ body {
   background-color: #fff; }
   @media screen and (max-width: 896px) {
     .list .header {
-      height: auto; } }
+      height: 63px; } }
   .list .header-inner {
     max-width: 1024px;
     margin: 0 auto;
@@ -821,7 +914,10 @@ body {
       margin-left: 20px; }
       @media screen and (max-width: 896px) {
         .list .header-inner img {
-          margin-top: 7px; } }
+          width: 150px;
+          height: 35px;
+          margin: 0;
+          margin-top: 13px; } }
   .list .header button {
     display: none; }
   @media screen and (max-width: 896px) {
@@ -835,7 +931,8 @@ body {
       cursor: pointer; }
       .list .header #header-btn img {
         width: 40px;
-        height: 40px; } }
+        height: 40px;
+        margin: 0; } }
   .list .header ul {
     display: flex;
     justify-content: space-between;
@@ -844,16 +941,17 @@ body {
       .list .header ul {
         display: none;
         list-style: none;
-        margin-top: 40px; } }
+        margin: 0;
+        background: #fff; } }
     .list .header ul li {
       text-align: center;
       margin-left: 45px;
       list-style: none; }
       @media screen and (max-width: 896px) {
         .list .header ul li {
-          margin: 10px 0;
+          margin: 0 auto;
           position: relative;
-          padding: 0.6em 0;
+          padding: 1em 0;
           text-align: left; }
           .list .header ul li :after {
             content: "";
@@ -866,9 +964,10 @@ body {
         color: #333; }
 .list-inner {
   margin: 50px; }
-  .list-inner .message {
-    margin: 60px;
-    text-align: center; }
+  @media screen and (max-width: 480px) {
+    .list-inner {
+      width: 100%;
+      margin: 0; } }
   .list-inner .main-ttl {
     text-align: center;
     margin-top: 70px;
@@ -891,6 +990,32 @@ body {
       transform: translateX(-50%);
       background-color: #333;
       border-radius: 2px; }
+  .list-inner .main .message {
+    margin: 50px auto;
+    text-align: center;
+    width: 40%; }
+    @media screen and (max-width: 480px) {
+      .list-inner .main .message {
+        width: 90%; } }
+    .list-inner .main .message p {
+      position: relative;
+      color: #333;
+      text-shadow: 0 0 2px white;
+      background: #e0f3ff;
+      z-index: -4;
+      border-radius: 0 10px 10px;
+      padding: 10px; }
+    .list-inner .main .message p:before {
+      content: "";
+      position: absolute;
+      background: #9de5ff;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      top: 50%;
+      left: -15px;
+      transform: translateY(-50%);
+      z-index: -1; }
   .list-inner .main-box {
     margin: 25px 0;
     display: flex;
@@ -898,9 +1023,11 @@ body {
     @media screen and (max-width: 896px) {
       .list-inner .main-box {
         text-align: center;
-        margin: 0 auto;
+        margin: 50px auto 0;
         display: block;
         width: 90%; } }
+    .list-inner .main-box p {
+      margin-top: 0; }
     .list-inner .main-box img {
       width: 250px;
       height: auto;
@@ -1234,7 +1361,7 @@ body {
     background-color: #fff; }
     @media screen and (max-width: 896px) {
       .review .header {
-        height: auto; } }
+        height: 63px; } }
     .review .header-inner {
       max-width: 1024px;
       margin: 0 auto;
@@ -1252,7 +1379,10 @@ body {
         margin-left: 20px; }
         @media screen and (max-width: 896px) {
           .review .header-inner img {
-            margin-top: 7px; } }
+            width: 150px;
+            height: 35px;
+            margin: 0;
+            margin-top: 13px; } }
     .review .header button {
       display: none; }
     @media screen and (max-width: 896px) {
@@ -1266,7 +1396,8 @@ body {
         cursor: pointer; }
         .review .header #header-btn img {
           width: 40px;
-          height: 40px; } }
+          height: 40px;
+          margin: 0; } }
     .review .header ul {
       display: flex;
       justify-content: space-between;
@@ -1275,16 +1406,17 @@ body {
         .review .header ul {
           display: none;
           list-style: none;
-          margin-top: 40px; } }
+          margin: 0;
+          background: #fff; } }
       .review .header ul li {
         text-align: center;
         margin-left: 45px;
         list-style: none; }
         @media screen and (max-width: 896px) {
           .review .header ul li {
-            margin: 10px 0;
+            margin: 0 auto;
             position: relative;
-            padding: 0.6em 0;
+            padding: 1em 0;
             text-align: left; }
             .review .header ul li :after {
               content: "";
@@ -1298,7 +1430,7 @@ body {
   .review .main {
     text-align: center; }
     .review .main-ttl {
-      margin: 100px 0 60px;
+      margin: 100px 0 30px;
       font-size: 26px; }
       @media screen and (max-width: 896px) {
         .review .main-ttl {
@@ -1323,6 +1455,11 @@ body {
       .review .main-inner .error ul {
         color: #f30;
         text-align: center; }
+        @media screen and (max-width: 480px) {
+          .review .main-inner .error ul {
+            text-align: left;
+            width: 90%;
+            margin: 0 auto 30px; } }
       .review .main-inner .error li {
         list-style: none; }
       .review .main-inner .form {
@@ -1337,6 +1474,9 @@ body {
         @media screen and (max-width: 1024px) {
           .review .main-inner .form {
             width: 90%; } }
+        @media screen and (max-width: 480px) {
+          .review .main-inner .form {
+            width: 100%; } }
         .review .main-inner .form-name {
           margin: 0;
           background-color: #eee;
@@ -1381,7 +1521,7 @@ body {
   background-color: #fff; }
   @media screen and (max-width: 896px) {
     .profile .header {
-      height: auto; } }
+      height: 63px; } }
   .profile .header-inner {
     max-width: 1024px;
     margin: 0 auto;
@@ -1399,7 +1539,10 @@ body {
       margin-left: 20px; }
       @media screen and (max-width: 896px) {
         .profile .header-inner img {
-          margin-top: 7px; } }
+          width: 150px;
+          height: 35px;
+          margin: 0;
+          margin-top: 13px; } }
   .profile .header button {
     display: none; }
   @media screen and (max-width: 896px) {
@@ -1413,7 +1556,8 @@ body {
       cursor: pointer; }
       .profile .header #header-btn img {
         width: 40px;
-        height: 40px; } }
+        height: 40px;
+        margin: 0; } }
   .profile .header ul {
     display: flex;
     justify-content: space-between;
@@ -1422,16 +1566,17 @@ body {
       .profile .header ul {
         display: none;
         list-style: none;
-        margin-top: 40px; } }
+        margin: 0;
+        background: #fff; } }
     .profile .header ul li {
       text-align: center;
       margin-left: 45px;
       list-style: none; }
       @media screen and (max-width: 896px) {
         .profile .header ul li {
-          margin: 10px 0;
+          margin: 0 auto;
           position: relative;
-          padding: 0.6em 0;
+          padding: 1em 0;
           text-align: left; }
           .profile .header ul li :after {
             content: "";
@@ -1452,6 +1597,9 @@ body {
     width: 40%;
     margin: 0 auto;
     text-align: center; }
+    @media screen and (max-width: 896px) {
+      .profile .main-inner {
+        width: 90%; } }
     .profile .main-inner .ttl {
       font-size: 26px;
       padding: 100px 0 30px; }
@@ -1516,11 +1664,13 @@ body {
     text-align: left;
     background: rgba(255, 255, 255, 0.4);
     padding: 20px;
-    margin: 20px; }
+    margin: 20px 0; }
     @media screen and (max-width: 896px) {
       .profile .main-content {
-        text-align: center;
-        width: 90%; } }
+        text-align: center; } }
+    @media screen and (max-width: 480px) {
+      .profile .main-content {
+        margin: 10px 0; } }
     .profile .main-content-ttl {
       font-size: 16px; }
     .profile .main-content-ttx {
@@ -1538,7 +1688,11 @@ body {
   .profile .favorite-ttl {
     text-align: center;
     font-size: 26px;
-    margin-left: 50px; }
+    margin-left: 50px;
+    margin-bottom: 50px; }
+    @media screen and (max-width: 896px) {
+      .profile .favorite-ttl {
+        margin-left: 0; } }
     .profile .favorite-ttl p {
       position: relative;
       display: inline-block;
@@ -1567,6 +1721,9 @@ body {
         width: 90%; } }
   .profile .favorite-image {
     margin-right: 40px; }
+    @media screen and (max-width: 896px) {
+      .profile .favorite-image {
+        margin: 0; } }
   .profile .favorite-content-comment {
     color: #777; }
   .profile .favorite-content a {
@@ -1594,7 +1751,7 @@ body {
   background-color: #fff; }
   @media screen and (max-width: 896px) {
     .show .header {
-      height: auto; } }
+      height: 63px; } }
   .show .header-inner {
     max-width: 1024px;
     margin: 0 auto;
@@ -1612,7 +1769,10 @@ body {
       margin-left: 20px; }
       @media screen and (max-width: 896px) {
         .show .header-inner img {
-          margin-top: 7px; } }
+          width: 150px;
+          height: 35px;
+          margin: 0;
+          margin-top: 13px; } }
   .show .header button {
     display: none; }
   @media screen and (max-width: 896px) {
@@ -1626,7 +1786,8 @@ body {
       cursor: pointer; }
       .show .header #header-btn img {
         width: 40px;
-        height: 40px; } }
+        height: 40px;
+        margin: 0; } }
   .show .header ul {
     display: flex;
     justify-content: space-between;
@@ -1635,16 +1796,17 @@ body {
       .show .header ul {
         display: none;
         list-style: none;
-        margin-top: 40px; } }
+        margin: 0;
+        background: #fff; } }
     .show .header ul li {
       text-align: center;
       margin-left: 45px;
       list-style: none; }
       @media screen and (max-width: 896px) {
         .show .header ul li {
-          margin: 10px 0;
+          margin: 0 auto;
           position: relative;
-          padding: 0.6em 0;
+          padding: 1em 0;
           text-align: left; }
           .show .header ul li :after {
             content: "";
@@ -1676,7 +1838,7 @@ body {
 .show .message {
   text-align: center;
   width: 30%;
-  margin: 0 auto; }
+  margin: 100px auto 0; }
   .show .message p {
     position: relative;
     color: #333;
@@ -1694,12 +1856,14 @@ body {
     border-radius: 50%;
     top: 50%;
     left: -15px;
-    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: -1; }
 .show .main {
   width: 75%;
   margin: 0 auto; }
+  @media screen and (max-width: 896px) {
+    .show .main {
+      width: 100%; } }
   .show .main h2 {
     padding: 0.25em 0.5em;
     color: #494949;
@@ -1707,8 +1871,6 @@ body {
     border-left: solid 10px #7db4e6; }
   .show .main-top {
     margin: 30px; }
-    .show .main-top img {
-      margin-right: 30px; }
   .show .main-content {
     display: flex;
     justify-content: space-between; }
@@ -1738,6 +1900,32 @@ body {
         margin: 0;
         font-weight: normal;
         color: #666; }
+    .show .main-content-image {
+      width: 80%;
+      margin: 10px auto; }
+      @media screen and (max-width: 896px) {
+        .show .main-content-image {
+          width: 100%; } }
+      .show .main-content-image figure {
+        border: 1px solid #ccc;
+        width: 100%;
+        margin: 0 auto; }
+        .show .main-content-image figure img {
+          width: 100%;
+          height: auto; }
+      .show .main-content-image-list {
+        display: flex;
+        justify-content: center;
+        padding: 0; }
+        .show .main-content-image-list li {
+          list-style: none;
+          border: 1px solid #ccc;
+          margin: 10px; }
+      .show .main-content-image-item {
+        width: 50px; }
+        .show .main-content-image-item img {
+          width: 100%;
+          height: auto; }
   .show .main table {
     border-collapse: collapse;
     border-spacing: unset;
@@ -1761,6 +1949,9 @@ body {
 .show .review {
   width: 75%;
   margin: 0 auto; }
+  @media screen and (max-width: 896px) {
+    .show .review {
+      width: 95%; } }
   .show .review-ttl {
     font-size: 26px;
     text-align: center;
@@ -1804,7 +1995,14 @@ body {
     border: 1px solid #ccc;
     border-radius: 20px;
     padding: 20px;
-    margin: 30px 0; }
+    margin: 30px 0;
+    opacity: 0;
+    transform: translate(0, 50%);
+    transition: all 500ms; }
+  .show .review .active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); }
   .show .review-content a {
     font-size: 20px;
     color: #ff773e; }
@@ -1835,9 +2033,30 @@ body {
     padding: 0; }
   .show .review-btn {
     text-align: right; }
+    @media screen and (max-width: 480px) {
+      .show .review-btn {
+        text-align: center; } }
     .show .review-btn-home, .show .review-btn-back {
       margin: 30px;
       color: #333; }
+
+#bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4); }
+
+#photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 640px;
+  height: 420px; }
 
 body {
   margin: 0; }
@@ -1857,7 +2076,7 @@ body {
     background-color: #fff; }
     @media screen and (max-width: 896px) {
       .contact .header {
-        height: auto; } }
+        height: 63px; } }
     .contact .header-inner {
       max-width: 1024px;
       margin: 0 auto;
@@ -1875,7 +2094,10 @@ body {
         margin-left: 20px; }
         @media screen and (max-width: 896px) {
           .contact .header-inner img {
-            margin-top: 7px; } }
+            width: 150px;
+            height: 35px;
+            margin: 0;
+            margin-top: 13px; } }
     .contact .header button {
       display: none; }
     @media screen and (max-width: 896px) {
@@ -1889,7 +2111,8 @@ body {
         cursor: pointer; }
         .contact .header #header-btn img {
           width: 40px;
-          height: 40px; } }
+          height: 40px;
+          margin: 0; } }
     .contact .header ul {
       display: flex;
       justify-content: space-between;
@@ -1898,16 +2121,17 @@ body {
         .contact .header ul {
           display: none;
           list-style: none;
-          margin-top: 40px; } }
+          margin: 0;
+          background: #fff; } }
       .contact .header ul li {
         text-align: center;
         margin-left: 45px;
         list-style: none; }
         @media screen and (max-width: 896px) {
           .contact .header ul li {
-            margin: 10px 0;
+            margin: 0 auto;
             position: relative;
-            padding: 0.6em 0;
+            padding: 1em 0;
             text-align: left; }
             .contact .header ul li :after {
               content: "";
@@ -1952,6 +2176,9 @@ body {
     @media screen and (max-width: 1024px) {
       .contact .form {
         width: 90%; } }
+    @media screen and (max-width: 480px) {
+      .contact .form {
+        width: 100%; } }
     .contact .form-name {
       margin: 0;
       background-color: #eee;

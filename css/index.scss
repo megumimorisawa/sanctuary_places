@@ -15,7 +15,7 @@ body {
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
         background-color: #fff;
         @media screen and (max-width: 896px) {
-            height: auto;
+            height: 63px;
         }
       
         &-inner {
@@ -35,12 +35,12 @@ body {
                 height: 50px;
                 margin-left: 20px;
                 @media screen and (max-width: 896px) {
-                    margin-top: 7px;
+                    width: 150px;
+                    height: 35px;
+                    margin: 0;
+                    margin-top: 13px;
                 }
             }
-        }
-        
-        &-nav {
         }
         
         button {
@@ -60,6 +60,7 @@ body {
                 img {
                     width: 40px;
                     height: 40px;
+                    margin: 0;
                 }
             }
         }
@@ -71,7 +72,8 @@ body {
           @media screen and (max-width: 896px){
               display: none;
               list-style: none;
-              margin-top: 40px;
+              margin: 0;
+              background: #fff;
           }
           
           li {
@@ -79,18 +81,18 @@ body {
             margin-left: 45px;
             list-style: none;
             @media screen and (max-width: 896px){
-                  margin: 10px 0;
-                  position: relative;
-                  padding: 0.6em 0;
-                  text-align: left;
+                margin: 0 auto;
+                position: relative;
+                padding: 1em 0;
+                text-align: left;
                 
-                  :after {
-                      content: "";
-                      display: block;
-                      height: 2px;
-                      background: linear-gradient(to right, rgb(187, 187, 187), transparent);
-                  }
-              }
+                :after {
+                    content: "";
+                    display: block;
+                    height: 2px;
+                    background: linear-gradient(to right, rgb(187, 187, 187), transparent);
+                }
+            }
             
             a {
                 font-size: 16px;
@@ -105,7 +107,10 @@ body {
         margin-top: 90px;
         margin-left: 20px;
         text-align: center;
-        width: 30%;
+        width: 40%;
+        @media screen and (max-width: 480px){
+            width: 90%;
+        }
         
         p {
             position: relative;
@@ -118,17 +123,16 @@ body {
         }
         
         p:before {
-          content: "";
-          position: absolute;
-          background: #9de5ff;
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          top: 50%;
-          left: -15px;
-          -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-          z-index: -1;
+            content: "";
+            position: absolute;
+            background: #9de5ff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            top: 50%;
+            left: -15px;
+            transform: translateY(-50%);
+            z-index: -1;
         }
     }
         
@@ -154,59 +158,62 @@ body {
             @media screen and (max-width: 896px){
                 text-align: center;
                 position: unset;
-        }
-            
-        &-ttx1 {
-            font-size: 38px;
-            font-weight: bold;
-            color: #333;
-            margin: 0;
-            @media screen and (max-width: 896px){
-                font-size: 30px;
             }
-        }
-        
-        &-ttx2 {
-            font-size: 32px;
-            font-weight: bold;
-            color: #DCC2FF;
-            margin: 0;
-            margin-bottom: 25px;
-            @media screen and (max-width: 896px){
-                font-size: 25px;
-            }
-        }
             
-        &-btn {
-            width: 80px;
-            height: 40px;
-            background-color: #fff;
-            border: 0.5px solid #666;
-            border-radius: 50px;
-            display: inline;
-            box-shadow: 5px 4px 2px rgba(0,0,0,0.18);
-            padding: 8px 30px;
-            text-decoration: none;
-            color: #333;
-            font-size: 18px;
+            &-ttx1 {
+                font-size: 38px;
+                font-weight: bold;
+                color: #333;
+                margin: 0;
+                @media screen and (max-width: 896px){
+                    font-size: 30px;
+                }
+            }
+            
+            &-ttx2 {
+                font-size: 32px;
+                font-weight: bold;
+                color: #DCC2FF;
+                margin: 0;
+                margin-bottom: 25px;
+                @media screen and (max-width: 896px){
+                    font-size: 25px;
+                }
+            }
+                
+            &-btn {
+                width: 80px;
+                height: 40px;
+                background-color: #fff;
+                border: 0.5px solid #666;
+                border-radius: 50px;
+                display: inline;
+                box-shadow: 5px 4px 2px rgba(0,0,0,0.18);
+                padding: 8px 30px;
+                text-decoration: none;
+                color: #333;
+                font-size: 18px;
+            }
         }
     }
-}
+            
+    .search {
         
-.search {
-
-&-top {
-    text-align: center;
-    margin: 150px 0 60px;
+        &-top {
+        text-align: center;
+        margin: 150px 0 60px;
     
-    p {
-        position: relative;
-        line-height: 1.4;
-        padding:0.25em 1em;
-        display: inline-block;
-        top:0;
+        p {
+            position: relative;
+            line-height: 1.4;
+            padding:0.25em 1em;
+            display: inline-block;
+            top:0;
+            @media screen and (max-width: 480px){
+                margin: 0 10px;
+            }
         }
-        
+            
         p:before, p:after { 
             position: absolute;
             top: 0;
@@ -214,35 +221,38 @@ body {
             width: 8px;
             height: 100%;
             display: inline-block;
+        }
+                
+        p:before {
+            border-left: solid 1px black;
+            border-top: solid 1px black;
+            border-bottom: solid 1px black;
+            left: 0;
             }
             
-            p:before {
-                border-left: solid 1px black;
+            p:after {
+                content: '';
                 border-top: solid 1px black;
+                border-right: solid 1px black;
                 border-bottom: solid 1px black;
-                left: 0;
+                right: 0;
                 }
-                
-                p:after {
-                    content: '';
-                    border-top: solid 1px black;
-                    border-right: solid 1px black;
-                    border-bottom: solid 1px black;
-                    right: 0;
-                    }
-    
-                &-ttl1 {
-                    font-size: 38px;
-                    margin-bottom: 0;
-                }
-                
-                &-ttl2 {
-                    font-size: 20px;
-                    color: #bbb;
-                    margin-top: 0;
-                    margin-bottom: 60px;
+        
+            &-ttl1 {
+                font-size: 38px;
+                margin-bottom: 0;
+                @media screen and (max-width: 480px){
+                    font-size: 30px;
                 }
             }
+            
+            &-ttl2 {
+                font-size: 20px;
+                color: #bbb;
+                margin-top: 0;
+                margin-bottom: 60px;
+            }
+        }
         
         &-inner {
             margin: 0 auto;
@@ -252,6 +262,9 @@ body {
         &-ttl {
             font-size: 19px;
             margin-left: 50px;
+            @media screen and (max-width: 480px){
+                margin: 0;
+            }
             
             h2 {
                 margin-bottom: 5px;
@@ -265,8 +278,11 @@ body {
         &-man {
             background: #D9E5FF;
             padding: 50px;
+            @media screen and (max-width: 480px){
+                padding: 20px;
+            }
         }
-        
+    
         &-box {
             background: #fff;
             border-radius: 10px;
@@ -305,12 +321,17 @@ body {
             background: #FFD5EC;
             padding: 50px;
             margin-bottom: 60px;
+            @media screen and (max-width: 480px){
+                padding: 20px;
+            }
         }
         
         &-tv {
             background: #FFDBC9;
             padding: 50px;
+            @media screen and (max-width: 480px){
+                padding: 20px;
+            }
         }
     }
-    
 }

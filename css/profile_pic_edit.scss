@@ -15,7 +15,7 @@ body {
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
         background-color: #fff;
         @media screen and (max-width: 896px) {
-            height: auto;
+            height: 63px;
         }
       
         &-inner {
@@ -35,7 +35,10 @@ body {
                 height: 50px;
                 margin-left: 20px;
                 @media screen and (max-width: 896px) {
-                    margin-top: 7px;
+                    width: 150px;
+                    height: 35px;
+                    margin: 0;
+                    margin-top: 13px;
                 }
             }
         }
@@ -60,6 +63,7 @@ body {
                 img {
                     width: 40px;
                     height: 40px;
+                    margin: 0;
                 }
             }
         }
@@ -70,8 +74,10 @@ body {
           margin-right: 20px;
           @media screen and (max-width: 896px){
               display: none;
-              list-style: none;
-              margin-top: 40px;
+                list-style: none;
+                margin: 0;
+                background: #fff;
+              
           }
           
           li {
@@ -79,10 +85,10 @@ body {
             margin-left: 45px;
             list-style: none;
             @media screen and (max-width: 896px){
-                margin: 10px 0;
-                position: relative;
-                padding: 0.6em 0;
-                text-align: left;
+                margin: 0 auto;
+                    position: relative;
+                    padding: 1em 0;
+                    text-align: left;
                 
                 :after {
                     content: "";
@@ -145,6 +151,9 @@ body {
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
             @media screen and (max-width: 1024px){
                 width: 90%;
+            }
+            @media screen and (max-width: 480px){
+                width: 100%;
             }
             
             &-name {

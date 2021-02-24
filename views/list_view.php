@@ -12,7 +12,7 @@
         <div class="list">
             <section class="header">
                 <div class="header-inner">
-                    <img src="css/image/logo.png" alt="ロゴ画像">
+                    <a href="index.php"><img src="css/image/logo.png" alt="ロゴ画像"></a>
                     <nav class="header-nav">
                         <button><img src="css/image/button.png" alt="ボタン画像"></button>
                         <ul>
@@ -25,19 +25,19 @@
             </section>
                 
             <div class="list-inner">
-                <section class="message">
-                    <?php if($flash_message !== null): ?>
-                    <p><?= $flash_message ?></p>
-                    <?php endif; ?>
-                </section>
-                
                 <section class="main">
                     <div class="main-ttl">
                         <h1><?= $genre_name; ?>の聖地一覧</h1>
                     </div>
+                    
+                    <section class="message">
+                        <?php if($flash_message !== null): ?>
+                        <p><?= $flash_message ?></p>
+                        <?php endif; ?>
+                    </section>
+                    
                     <?php if(count($places) !== 0): ?>
                     <?php foreach($places as $place): ?>
-                    
                     <div class="main-box">
                         <img src='upload/<?= $place->image1 ?>'>
                         <div class="main-box-content">

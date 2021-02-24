@@ -12,7 +12,7 @@
     <div class="profile-pic-edit">
         <section class="header">
             <div class="header-inner">
-                <img src="css/image/logo.png" alt="ロゴ画像">
+                <a href="index.php"><img src="css/image/logo.png" alt="ロゴ画像"></a>
                 
                 <nav class="header-nav">
                     <button><img src="css/image/button.png" alt="ボタン画像"></button>

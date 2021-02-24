@@ -16,7 +16,7 @@ body {
     background-color: #fff; }
     @media screen and (max-width: 896px) {
       .review .header {
-        height: auto; } }
+        height: 63px; } }
     .review .header-inner {
       max-width: 1024px;
       margin: 0 auto;
@@ -34,7 +34,10 @@ body {
         margin-left: 20px; }
         @media screen and (max-width: 896px) {
           .review .header-inner img {
-            margin-top: 7px; } }
+            width: 150px;
+            height: 35px;
+            margin: 0;
+            margin-top: 13px; } }
     .review .header button {
       display: none; }
     @media screen and (max-width: 896px) {
@@ -48,7 +51,8 @@ body {
         cursor: pointer; }
         .review .header #header-btn img {
           width: 40px;
-          height: 40px; } }
+          height: 40px;
+          margin: 0; } }
     .review .header ul {
       display: flex;
       justify-content: space-between;
@@ -57,16 +61,17 @@ body {
         .review .header ul {
           display: none;
           list-style: none;
-          margin-top: 40px; } }
+          margin: 0;
+          background: #fff; } }
       .review .header ul li {
         text-align: center;
         margin-left: 45px;
         list-style: none; }
         @media screen and (max-width: 896px) {
           .review .header ul li {
-            margin: 10px 0;
+            margin: 0 auto;
             position: relative;
-            padding: 0.6em 0;
+            padding: 1em 0;
             text-align: left; }
             .review .header ul li :after {
               content: "";
@@ -80,7 +85,7 @@ body {
   .review .main {
     text-align: center; }
     .review .main-ttl {
-      margin: 100px 0 60px;
+      margin: 100px 0 30px;
       font-size: 26px; }
       @media screen and (max-width: 896px) {
         .review .main-ttl {
@@ -105,6 +110,11 @@ body {
       .review .main-inner .error ul {
         color: #f30;
         text-align: center; }
+        @media screen and (max-width: 480px) {
+          .review .main-inner .error ul {
+            text-align: left;
+            width: 90%;
+            margin: 0 auto 30px; } }
       .review .main-inner .error li {
         list-style: none; }
       .review .main-inner .form {
@@ -119,6 +129,9 @@ body {
         @media screen and (max-width: 1024px) {
           .review .main-inner .form {
             width: 90%; } }
+        @media screen and (max-width: 480px) {
+          .review .main-inner .form {
+            width: 100%; } }
         .review .main-inner .form-name {
           margin: 0;
           background-color: #eee;

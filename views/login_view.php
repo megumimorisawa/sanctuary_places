@@ -12,7 +12,7 @@
         <div class="login">
             <section class="login-header">
                 <div class="login-header-inner">
-                <img src="css/image/logo.png" alt="ロゴ画像" style="width:200px;height:50px">
+                <img src="css/image/logo.png" alt="ロゴ画像">
                 </div>
             </section>
             
@@ -41,16 +41,10 @@
                                 <input class="login-main-login-btn" type="submit" value="ログイン"><br/><br/>
                                 <a href="signup.php">新規会員登録</a>
                             </div>
-                            
                         </form>
                     </div>
-                
-                    
-                    
                 </div>
-                
             </section>
-            
         </div>
     </body>
 </html>

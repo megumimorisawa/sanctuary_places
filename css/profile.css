@@ -14,7 +14,7 @@ body {
   background-color: #fff; }
   @media screen and (max-width: 896px) {
     .profile .header {
-      height: auto; } }
+      height: 63px; } }
   .profile .header-inner {
     max-width: 1024px;
     margin: 0 auto;
@@ -32,7 +32,10 @@ body {
       margin-left: 20px; }
       @media screen and (max-width: 896px) {
         .profile .header-inner img {
-          margin-top: 7px; } }
+          width: 150px;
+          height: 35px;
+          margin: 0;
+          margin-top: 13px; } }
   .profile .header button {
     display: none; }
   @media screen and (max-width: 896px) {
@@ -46,7 +49,8 @@ body {
       cursor: pointer; }
       .profile .header #header-btn img {
         width: 40px;
-        height: 40px; } }
+        height: 40px;
+        margin: 0; } }
   .profile .header ul {
     display: flex;
     justify-content: space-between;
@@ -55,16 +59,17 @@ body {
       .profile .header ul {
         display: none;
         list-style: none;
-        margin-top: 40px; } }
+        margin: 0;
+        background: #fff; } }
     .profile .header ul li {
       text-align: center;
       margin-left: 45px;
       list-style: none; }
       @media screen and (max-width: 896px) {
         .profile .header ul li {
-          margin: 10px 0;
+          margin: 0 auto;
           position: relative;
-          padding: 0.6em 0;
+          padding: 1em 0;
           text-align: left; }
           .profile .header ul li :after {
             content: "";
@@ -85,6 +90,9 @@ body {
     width: 40%;
     margin: 0 auto;
     text-align: center; }
+    @media screen and (max-width: 896px) {
+      .profile .main-inner {
+        width: 90%; } }
     .profile .main-inner .ttl {
       font-size: 26px;
       padding: 100px 0 30px; }
@@ -109,9 +117,12 @@ body {
     .profile .main-inner .message {
       margin: 0 auto;
       text-align: center;
-      width: 50%;
+      width: 90%;
       position: relative;
       z-index: 9999; }
+      @media screen and (max-width: 480px) {
+        .profile .main-inner .message {
+          width: 90%; } }
       .profile .main-inner .message p {
         position: relative;
         color: #333;
@@ -149,11 +160,13 @@ body {
     text-align: left;
     background: rgba(255, 255, 255, 0.4);
     padding: 20px;
-    margin: 20px; }
+    margin: 20px 0; }
     @media screen and (max-width: 896px) {
       .profile .main-content {
-        text-align: center;
-        width: 90%; } }
+        text-align: center; } }
+    @media screen and (max-width: 480px) {
+      .profile .main-content {
+        margin: 10px 0; } }
     .profile .main-content-ttl {
       font-size: 16px; }
     .profile .main-content-ttx {
@@ -171,7 +184,11 @@ body {
   .profile .favorite-ttl {
     text-align: center;
     font-size: 26px;
-    margin-left: 50px; }
+    margin-left: 50px;
+    margin-bottom: 50px; }
+    @media screen and (max-width: 896px) {
+      .profile .favorite-ttl {
+        margin-left: 0; } }
     .profile .favorite-ttl p {
       position: relative;
       display: inline-block;
@@ -200,6 +217,9 @@ body {
         width: 90%; } }
   .profile .favorite-image {
     margin-right: 40px; }
+    @media screen and (max-width: 896px) {
+      .profile .favorite-image {
+        margin: 0; } }
   .profile .favorite-content-comment {
     color: #777; }
   .profile .favorite-content a {

@@ -13,7 +13,7 @@
         <div class="show">
             <section class="header">
                 <div class="header-inner">
-                    <img src="css/image/logo.png" alt="ロゴ画像">
+                    <a href="index.php"><img src="css/image/logo.png" alt="ロゴ画像"></a>
                     <nav class="header-nav">
                         <button><img src="css/image/button.png" alt="ボタン画像"></button>
                         <ul>
@@ -25,16 +25,16 @@
                 </div>
             </section>
             
-            <div class="show-ttl">
-                <h1>聖地詳細情報</h1>
-            </div>
-            
             <section class="message">
                 <?php if($flash_message !== null): ?>
                 <p><?= $flash_message ?></p>
                 <?php endif; ?>
             </section>
             
+            <div class="show-ttl">
+                <h1>聖地詳細情報</h1>
+            </div>
+
             <section class="main">
                 <div class="main-inner">
                     <div class="main-top">
@@ -57,28 +57,37 @@
                         <div class="main-content-ttx">
                             <p><?= $place->introduction ?></p>
                         </div>
-                            
-                        <img src='upload/<?= $place->image1 ?>'>
-                        <?php if($place->image2 === ''): ?>
-                        <?php print '' ?>
-                        <?php else: ?>
-                        <?php print "<img src='upload/$place->image2'>" ?>
-                        <?php endif; ?>
-                        <?php if($place->image2 === ''): ?>
-                        <?php print '' ?>
-                        <?php else: ?>
-                        <?php print "<img src='upload/$place->image3'>" ?>
-                        <?php endif; ?>
-                        <?php if($place->image2 === ''): ?>
-                        <?php print '' ?>
-                        <?php else: ?>
-                        <?php print "<img src='upload/$place->image4'>" ?>
-                        <?php endif; ?>
-                        <?php if($place->image2 === ''): ?>
-                        <?php print '' ?>
-                        <?php else: ?>
-                        <?php print "<img src='upload/$place->image5'>" ?>
-                        <?php endif; ?>
+                        
+                        <div class="main-content-image">
+                            <figure><?php print "<img src='upload/$place->image1' alt='Photo'1>" ?></figure>
+                            <ul class="main-content-image-list">
+                                <?php if($place->image1 === ''): ?>
+                                <?php print '' ?>
+                                <?php else: ?>
+                                <?php print "<li><a class='main-content-image-item' href='upload/$place->image1'><img src='upload/$place->image1' alt='Photo1'></a></li>" ?>
+                                <?php endif; ?>
+                                <?php if($place->image2 === ''): ?>
+                                <?php print '' ?>
+                                <?php else: ?>
+                                <?php print "<li><a class='main-content-image-item' href='upload/$place->image2'><img src='upload/$place->image2' alt='Photo2'></a></li>" ?>
+                                <?php endif; ?>
+                                <?php if($place->image2 === ''): ?>
+                                <?php print '' ?>
+                                <?php else: ?>
+                                <?php print "<li><a class='main-content-image-item' href='upload/$place->image3'><img src='upload/$place->image3' alt='Photo3'></a></li>" ?>
+                                <?php endif; ?>
+                                <?php if($place->image2 === ''): ?>
+                                <?php print '' ?>
+                                <?php else: ?>
+                                <?php print "<li><a class='main-content-image-item' href='upload/$place->image4'><img src='upload/$place->image4' alt='Photo4'></a></li>" ?>
+                                <?php endif; ?>
+                                <?php if($place->image2 === ''): ?>
+                                <?php print '' ?>
+                                <?php else: ?>
+                                <?php print "<li><a class='main-content-image-item' href='upload/$place->image5'><img src='upload/$place->image5' alt='Photo5'></a></li>" ?>
+                                <?php endif; ?>
+                            </ul>
+                        </div>
                     </div>
                     
                     <table>
@@ -129,22 +138,29 @@
                             <p><?= $review->content ?></p>
                         </div>
                     </div>
-                    <img src='upload/<?= $review->image1 ?>'>
-                    <?php if($review->image2 === ''): ?>
-                    <?php print '' ?>
-                    <?php else: ?>
-                    <?php print "<img src='upload/$review->image2'>" ?>
-                    <?php endif; ?>
-                    <?php if($review->image3 === ''): ?>
-                    <?php print '' ?>
-                    <?php else: ?>
-                    <?php print "<img src='upload/$review->image3'>" ?>
-                    <?php endif; ?>
-                    <?php if($review->image4 === ''): ?>
-                    <?php print '' ?>
-                    <?php else: ?>
-                    <?php print "<img src='upload/$review->image4'>" ?>
-                    <?php endif; ?>
+                    
+                    <ul>
+                        <?php if($review->image1 === ''): ?>
+                        <?php print '' ?>
+                        <?php else: ?>
+                        <?php print "<li><a class='review-image' href='upload/$review->image1'><img src='upload/$review->image1'></a></li>" ?>
+                        <?php endif; ?>
+                        <?php if($review->image2 === ''): ?>
+                        <?php print '' ?>
+                        <?php else: ?>
+                        <?php print "<li><a class='review-image' href='upload/$review->image2'><img src='upload/$review->image2'></a></li>" ?>
+                        <?php endif; ?>
+                        <?php if($review->image3 === ''): ?>
+                        <?php print '' ?>
+                        <?php else: ?>
+                        <?php print "<li><a class='review-image' href='upload/$review->image3'><img src='upload/$review->image3'></a></li>" ?>
+                        <?php endif; ?>
+                        <?php if($review->image4 === ''): ?>
+                        <?php print '' ?>
+                        <?php else: ?>
+                        <?php print "<li><a class='review-image' href='upload/$review->image4'><img src='upload/$review->image4'></a></li>" ?>
+                        <?php endif; ?>
+                    </ul>
                     <p class="review-content-date">更新日：<?= $review->created_at ?></p>
                 </div>
                 <?php endforeach; ?>
@@ -154,6 +170,7 @@
             <div class="review-btn">
                 <a class="review-btn-home" href="index.php">ホーム画面へ戻る</a>
                 <a class="review-btn-back" href="list.php?genre_name=<?= $place->genre_name ?>">一覧へ戻る</a>
+            </div>
             </div>
             <script>
                 // Google Map API & Geocoder デモ
@@ -273,10 +290,10 @@
               }
            });
         }
+        
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2qi6Rr9OTuGMClC8RSYlkDrHz_MeV3iM&callback=initMap"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="main.js"></script>
-        </div>
     </body>
 </html>

@@ -12,7 +12,7 @@
         <div class="new">
             <section class="header">
                 <div class="header-inner">
-                    <img src="css/image/logo.png" alt="ロゴ画像">
+                    <a href="index.php"><img src="css/image/logo.png" alt="ロゴ画像"></a>
                     
                     <nav class="header-nav">
                     <button><img src="css/image/button.png" alt="ボタン画像"></button>
@@ -101,11 +101,8 @@
                             <input class="form-btn-back" type="button" onclick="history.back()" value="戻る">
                         </div>
                     </form>
-                    
                 </section>
-                
             </div>
-            
         </div>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="main.js"></script>

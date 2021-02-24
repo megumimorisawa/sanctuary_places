@@ -11,6 +11,9 @@ body {
     height: 55px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     background-color: #fff; }
+    @media screen and (max-width: 896px) {
+      .login-header {
+        height: 63px; } }
     .login-header-inner {
       max-width: 1024px;
       margin: 0 auto;
@@ -21,6 +24,12 @@ body {
       width: 200px;
       height: 50px;
       margin-left: 20px; }
+      @media screen and (max-width: 896px) {
+        .login-header img {
+          width: 150px;
+          height: 35px;
+          margin: 0;
+          margin-top: 13px; } }
   .login-main-ttl {
     font-size: 26px;
     text-align: center; }
@@ -43,9 +52,12 @@ body {
       background-color: #333;
       border-radius: 2px; }
   .login-main-message {
-    width: 30%;
+    width: 40%;
     text-align: center;
     margin: 0 auto; }
+    @media screen and (max-width: 480px) {
+      .login-main-message {
+        width: 90%; } }
     .login-main-message p {
       position: relative;
       color: #333;
@@ -70,7 +82,7 @@ body {
     width: 40%;
     height: auto;
     text-align: left;
-    margin: 0 auto 100px;
+    margin: 20px auto 100px;
     padding: 0 0 40px;
     border: 1px solid #eee;
     border-radius: 10px;
@@ -78,6 +90,9 @@ body {
     @media screen and (max-width: 1024px) {
       .login-main-form {
         width: 90%; } }
+    @media screen and (max-width: 480px) {
+      .login-main-form {
+        width: 100%; } }
     .login-main-form-ttx {
       margin: 0;
       background-color: #eee;

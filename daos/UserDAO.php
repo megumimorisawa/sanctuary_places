@@ -2,6 +2,7 @@
     require_once 'config.php';
     require_once 'models/User.php';
     
+    //DAO
     class UserDAO{
         //データベースと接続
         private static function get_connection(){
@@ -109,8 +110,8 @@
             }
             if($email === ''){
                 $errors[] = 'メールアドレスを入力してください';
-            // }else if(!preg_match('/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/', $email)){
-            //     $errors[] = 'メールアドレスではありません';
+            }else if(!preg_match('/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/', $email)){
+                $errors[] = 'メールアドレスではありません';
             
             }else if(!preg_match('/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/', $email)){
                 $errors[] = 'メールアドレスを入力してください';
@@ -186,6 +187,7 @@
                 self::close_connection($dbh, $stmt);
             }
         }
+        
         //画像アップロード
         public function upload(){
             if(!empty($_FILES['image']['name'])){

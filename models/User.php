@@ -55,7 +55,7 @@
             
             return $errors;
         }
-        
+        //ユーザーIDからユーザー情報を取得
         public function get_user(){
             $user = UserDAO::get_user_by_id($this->user_id);
             return $user;

@@ -2,6 +2,7 @@
     require_once 'config.php';
     require_once 'models/Review.php';
     
+    //DAO
     class ReviewDAO {
         //データベースと接続メソッド
         public static function get_connection(){
@@ -56,7 +57,7 @@
             return $reviews;
         }
         
-        //ファイルをアップデートするメソッド
+        //1枚目ファイルをアップデートするメソッド
         public function upload1(){
             if(!empty($_FILES['image1']['name'])){
                 $image = uniqid(mt_rand(), true);
@@ -69,6 +70,7 @@
                 return '';
             }
         }
+        //2枚目のファイルをアップデートするメソッド
         public function upload2(){
             if(!empty($_FILES['image2']['name'])){
                 $image = uniqid(mt_rand(), true);
@@ -81,6 +83,7 @@
                 return '';
             }
         }
+        //3枚目ファイルをアップデートするメソッド
         public function upload3(){
             if(!empty($_FILES['image3']['name'])){
                 $image = uniqid(mt_rand(), true);
@@ -93,6 +96,7 @@
                 return '';
             }
         }
+        //4枚目ファイルをアップデートするメソッド
         public function upload4(){
             if(!empty($_FILES['image4']['name'])){
                 $image = uniqid(mt_rand(), true);
@@ -105,5 +109,4 @@
                 return '';
             }
         }
-        
     }

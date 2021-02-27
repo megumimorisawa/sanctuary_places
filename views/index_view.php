@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
-        <div class="index">
+        <div class="index"> 
             <section class="header">
                 <div class="header-inner">
                     <a href="index.php"><img src="css/image/logo.png" alt="ロゴ画像"></a>
@@ -39,7 +39,9 @@
                 <div class="main-post">
                     <p class="main-post-ttx1">新しく見つけた聖地を登録しよう！</p>
                     <p class="main-post-ttx2">Let's register the place</p>
-                    <a class="main-post-btn"href="new.php">登録</a>
+                    <div class="main-post-btn">
+                        <a class="main-post-btn-entry" href="new.php">登録</a>
+                    </div>
                 </div>
             </section>
             
@@ -62,12 +64,12 @@
                                     <a href="list.php?genre_name=EXO">EXO</a>
                                     <a href="list.php?genre_name=GOT7">GOT7</a>
                                     <a href="list.php?genre_name=IKON">IKON</a>
-                                    <a href="list.php?genre_name=MONSTAX">MONSTA X</a>
+                                    <a href="list.php?genre_name=MONSTA X">MONSTA X</a>
                                     <a href="list.php?genre_name=NCT">NCT</a>
                                     <a href="list.php?genre_name=SEVENTEEN">SEVENTEEN</a>
-                                    <a href="list.php?genre_name=SHINEE">SHINee</a>
-                                    <a href="list.php?genre_name=SUPERJUNIOR">SUPER JUNIOR</a>
-                                    <a href="list.php?genre_name=THEBOYZ">THE BOYZ</a>
+                                    <a href="list.php?genre_name=SHINee">SHINee</a>
+                                    <a href="list.php?genre_name=SUPER JUNIOR">SUPER JUNIOR</a>
+                                    <a href="list.php?genre_name=THE BOYZ">THE BOYZ</a>
                                 </div>
                             </div>
                         </div>
@@ -76,16 +78,16 @@
                             <div class="search-box">    
                                 <img src="css/image/index_woman.png" alt="女性画像"><span class="search-box-ttl">女性</span>
                                 <div class="search-box-name">
-                                    <a href="list.php?genre_name=aespa">pespa</a>
+                                    <a href="list.php?genre_name=pespa">pespa</a>
                                     <a href="list.php?genre_name=APRIL">APRIL</a>
                                     <a href="list.php?genre_name=BLACKPINK">BLACKPINK</a>
                                     <a href="list.php?genre_name=GFRIEND">GFRIEND</a>
-                                    <a href="list.php?genre_name=GIDLE">(G)I-DLE</a>
+                                    <a href="list.php?genre_name=(G)I-DLE">(G)I-DLE</a>
                                     <a href="list.php?genre_name=ITZY">ITZY</a>
                                     <a href="list.php?genre_name=IU">IU</a>
-                                    <a href="list.php?genre_name=IZONE">IZ*ONE</a>
+                                    <a href="list.php?genre_name=IZ*ONE">IZ*ONE</a>
                                     <a href="list.php?genre_name=MAMAMOO">MAMAMOO</a>
-                                    <a href="list.php?genre_name=OHMYGIRL">OH MY GIRL</a>
+                                    <a href="list.php?genre_name=OH MY GIRL">OH MY GIRL</a>
                                     <a href="list.php?genre_name=TWICE">TWICE</a>
                                 </div>
                             </div>
@@ -102,7 +104,7 @@
                                     <a href="list.php?genre_name=愛の不時着">愛の不時着</a>
                                     <a href="list.php?genre_name=梨泰院クラス">梨泰院クラス</a>
                                     <a href="list.php?genre_name=サイコだけど大丈夫">サイコだけど大丈夫</a>
-                                    <a href="list.php?genre_name=サムマイウェイ">サム、マイウェイ</a>
+                                    <a href="list.php?genre_name=サム、マイウェイ">サム、マイウェイ</a>
                                     <a href="list.php?genre_name=相続者たち">相続者たち</a>
                                     <a href="list.php?genre_name=太陽の末裔">太陽の末裔</a>
                                     <a href="list.php?genre_name=チャングムの誓い">宮廷女官チャングムの誓い</a>
@@ -113,6 +115,7 @@
                             </div>
                         </div>
                     </div>
+                
                     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
                     <script src="main.js"></script>
                 </div>

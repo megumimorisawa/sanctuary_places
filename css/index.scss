@@ -148,6 +148,7 @@ body {
             margin-top: 30px;
             width: 80%;
             height: auto;
+            display: none;
         }
         
         &-post {
@@ -155,6 +156,7 @@ body {
             top: 50%;
             left: 14%;
             text-align: left;
+            display: none;
             @media screen and (max-width: 896px){
                 text-align: center;
                 position: unset;
@@ -180,19 +182,42 @@ body {
                     font-size: 25px;
                 }
             }
-                
+            
             &-btn {
                 width: 80px;
                 height: 40px;
                 background-color: #fff;
-                border: 0.5px solid #666;
-                border-radius: 50px;
-                display: inline;
-                box-shadow: 5px 4px 2px rgba(0,0,0,0.18);
+                display: contents;
                 padding: 8px 30px;
                 text-decoration: none;
                 color: #333;
                 font-size: 18px;
+                text-align: center;
+            
+                a {
+                    transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+                    display: block;
+                    max-width: 180px;
+                    text-decoration: none;
+                    border-radius: 4px;
+                    padding: 20px 30px;
+                    @media screen and (max-width: 896px){
+                        margin: 20px auto;
+                    }
+                    @media screen and (max-width: 480px){
+                        padding: 20px 0;
+                    }
+                }
+  
+                &-entry {
+                    color: rgba(30, 22, 54, 0.6);
+                    box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+                }
+  
+                :hover {
+                    color: rgba(255, 255, 255, 0.85);
+                    box-shadow: rgba(30, 22, 54, 0.7) 0 0px 0px 40px inset;
+                }
             }
         }
     }
@@ -308,13 +333,46 @@ body {
                 }
                 
                 a {
-                    margin: 20px;
-                    color: #666;
+                    color:#666;
+                    border: none;
+                    position: relative;
+                    height: 40px;
                     font-size: 25px;
-                    font-weight: normal;
+                    padding: 0.2em 2em;
+                    cursor: pointer;
+                    transition: 800ms ease all;
+                    outline: none;
+                    margin: 20px;
+                }
+                    
+                :hover {
+                    background:#fff;
+                    color:#09f;
+                }
+                
+                :before,:after {
+                    content:'';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 2px;
+                    width: 0;
+                    background: #09f;
+                    transition: 400ms ease all;
+                }
+                
+                :after {
+                    right: inherit;
+                    top: inherit;
+                    left: 0;
+                    bottom: 0;
+                }
+                
+                :hover:before,:hover:after {
+                    width: 100%;
+                    transition: 800ms ease all;
                 }
             }
-            
         }
         
         &-woman {
@@ -324,13 +382,97 @@ body {
             @media screen and (max-width: 480px){
                 padding: 20px;
             }
+            
+            .search-box-name {
+                a {
+                color:#666;
+                border: none;
+                position: relative;
+                height: 40px;
+                font-size: 25px;
+                padding: 0.2em 2em;
+                cursor: pointer;
+                transition: 800ms ease all;
+                outline: none;
+                margin: 20px;
+                }
+                    
+                :hover {
+                    background:#fff;
+                    color:#f6c;
+                }
+                
+                :before,:after {
+                    content:'';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 2px;
+                    width: 0;
+                    background: #f6c;
+                    transition: 400ms ease all;
+                }
+                
+                :after {
+                    right: inherit;
+                    top: inherit;
+                    left: 0;
+                    bottom: 0;
+                }
+                
+                :hover:before,:hover:after {
+                    width: 100%;
+                    transition: 800ms ease all;
+                }
+            }
         }
+        
         
         &-tv {
             background: #FFDBC9;
             padding: 50px;
             @media screen and (max-width: 480px){
                 padding: 20px;
+            }
+            
+            a {
+                color:#666;
+                border: none;
+                position: relative;
+                height: 40px;
+                font-size: 25px;
+                padding: 0.2em 2em;
+                cursor: pointer;
+                transition: 800ms ease all;
+                outline: none;
+                margin: 20px;
+            }
+            
+            :hover {
+                background:#fff;
+                color:#f90;
+            }
+            :before,:after {
+                content:'';
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 2px;
+                width: 0;
+                background: #f90;
+                transition: 400ms ease all;
+            }
+                
+            :after {
+                right: inherit;
+                top: inherit;
+                left: 0;
+                bottom: 0;
+            }
+            
+            :hover:before,:hover:after {
+                width: 100%;
+                transition: 800ms ease all;
             }
         }
     }

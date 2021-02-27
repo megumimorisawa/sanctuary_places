@@ -7,13 +7,16 @@
     
     session_start();
     
-    // $user_id = $_POST['user_id'];
-    
+    //ログインしたユーザー情報を取得
     $login_user = $_SESSION['login_user'];
+    
+    //show_view.phpのお気に入りボタンから聖地IDを取得
     $place_id = $_POST['place_id'];
     
-    
+    //取得したユーザー情報と聖地IDからFavoriteクラスをインスタンス化
     $favorite = new Favorite($login_user->id, $place_id);
+    
+    //お気に入り登録
     FavoriteDAO::insert_favorite($favorite);
     
     $_SESSION['flash_message'] = 'お気に入り登録しました';

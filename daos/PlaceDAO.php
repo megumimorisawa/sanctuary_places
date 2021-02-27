@@ -3,6 +3,7 @@
     require_once 'models/Place.php';
     require_once 'models/User.php';
     
+    //DAO
     class PlaceDAO {
         //データベースへ接続メソッド
         public static function get_connection(){
@@ -45,8 +46,6 @@
                 $stmt->bindValue(':introduction', $place->introduction, PDO::PARAM_STR);
                 $stmt->bindValue(':postal_code', $place->postal_code, PDO::PARAM_INT);
                 $stmt->bindValue(':address', $place->address, PDO::PARAM_STR);
-                // $stmt->bindValue(':latitude', $place->latitude, PDO::PARAM_INT);
-                // $stmt->bindValue(':longitude', $place->longitude, PDO::PARAM_INT);
                 $stmt->bindValue(':tel', $place->tel, PDO::PARAM_INT);
                 $stmt->bindValue(':open_time', $place->open_time, PDO::PARAM_INT);
                 $stmt->bindValue(':close_time', $place->close_time, PDO::PARAM_INT);
@@ -116,7 +115,7 @@
         }
         
         //IDを指定して聖地情報を変更するメソッド
-        public static function update($id, $genre_name, $name, $introduction, $postal_code, $address, $latitude, $longitude, $tel, $open_time, $close_time, $close_date, $nearest_station, $booking, $price, $image1, $image2, $image3, $image4, $image5){
+        public static function update($id, $genre_name, $name, $introduction, $postal_code, $address, $tel, $open_time, $close_time, $close_date, $nearest_station, $booking, $price, $image1, $image2, $image3, $image4, $image5){
             try{
                 $dbh = self::get_connection();
                 $stmt = $dbh->prepare('UPDATE plases SET genre_name= :genre_name, name= :name, introduction= :introduction, postal_code= :postal_code, address= :address, latitude= :latitude, longitude= :longitude, tel= :tel, open_time= :open_time, close_time= :close_time, close_date= :close_date, nearest_station= :nearest_station, booking= :booking, price= :price, image1= :image1, image2= :image2, image3= :image3, image4= :image4, image5= :image5 WHERE id= :id');
@@ -125,8 +124,6 @@
                 $stmt->bindValue(':introduction', $introduction, PDO::PARAM_STR);
                 $stmt->bindValue(':postal_code', $postal_code, PDO::PARAM_INT);
                 $stmt->bindValue(':address', $address, PDO::PARAM_STR);
-                $stmt->bindValue(':latitude', $latitude, PDO::PARAM_INT);
-                $stmt->bindValue(':longitude', $longitude, PDO::PARAM_INT);
                 $stmt->bindValue(':tel', $tel, PDO::PARAM_INT);
                 $stmt->bindValue(':open_time', $open_time, PDO::PARAM_INT);
                 $stmt->bindValue(':close_time', $close_time, PDO::PARAM_INT);
@@ -147,7 +144,7 @@
             }
         }
         
-        //ファイルをアップデートするメソッド
+        //1枚目ファイルをアップデートするメソッド
         public function upload1(){
             if(!empty($_FILES['image1']['name'])){
                 $image = uniqid(mt_rand(), true);
@@ -160,6 +157,7 @@
                 return '';
             }
         }
+        //2枚目ファイルをアップデートするメソッド
         public function upload2(){
             if(!empty($_FILES['image2']['name'])){
                 $image = uniqid(mt_rand(), true);
@@ -172,6 +170,7 @@
                 return '';
             }
         }
+        //3枚目ファイルをアップデートするメソッド
         public function upload3(){
             if(!empty($_FILES['image3']['name'])){
                 $image = uniqid(mt_rand(), true);
@@ -184,6 +183,7 @@
                 return '';
             }
         }
+        //4枚目ファイルをアップデートするメソッド
         public function upload4(){
             if(!empty($_FILES['image4']['name'])){
                 $image = uniqid(mt_rand(), true);
@@ -196,6 +196,7 @@
                 return '';
             }
         }
+        //5枚目ファイルをアップデートするメソッド
         public function upload5(){
             if(!empty($_FILES['image5']['name'])){
                 $image = uniqid(mt_rand(), true);

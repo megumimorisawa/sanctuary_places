@@ -11,6 +11,8 @@
             $this->user_id = $user_id;
             $this->place_id = $place_id;
         }
+        
+        //聖地IDから聖地情報を取得
         public function get_place(){
             $place = PlaceDAO::get_place_by_id($this->place_id);
             return $place;

@@ -42,15 +42,42 @@
                     <form action="create.php" method="POST" enctype="multipart/form-data">
                         <p class="form-name">グループ名・ドラマ名</p>
                         <div class="form-input"><select name="genre_name" style="height:27px">
+                            <option value="">▼選択してください</option>
+                            <option value="">-- 男性 --</option>
                             <option value="BTS">BTS</option>
                             <option value="BIGBANG">BIGBANG</option>
+                            <option value="EXO">EXO</option>
+                            <option value="GOT7">GOT7</option>
                             <option value="IKON">IKON</option>
+                            <option value="MONSTA X">MONSTA X</option>
+                            <option value="NCT">NCT</option>
+                            <option value="SEVENTEEN">SEVENTEEN</option>
+                            <option value="SHINee">SHINee</option>
+                            <option value="SUPER JUNIOR">SUPER JUNIOR</option>
+                            <option value="THE BOYZ">THE BOYZ</option>
+                            <option value="">-- 女性 --</option>
+                            <option value="pespa">pespa</option>
+                            <option value="APRIL">APRIL</option>
                             <option value="BLACK PINK">BLACK PINK</option>
-                            <option value="TWICE">TWICE</option>
+                            <option value="GFRIEND">GFRIEND</option>
+                            <option value="(G)I-DLE">(G)I-DLE</option>
+                            <option value="ITZY">ITZY</option>
                             <option value="IU">IU</option>
-                            <option value="aino">愛の不時着</option>
-                            <option value="ite">梨泰院クラス</option>
-                            <option value="kumo">雲が描いた月明かり</option>
+                            <option value="IZ*ONE">IZ*ONE</option>
+                            <option value="MAMAMOO">MAMAMOO</option>
+                            <option value="OH MY GIRL">OH MY GIRL</option>
+                            <option value="TWICE">TWICE</option>
+                            <option value="">-- ドラマ --</option>
+                            <option value="愛の不時着">愛の不時着</option>
+                            <option value="梨泰院クラス">梨泰院クラス</option>
+                            <option value="サイコだけど大丈夫">サイコだけど大丈夫</option>
+                            <option value="サム、マイウェイ">サム、マイウェイ</option>
+                            <option value="相続者たち">相続者たち</option>
+                            <option value="太陽の末裔">太陽の末裔</option>
+                            <option value="宮廷女官チャングムの誓い">宮廷女官チャングムの誓い</option>
+                            <option value="トッケビ">トッケビ</option>
+                            <option value="ピノキオ">ピノキオ</option>
+                            <option value="冬のソナタ">冬のソナタ</option>
                         </select></div>
                         <p class="form-name">場所の名称</p>
                         <div class="form-input"><input type="text" name="name" placeholder="例） バンタン食堂" style="height:27px"></div>

@@ -1,6 +1,5 @@
 <?php
     require_once 'daos/UserDAO.php';
-    // require_once 'daos/ReviewDAO.php';
     
     class Review{
         public $id;
@@ -45,6 +44,7 @@
             return $errors;
         }
         
+        //ユーザーIDからユーザー情報を取得
         public function get_user(){
             $user = UserDAO::get_user_by_id($this->user_id);
             return $user;

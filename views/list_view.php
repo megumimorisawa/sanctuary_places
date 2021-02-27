@@ -39,9 +39,9 @@
                     <?php if(count($places) !== 0): ?>
                     <?php foreach($places as $place): ?>
                     <div class="main-box">
-                        <img src='upload/<?= $place->image1 ?>'>
+                        <img src='upload/<?= $place->image1 ?>' alt="聖地の画像">
                         <div class="main-box-content">
-                            <a href="show.php?place_id=<?= $place->id ?> ?>"><p><?= $place->name ?></p></a>
+                            <a href="show.php?place_id=<?= $place->id ?>"><p><?= $place->name ?></p></a>
                             <p class="main-box-content-comment"><?= $place->introduction ?></p>
                             <p>最寄駅&thinsp;/&thinsp;<?= $place->nearest_station ?></p>
                             <p>価格帯&thinsp;/&thinsp;<?= $place->price ?></p>

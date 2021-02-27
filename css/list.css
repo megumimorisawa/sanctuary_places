@@ -149,7 +149,8 @@ body {
     .list-inner .main-box img {
       width: 250px;
       height: auto;
-      margin-right: 20px; }
+      margin: 40px;
+      margin-top: 0; }
     .list-inner .main-box-content {
       padding: 30px; }
       @media screen and (max-width: 896px) {

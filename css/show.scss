@@ -172,7 +172,7 @@ body {
         }
         
         &-top {
-            margin: 30px;
+            margin: 30px 0;
         }
         
         &-content {
@@ -215,32 +215,20 @@ body {
             }
             
             &-image {
-                width: 80%;
                 margin: 10px auto;
                 @media screen and (max-width: 896px){
                     width: 100%;
                 }
                 
-                figure {
-                    border: 1px solid #ccc;
-                    width: 100%;
-                    margin: 0 auto;
-                    
-                    img {
-                        width: 100%;
-                        height: auto;
-                    }
-                }
-                
                 &-list {
                     display: flex;
                     justify-content: center;
+                    flex-wrap: wrap;
                     padding: 0;
                     
                     li {
                         list-style: none;
-                        border: 1px solid #ccc;
-                        margin: 10px;
+                        margin: 5px;
                     }
                 }
                 
@@ -248,7 +236,7 @@ body {
                     width: 50px;
                     
                     img {
-                        width: 100%;
+                        width: 200px;
                         height: auto;
                     }
                 }
@@ -354,6 +342,25 @@ body {
             opacity: 0;
             transform: translate(0, 50%);
             transition: all 500ms;
+            
+            img {
+                width: 200px;
+                height: auto;
+                margin: 5px;
+            }
+            
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                @media screen and (max-width: 480px){
+                    display: block;
+                    text-align: center;
+                }
+            }
+            
+            li {
+                list-style: none;
+            }
         }
         
         .active {
@@ -418,23 +425,18 @@ body {
     }
 }
 
-#bg {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.4);
-}
-        
-#photo {
+.overlay {
     position: absolute;
+    display: none;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    width: 640px;
-    height: 420px;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.6);
+}
+.overlay img {
+    display: inline-block;
+    position: absolute;
+    border: 5px solid #fff;
+    width: 60vw;
 }
 

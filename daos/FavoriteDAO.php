@@ -2,6 +2,7 @@
     require_once 'config.php';
     require_once 'models/Favorite.php';
     
+    //DAO
     class FavoriteDAO {
         //データベースへ接続メソッド
         public static function get_connection(){
@@ -53,31 +54,6 @@
         }
         
         //ログインしているユーザーのidと場所のidが与えられた時、既にいいねしているか判定
-        // public static function is_favorite($login_user_id, $place_id){
-        //     try{
-        //         $dbh = self::get_connection();
-        //         $stmt = $dbh->prepare('SELECT * FROM favorites WHERE user_id = :user_id AND place_id = :place_id');
-        //         $stmt->bindValue(':user_id', $login_user_id->user_id, PDO::PARAM_INT);
-        //         $stmt->bindValue(':place_id', $place->place_id, PDO::PARAM_INT);
-        //         $stmt->execute();
-        //         $stmt->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'Favorite');
-                
-        //         $favorite = $stmt->fetch();
-        //         //そんな状況がfavoriteste-buruni
-        //         // nakattanaraba
-        //         // var_dump($favorite);
-                
-        //         if($favorite === null){
-        //             return false;
-        //         }else{
-        //             return true;
-        //         }
-                
-        //     }catch(PDOException $e){
-        //     }finally{
-        //         self::close_connection($dbh, $stmt);
-        //     }
-        // }
         public static function is_favorite($login_user_id, $place_id){
             try{
                 $dbh = self::get_connection();
@@ -88,8 +64,6 @@
                 $stmt->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'Favorite');
                 
                 $favorite = $stmt->fetch();
-                
-                // var_dump($favorite);
                 
                 // そんな情報がfavoritesテーブルになかったならば
                 if($favorite === false){
@@ -103,6 +77,8 @@
                 self::close_connection($dbh, $stmt);
             }
         }
+        
+        //データベースから聖地IDを削除して、お気に入りを解除するメソッド
         public static function delete_favorite($login_user_id,$place_id){
             try{
                 $dbh = self::get_connection();

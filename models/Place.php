@@ -8,8 +8,6 @@
         public $name;
         public $introduction;
         public $address;
-        // public $latitude;
-        // public $longitude;
         public $tel;
         public $open_time;
         public $close_time;
@@ -32,8 +30,6 @@
             $this->introduction = $introduction;
             $this->postal_code = $postal_code;
             $this->address = $address;
-            // $this->latitude = $latitude;
-            // $this->longitude = $longitude;
             $this->tel = $tel;
             $this->open_time = $open_time;
             $this->close_time = $close_time;
@@ -60,22 +56,9 @@
             if($this->introduction === ''){
                 $errors[] = '紹介文を入力してください';
             }
-            // if($this->postal_code === ''){
-            //     $errors[] = '郵便番号を入力してください';
-            // }
             if($this->address === ''){
                 $errors[] = '住所を入力してください';
             }
-            // $preg_tel = "/\A[0-9]{2,4} - [0-9]{2,4} - [0-9]{3,4}\z/";
-            // if(preg_match($preg_tel, $this->tel) == 0){
-            //     $errors[] = '電話番号を正しく入力してください';
-            // }
-            // if($this->open_time === ''){
-            //     $errors[] = '開店時間を選択してください';
-            // }
-            // if($this->close_time === ''){
-            //     $errors[] = '閉店時間を選択してください';
-            // }
             if($this->close_date === ''){
                 $errors[] = '定休日を入力してください';
             }

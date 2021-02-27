@@ -25,8 +25,8 @@
         <section class="main">
             <div class="main-inner">
                 <img src="/portfolio2/css/image/top7.jpeg" style="width:100%">
-                <div class="main-start-btn">
-                    <a href="signup.php">START</a>
+                <div class="main-start">
+                    <a href="signup.php"class="start-btn">START</a>
                 </div>
             </div>
         </section>
@@ -73,7 +73,9 @@
                     <img src="css/image/top2.jpeg" style="width:100%">
                     <div class="feature-bottom-box">
                         <p>推しの聖地巡礼を始めましょう</p>
-                        <a class="feature-bottom-btn" href="signup.php">START</a>
+                        <div class="feature-start">
+                            <a class="start-btn" href="signup.php">START</a>
+                        </div>
                     </div>
                 </div>
             </div>

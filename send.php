@@ -31,10 +31,10 @@
     $content2 .= "=================================\r\n";
     $content2 .= "お名前	      " . htmlspecialchars($name) . "\r\n";
     $content2 .= "メールアドレス   " . htmlspecialchars($email) . "\r\n";
-    $content2 .= "タイトル   " . htmlspecialchars($title) . "\r\n";
+    // $content2 .= "タイトル   " . htmlspecialchars($title) . "\r\n";
     $content2 .= "内容   " . htmlspecialchars($message) . "\r\n";
     $content2 .= "お問い合わせ日時   " . $request_datetime . "\r\n";
-    $content2 .= "================================="."\r\n";
+    $content2 .= "=================================\r\n";
      
     mb_language("ja");
     mb_internal_encoding("UTF-8");
@@ -43,5 +43,7 @@
     if(mb_send_mail($to, $subject2, $content2, $mailfrom)){
         mb_send_mail($mailto, $subject, $content, $mailfrom);
     }
+    
+    var_dump($mailto, $subject, $content, $mailfrom);
     header('Location: index.php');
     exit;

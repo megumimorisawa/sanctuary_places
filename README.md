@@ -11,6 +11,8 @@ You can search for sacred places by group name and drama.
 ![demo](https://user-images.githubusercontent.com/74285235/109370980-0cf31300-78e6-11eb-980f-70aa93cd04f5.gif)
 
 # Features
+New member registration is required to use this site.
+After registering as a member, you can log in and use this tool.
 
 If you discover a new sanctuary, you can post it.
 

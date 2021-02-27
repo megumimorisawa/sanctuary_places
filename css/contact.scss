@@ -132,6 +132,24 @@ body {
             border-radius: 2px;
         }
     }
+    
+    .error {
+        margin-bottom: 30px;
+        
+        ul {
+            color: #f30;
+            text-align: center;
+            @media screen and (max-width: 480px){
+                text-align: left;
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+            
+        li {
+            list-style: none;
+        }
+    }
  
     .form {
         width: 45%;
@@ -153,6 +171,11 @@ body {
             margin: 0;
             background-color: #eee;
             padding: 10px;
+            
+            span {
+                color: red;
+                font-weight: normal;
+            }
         }
         
         &-input {

@@ -104,6 +104,18 @@ body {
       transform: translateX(-50%);
       background-color: #333;
       border-radius: 2px; }
+  .contact .error {
+    margin-bottom: 30px; }
+    .contact .error ul {
+      color: #f30;
+      text-align: center; }
+      @media screen and (max-width: 480px) {
+        .contact .error ul {
+          text-align: left;
+          width: 90%;
+          margin: 0 auto; } }
+    .contact .error li {
+      list-style: none; }
   .contact .form {
     width: 45%;
     height: auto;
@@ -123,6 +135,9 @@ body {
       margin: 0;
       background-color: #eee;
       padding: 10px; }
+      .contact .form-name span {
+        color: red;
+        font-weight: normal; }
     .contact .form-input {
       margin: 10px 10px 20px; }
     .contact .form-btn {

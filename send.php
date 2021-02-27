@@ -1,7 +1,14 @@
 <?php
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
+    session_start();
+    
+    $name = $_SESSION['name'];
+    $_SESSION['name'] = null;
+    
+    $email = $_SESSION['email'];
+    $_SESSION['email'] = null;
+    
+    $message = $_SESSION['message'];
+    $_SESSION['message'] = null;
     
     // お問い合わせ日時
     $request_datetime = date("Y年m月d日 H時i分s秒");
@@ -36,13 +43,13 @@
     $content2 .= "お問い合わせ日時   " . $request_datetime . "\r\n";
     $content2 .= "=================================\r\n";
      
-    // mb_language("ja");
-    // mb_internal_encoding("UTF-8");
+    mb_language("ja");
+    mb_internal_encoding("UTF-8");
     
-    // //mail 送信
-    // if(mb_send_mail($to, $subject2, $content2, $mailfrom)){
-    //     mb_send_mail($mailto, $subject, $content, $mailfrom);
-    // }
+    //mail 送信
+    if(mb_send_mail($to, $subject2, $content2, $mailfrom)){
+        mb_send_mail($mailto, $subject, $content, $mailfrom);
+    }
     
     var_dump($mailto, $subject, $content, $mailfrom);
     header('Location: index.php');

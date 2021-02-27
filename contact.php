@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    
+    $errors = $_SESSION['errors'];
+    $_SESSION['errors'] = null;
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
     <head>
@@ -27,6 +34,14 @@
             <div class="contact-ttl">
                 <h1>お問い合わせ</h1>
             </div>
+            
+            <?php if($errors !== null): ?>
+                <ul>
+                    <?php foreach($errors as $error): ?>
+                    <li><?= $error ?></li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php endif; ?>
         
             <section class="form">
                 <form action="contact_check.php" method="post">

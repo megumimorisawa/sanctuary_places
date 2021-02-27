@@ -8,7 +8,7 @@ You can search for sacred places by group name and drama.
 <img width="735" alt="top" src="https://user-images.githubusercontent.com/74285235/109370787-29db1680-78e5-11eb-9f6b-a17a34c03682.png">
 
 ## Demo
-![demo](https://user-images.githubusercontent.com/74285235/109371860-1b432e00-78ea-11eb-90c1-68d9034c0769.gif)
+![demo](https://user-images.githubusercontent.com/74285235/109372251-f2bc3380-78eb-11eb-8171-91f439b594e7.gif)
 
 # Features
 New member registration is required to use this site.

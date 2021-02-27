@@ -24,11 +24,12 @@ You can search for sacred places by group name and drama.
 ## Author
 
 *Megumi
+
 *Samurai Engineer School
 
 ## Licence
 
-[MIT]()
+"sanctuary_places" is under [MIT](https://en.wikipedia.org/wiki/MIT_License).
 Enjoy searching for a sacred place！
 
 Thank　you!

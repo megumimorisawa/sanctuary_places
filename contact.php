@@ -29,7 +29,7 @@
             </div>
         
             <section class="form">
-                <form action="send.php" method="post">
+                <form action="contact_check.php" method="post">
                     <p class="form-name">お名前</p>
                     <div class="form-input"><input type="text" name="name" style="height:27px"></div>
                     <p class="form-name">メールアドレス</p>

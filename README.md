@@ -2,23 +2,41 @@
 
 An app that allows you to search for sacred places related to Korean dramas and K-POP.
 
+
 ## Description
 You can search for sacred places by group name and drama.
 
 <img width="735" alt="top" src="https://user-images.githubusercontent.com/74285235/109370787-29db1680-78e5-11eb-9f6b-a17a34c03682.png">
 
+
 ## Demo
-![demo](https://user-images.githubusercontent.com/74285235/109372373-868dff80-78ec-11eb-9a00-e5bde1263567.gif)
+![demo](https://user-images.githubusercontent.com/74285235/109574239-ee358c00-7b32-11eb-9991-a52ae4588e50.gif)
 
-# Features
-New member registration is required to use this site.
-After registering as a member, you can log in and use this tool.
+## Features
 
-If you discover a new sanctuary, you can post it.
+ -Membership registration and validation.
+ -Login/logout
+ -Sanctuary registration and validation.
+ -Review post and validation.
+ -Favorite function.
+ -Map display of sacred places.
+ -Click image enlargement.
+ -Contact Us and validation.
+ -send e-mail.
 
-You can comment and upload photos to the sanctuary.
 
-You can like the posts you like. You can also "unlike" it.
+## Tools used
+
+-HTML5
+-CSS3
+-JavaScript
+-jQuery
+-GoogleMapsAPI
+-PHP7
+-MySQL5
+-AWS Cloud9
+-Git/Github
+-Xfree
 
 
 ## Author
@@ -26,6 +44,7 @@ You can like the posts you like. You can also "unlike" it.
 *Megumi
 
 *Samurai Engineer School
+
 
 ## Licence
 

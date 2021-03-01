@@ -14,29 +14,29 @@ You can search for sacred places by group name and drama.
 
 ## Features
 
- -Membership registration and validation.
- -Login/logout
- -Sanctuary registration and validation.
- -Review post and validation.
- -Favorite function.
- -Map display of sacred places.
- -Click image enlargement.
- -Contact Us and validation.
- -send e-mail.
+ -Membership registration and validation.  
+ -Login/logout  
+ -Sanctuary registration and validation.  
+ -Review post and validation.  
+ -Favorite function.  
+ -Map display of sacred places.  
+ -Click image enlargement.  
+ -Contact Us and validation.  
+ -send e-mail.  
 
 
 ## Tools used
 
--HTML5
--CSS3
--JavaScript
--jQuery
--GoogleMapsAPI
--PHP7
--MySQL5
--AWS Cloud9
--Git/Github
--Xfree
+-HTML5  
+-CSS3  
+-JavaScript  
+-jQuery  
+-GoogleMapsAPI  
+-PHP7  
+-MySQL5  
+-AWS Cloud9  
+-Git/Github  
+-Xfree  
 
 
 ## Author

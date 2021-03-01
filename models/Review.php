@@ -38,9 +38,6 @@
             if($this->content === ''){
                 $errors[] = 'コメントを入力してください';
             }
-            if($this->image1 === ''){
-                $errors[] = '写真を1枚は選択してください';
-            }
             return $errors;
         }
         

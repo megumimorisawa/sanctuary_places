@@ -290,8 +290,11 @@ body {
         
         &-image {
             margin-right: 40px;
+            display: flex;
+            align-items: center;
             @media screen and (max-width: 896px){
                 margin: 0;
+                display: block;
             }
         }
         

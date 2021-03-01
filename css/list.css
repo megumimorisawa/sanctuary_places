@@ -155,10 +155,14 @@ body {
       padding: 30px; }
       @media screen and (max-width: 896px) {
         .list-inner .main-box-content {
-          padding: 0; } }
+          padding: 0;
+          text-align: left; } }
       .list-inner .main-box-content a {
         font-size: 25px;
         color: #5507FF; }
+        @media screen and (max-width: 896px) {
+          .list-inner .main-box-content a {
+            text-align: center; } }
       .list-inner .main-box-content-comment {
         color: #777; }
 .list .back-btn {

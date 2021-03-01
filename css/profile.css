@@ -216,10 +216,13 @@ body {
         display: block;
         width: 90%; } }
   .profile .favorite-image {
-    margin-right: 40px; }
+    margin-right: 40px;
+    display: flex;
+    align-items: center; }
     @media screen and (max-width: 896px) {
       .profile .favorite-image {
-        margin: 0; } }
+        margin: 0;
+        display: block; } }
   .profile .favorite-content-comment {
     color: #777; }
   .profile .favorite-content a {

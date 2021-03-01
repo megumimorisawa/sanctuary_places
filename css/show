@@ -133,7 +133,11 @@ body {
     background: transparent;
     border-left: solid 10px #7db4e6; }
   .show .main-top {
-    margin: 30px; }
+    margin: 30px auto;
+    width: 100%; }
+    @media screen and (max-width: 896px) {
+      .show .main-top {
+        width: 90%; } }
   .show .main-content {
     display: flex;
     justify-content: space-between; }
@@ -158,36 +162,29 @@ body {
       padding: 10px; }
       @media screen and (max-width: 896px) {
         .show .main-content-ttx {
-          clear: both; } }
+          clear: both;
+          padding: 5px; } }
       .show .main-content-ttx p {
         margin: 0;
         font-weight: normal;
         color: #666; }
     .show .main-content-image {
-      width: 80%;
       margin: 10px auto; }
       @media screen and (max-width: 896px) {
         .show .main-content-image {
           width: 100%; } }
-      .show .main-content-image figure {
-        border: 1px solid #ccc;
-        width: 100%;
-        margin: 0 auto; }
-        .show .main-content-image figure img {
-          width: 100%;
-          height: auto; }
       .show .main-content-image-list {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         padding: 0; }
         .show .main-content-image-list li {
           list-style: none;
-          border: 1px solid #ccc;
-          margin: 10px; }
+          margin: 5px; }
       .show .main-content-image-item {
         width: 50px; }
         .show .main-content-image-item img {
-          width: 100%;
+          width: 200px;
           height: auto; }
   .show .main table {
     border-collapse: collapse;
@@ -262,6 +259,19 @@ body {
     opacity: 0;
     transform: translate(0, 50%);
     transition: all 500ms; }
+    .show .review-box img {
+      width: 200px;
+      height: auto;
+      margin: 5px; }
+    .show .review-box ul {
+      display: flex;
+      flex-wrap: wrap; }
+      @media screen and (max-width: 480px) {
+        .show .review-box ul {
+          display: block;
+          text-align: center; } }
+    .show .review-box li {
+      list-style: none; }
   .show .review .active {
     opacity: 1;
     visibility: visible;
@@ -302,24 +312,6 @@ body {
     .show .review-btn-home, .show .review-btn-back {
       margin: 30px;
       color: #333; }
-
-#bg {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.4); }
-
-#photo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  width: 640px;
-  height: 420px; }
 
 .overlay {
   position: absolute;

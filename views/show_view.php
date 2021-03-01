@@ -100,13 +100,19 @@
                             <th>予約可否</th><td><?= $place->booking ?></td>
                         </tr>
                         <tr>
-                            <th>住所</th><td><?= $place->postal_code ?><br/><?= $place->address ?><br/><input type="hidden" name="address" id="address" value="<?= $place->address ?>"><div id="map"></div></td>
+                            <th>住所</th><td><?= $place->address ?><br/><input type="hidden" name="address" id="address" value="<?= $place->address ?>"><div id="map"></div></td>
                         </tr>
                         <tr>
                             <th>最寄駅</th><td><?= $place->nearest_station ?></td>
                         </tr>
                         <tr>
-                            <th>営業時間・定休日</th><td><?= $place->open_time ?>〜<?= $place->close_time ?><br/><?= $place->close_date ?></td>
+                            <th>営業時間(ラストオーダー)・定休日</th><td><?= $place->open_time ?>〜<?= $place->close_time ?>
+                            <?php if(($place->last_order) === '00:00:00'): ?>
+                            <?php print ""; ?> 
+                            <?php else: ?>
+                            (<?= $place->last_order ?>)
+                            <?php endif; ?><br/>
+                            <?= $place->close_date ?></td>
                         </tr>
                         <tr>
                             <th>価格帯</th><td><?= $place->price ?></td>
@@ -130,7 +136,9 @@
                 <?php foreach($reviews as $review): ?>
                 <div class="review-box">
                     <div class="review-content">
-                        <p><a href="profile.php?id=<?= $review->user_id ?>"><?= $review->get_user()->name ?></a></p>
+                        <div class="review-content-top">
+                            <a href="profile.php?id=<?= $review->user_id ?>"><?= "<img class='review-content-image' src=upload/".$review->get_user()->image.">" ?><?= $review->get_user()->name ?></a>
+                        </div>
                         <p>「<?= $review->title ?>」</p>
                         <p>訪れた月：<?= $review->month ?>月</p>
                         <div class="review-content-ttx">

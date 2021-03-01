@@ -83,8 +83,6 @@
                         <div class="form-input"><input type="text" name="name" placeholder="例） バンタン食堂" style="height:27px"></div>
                         <p class="form-name">紹介文</p>
                         <div class="form-input"><textarea type="text" name="introduction" placeholder="例） メンバーの写真がたくさんありました。ご飯もおいしかったです。" style="width:90%" rows="10"></textarea></div>
-                        <p class="form-name">郵便番号<span class="any">&emsp;※任意</span></p>
-                        <div class="form-input"><input type="text" name="postal_code" autocomplete="postal-code" placeholder="例） 111-1111" style="height:27px"></div>
                         <p class="form-name">住所</p>
                         <div class="form-input"><input type="text" name="address" autocomplete="address-level1" placeholder="例） ソウル特別市江南区島山大路28キル14" style="height:27px;width:80%"></div>
                         <p class="form-name">電話番号&emsp;<span class="any">※任意</span></p>
@@ -92,6 +90,7 @@
                         <p class="form-name">営業時間&emsp;<span class="any">※任意</span></p>
                         <div class="form-input">開始&emsp;<input type="time" name="open_time" style="height:27px"></div>
                         <div class="form-input">終了&emsp;<input type="time" name="close_time" style="height:27px"></div>
+                        <div class="form-input">ラストオーダー&emsp;<input type="time" name="last_order" style="height:27px"></div>
                         <p class="form-name">定休日</p>
                         <div class="form-input"><input type="text" name="close_date" placeholder="例） 年中無休" style="height:27px"></div>
                         <p class="form-name">最寄駅（徒歩何分かも分かれば）&emsp;<span class="any">※任意</span></p>
@@ -100,6 +99,7 @@
                         <div class="form-input"><select name="booking" style="height:27px;width:20%">
                             <option value="必要">必要</option>
                             <option value="不要">不要</option>
+                            <option value="不明">不明</option>
                         </select></div>
                         <p class="form-name">価格帯&emsp;<span class="any">※任意</span></p>
                         <div class="form-input"><select name="price" style="height:27px">

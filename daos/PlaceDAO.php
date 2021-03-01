@@ -39,16 +39,16 @@
         public static function insert($place){
             try{
                 $dbh = self::get_connection();
-                $stmt = $dbh->prepare('INSERT INTO places (user_id, genre_name, name, introduction, postal_code, address, tel, open_time, close_time, close_date, nearest_station, booking, price, image1, image2, image3, image4, image5)VALUES(:user_id, :genre_name, :name, :introduction, :postal_code, :address, :tel, :open_time, :close_time, :close_date, :nearest_station, :booking, :price, :image1, :image2, :image3, :image4, :image5)');
+                $stmt = $dbh->prepare('INSERT INTO places (user_id, genre_name, name, introduction, address, tel, open_time, close_time, last_order, close_date, nearest_station, booking, price, image1, image2, image3, image4, image5)VALUES(:user_id, :genre_name, :name, :introduction, :address, :tel, :open_time, :close_time, :last_order, :close_date, :nearest_station, :booking, :price, :image1, :image2, :image3, :image4, :image5)');
                 $stmt->bindValue(':user_id', $place->user_id, PDO::PARAM_INT);
                 $stmt->bindValue(':genre_name', $place->genre_name, PDO::PARAM_STR);
                 $stmt->bindValue(':name', $place->name, PDO::PARAM_STR);
                 $stmt->bindValue(':introduction', $place->introduction, PDO::PARAM_STR);
-                $stmt->bindValue(':postal_code', $place->postal_code, PDO::PARAM_INT);
                 $stmt->bindValue(':address', $place->address, PDO::PARAM_STR);
                 $stmt->bindValue(':tel', $place->tel, PDO::PARAM_INT);
                 $stmt->bindValue(':open_time', $place->open_time, PDO::PARAM_INT);
                 $stmt->bindValue(':close_time', $place->close_time, PDO::PARAM_INT);
+                $stmt->bindValue(':last_order', $place->last_order, PDO::PARAM_INT);
                 $stmt->bindValue(':close_date', $place->close_date, PDO::PARAM_INT);
                 $stmt->bindValue(':nearest_station', $place->nearest_station, PDO::PARAM_STR);
                 $stmt->bindValue(':booking', $place->booking, PDO::PARAM_STR);
@@ -115,18 +115,18 @@
         }
         
         //IDを指定して聖地情報を変更するメソッド
-        public static function update($id, $genre_name, $name, $introduction, $postal_code, $address, $tel, $open_time, $close_time, $close_date, $nearest_station, $booking, $price, $image1, $image2, $image3, $image4, $image5){
+        public static function update($id, $genre_name, $name, $introduction, $address, $tel, $open_time, $close_time, $last_order, $close_date, $nearest_station, $booking, $price, $image1, $image2, $image3, $image4, $image5){
             try{
                 $dbh = self::get_connection();
-                $stmt = $dbh->prepare('UPDATE plases SET genre_name= :genre_name, name= :name, introduction= :introduction, postal_code= :postal_code, address= :address, latitude= :latitude, longitude= :longitude, tel= :tel, open_time= :open_time, close_time= :close_time, close_date= :close_date, nearest_station= :nearest_station, booking= :booking, price= :price, image1= :image1, image2= :image2, image3= :image3, image4= :image4, image5= :image5 WHERE id= :id');
+                $stmt = $dbh->prepare('UPDATE plases SET genre_name= :genre_name, name= :name, introduction= :introduction, address= :address, tel= :tel, open_time= :open_time, close_time= :close_time, last_order= :last_order, close_date= :close_date, nearest_station= :nearest_station, booking= :booking, price= :price, image1= :image1, image2= :image2, image3= :image3, image4= :image4, image5= :image5 WHERE id= :id');
                 $stmt->bindValue(':genre_name', $genre_name, PDO::PARAM_STR);
                 $stmt->bindValue(':name', $name, PDO::PARAM_STR);
                 $stmt->bindValue(':introduction', $introduction, PDO::PARAM_STR);
-                $stmt->bindValue(':postal_code', $postal_code, PDO::PARAM_INT);
                 $stmt->bindValue(':address', $address, PDO::PARAM_STR);
                 $stmt->bindValue(':tel', $tel, PDO::PARAM_INT);
                 $stmt->bindValue(':open_time', $open_time, PDO::PARAM_INT);
                 $stmt->bindValue(':close_time', $close_time, PDO::PARAM_INT);
+                $stmt->bindValue(':last_order', $last_order, PDO::PARAM_INT);
                 $stmt->bindValue(':close_date', $close_date, PDO::PARAM_STR);
                 $stmt->bindValue(':nearest_station', $nearest_station, PDO::PARAM_STR);
                 $stmt->bindValue(':booking', $booking, PDO::PARAM_STR);

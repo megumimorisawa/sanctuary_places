@@ -35,7 +35,21 @@
             </section>
             
             <section class="main">
-                <img src="css/image/index_top.jpeg" alt="聖地登録画像">
+                <div id="slide">
+                    <ul>
+                        <li><img src="css/image/index_top1.jpeg" alt="聖地登録画像1"></li>
+                        <li><img src="css/image/index_top3.jpeg" alt="聖地登録画像2"></li>
+                        <li><img src="css/image/index_top5.jpg" alt="聖地登録画像3"></li>
+                    </ul>
+                </div>
+                <div id="button">
+                    <ul>
+                        <li><a href="#" class="target">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                    </ul>
+                </div>
+                
                 <div class="main-post">
                     <p class="main-post-ttx1">新しく見つけた聖地を登録しよう！</p>
                     <p class="main-post-ttx2">Let's register the place</p>

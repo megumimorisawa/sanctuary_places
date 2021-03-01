@@ -62,7 +62,7 @@
                             
                             <p class="form-name">コメント&emsp;<span>※必須</span></p>
                             <div class="form-input"><input type="text" name="content" placeholder="例） 店内にはたくさんメンバーの写真がありました。" style="width:80%;height:27px"></div>
-                            <p class="form-name">画像&emsp;<span>※一枚は必須</span></p>
+                            <p class="form-name">画像</p>
                             <div class="form-input"><input type="file" name="image1" style="height:27px"></div>
                             <div class="form-input"><input type="file" name="image2" style="height:27px"></div>
                             <div class="form-input"><input type="file" name="image3" style="height:27px"></div>

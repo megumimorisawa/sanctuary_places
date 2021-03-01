@@ -20,11 +20,11 @@ create table places(
     genre_name varchar(100) not null,
     name varchar(100) not null,
     introduction varchar(300) not null,
-    postal_code int,
     address varchar(200) not null,
     tel varchar(50),
     open_time time,
     close_time time,
+    last_order time,
     close_date varchar(100) not null,
     nearest_station varchar(200),
     booking varchar(100),
@@ -40,8 +40,7 @@ create table places(
     on delete cascade
     on update cascade
 );
- latitude int not null,
-    longitude int not null,
+
 // レビューを保存するテーブル
 create table reviews (
     id int primary key auto_increment,

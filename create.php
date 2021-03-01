@@ -9,11 +9,11 @@
     $genre_name = $_POST['genre_name'];
     $name = $_POST['name'];
     $introduction = $_POST['introduction'];
-    $postal_code = $_POST['postal_code'];
     $address = $_POST['address'];
     $tel = $_POST['tel'];
     $open_time = $_POST['open_time'];
     $close_time = $_POST['close_time'];
+    $last_order = $_POST['last_order'];
     $close_date = $_POST['close_date'];
     $nearest_station = $_POST['nearest_station'];
     $booking = $_POST['booking'];
@@ -28,8 +28,9 @@
     $image5 = PlaceDAO::upload5();
     
     //取得した新しい聖地情報からPlaceクラスをインスタンス化
-    $place = new Place($login_user->id, $genre_name, $name, $introduction, $postal_code, $address, $tel, $open_time, $close_time, $close_date, $nearest_station, $booking, $price, $image1, $image2, $image3, $image4, $image5);
+    $place = new Place($login_user->id, $genre_name, $name, $introduction, $address, $tel, $open_time, $close_time, $last_order, $close_date, $nearest_station, $booking, $price, $image1, $image2, $image3, $image4, $image5);
     
+    var_dump($place);
     //place情報のエラーをerrorsに格納
     $errors = $place->validate();
     

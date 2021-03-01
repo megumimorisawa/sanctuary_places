@@ -197,11 +197,15 @@ body {
                     padding: 30px;
                     @media screen and (max-width: 896px){
                         padding: 0;
+                        text-align: left;
                     }
                     
                     a {
                         font-size: 25px;
                         color: #5507FF;
+                        @media screen and (max-width: 896px){
+                            text-align: center;
+                        }
                     }
                     
                     &-comment {

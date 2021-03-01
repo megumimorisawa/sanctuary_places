@@ -144,11 +144,69 @@ body {
             text-align: center;
         }
         
+        li {
+            list-style: none;
+        }
+        
+        #slide ul{
+        	position: relative;
+        	@media screen and (max-width: 896px){
+        	    padding: 0;
+        	}
+        }
+        
+        #slide li{
+        	position: absolute;
+        }
+        
+        #button{
+        	padding-top: 55.5%;
+        	text-align: center;
+        	@media screen and (max-width: 896px){
+        	    padding-top: 59%;
+        	}
+        }
+        
+        #button ul{
+        	display: inline-block;
+        	padding: 0;
+        }
+        
+        #button ul li{
+        	float: left;
+        	margin-right: 15px;
+        }
+        
+        #button ul li:last-child{
+        	margin-right: 0;
+        }
+        
+        #button ul li a{
+        	text-indent: -9999px;
+        	text-decoration: none;
+        	display: block;
+        	width: 14px;
+        	height: 14px;
+        	border-radius: 7px;
+        	background: #D9E5FF;
+        	@media screen and (max-width: 896px){
+        	    width: 7px;
+        	    height: 7px;
+        	}
+        }
+        
+        #button ul li a.target{
+        	background: #8eb8ff;
+        }
+        
         img {
             margin-top: 30px;
             width: 80%;
             height: auto;
-            display: none;
+            @media screen and (max-width: 896px){
+                margin: 0;
+                width: 87%;
+            }
         }
         
         &-post {
@@ -201,6 +259,7 @@ body {
                     text-decoration: none;
                     border-radius: 4px;
                     padding: 20px 30px;
+                    background: #fff;
                     @media screen and (max-width: 896px){
                         margin: 20px auto;
                     }

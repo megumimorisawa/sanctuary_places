@@ -114,11 +114,51 @@ body {
   @media screen and (max-width: 896px) {
     .index .main {
       text-align: center; } }
+  .index .main li {
+    list-style: none; }
+  .index .main #slide ul {
+    position: relative; }
+    @media screen and (max-width: 896px) {
+      .index .main #slide ul {
+        padding: 0; } }
+  .index .main #slide li {
+    position: absolute; }
+  .index .main #button {
+    padding-top: 55.5%;
+    text-align: center; }
+    @media screen and (max-width: 896px) {
+      .index .main #button {
+        padding-top: 59%; } }
+  .index .main #button ul {
+    display: inline-block;
+    padding: 0; }
+  .index .main #button ul li {
+    float: left;
+    margin-right: 15px; }
+  .index .main #button ul li:last-child {
+    margin-right: 0; }
+  .index .main #button ul li a {
+    text-indent: -9999px;
+    text-decoration: none;
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    background: #D9E5FF; }
+    @media screen and (max-width: 896px) {
+      .index .main #button ul li a {
+        width: 7px;
+        height: 7px; } }
+  .index .main #button ul li a.target {
+    background: #8eb8ff; }
   .index .main img {
     margin-top: 30px;
     width: 80%;
-    height: auto;
-    display: none; }
+    height: auto; }
+    @media screen and (max-width: 896px) {
+      .index .main img {
+        margin: 0;
+        width: 87%; } }
   .index .main-post {
     position: absolute;
     top: 50%;
@@ -162,7 +202,8 @@ body {
         max-width: 180px;
         text-decoration: none;
         border-radius: 4px;
-        padding: 20px 30px; }
+        padding: 20px 30px;
+        background: #fff; }
         @media screen and (max-width: 896px) {
           .index .main-post-btn a {
             margin: 20px auto; } }

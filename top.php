@@ -24,7 +24,7 @@
         
         <section class="main">
             <div class="main-inner">
-                <img src="/portfolio2/css/image/top7.jpeg" style="width:100%">
+                <img src="css/image/top7.jpeg" style="width:100%">
                 <div class="main-start">
                     <a href="signup.php"class="start-btn">START</a>
                 </div>

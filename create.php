@@ -30,7 +30,6 @@
     //取得した新しい聖地情報からPlaceクラスをインスタンス化
     $place = new Place($login_user->id, $genre_name, $name, $introduction, $address, $tel, $open_time, $close_time, $last_order, $close_date, $nearest_station, $booking, $price, $image1, $image2, $image3, $image4, $image5);
     
-    var_dump($place);
     //place情報のエラーをerrorsに格納
     $errors = $place->validate();
     

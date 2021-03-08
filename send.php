@@ -14,7 +14,6 @@
     $request_datetime = date("Y年m月d日 H時i分s秒");
  
     //自動返信メール
-    $mailto = $_POST['email'];
     $to = "araki112318@gmail.com"; 
     $mailfrom = "From:" . $to; 
     $subject = "お問い合わせ有難うございます。";
@@ -48,9 +47,8 @@
     
     //mail 送信
     if(mb_send_mail($to, $subject2, $content2, $mailfrom)){
-        mb_send_mail($mailto, $subject, $content, $mailfrom);
+        mb_send_mail($email, $subject, $content, $mailfrom);
     }
     
-    var_dump($mailto, $subject, $content, $mailfrom);
     header('Location: index.php');
     exit;

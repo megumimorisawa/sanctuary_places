@@ -3,8 +3,8 @@
     session_start();
     
     //contact.phpからデータを取得
-    $login_user = $_SESSION['login_user'];
-    $name = $login_user->name;
+    // $login_user = $_SESSION['login_user'];
+    // $name = $login_user->name;
     $email = $_POST['email'];
     $message = $_POST['message'];
     
@@ -29,7 +29,7 @@
         header('Location: contact.php');
         exit;
     }else{//エラーがなければsend.phpへ入力された内容を送る
-        $_SESSION['name'] = $name;
+        // $_SESSION['name'] = $name;
         $_SESSION['email'] = $email;
         $_SESSION['message'] = $message;
         header('Location: send.php');

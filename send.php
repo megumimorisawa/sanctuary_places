@@ -1,8 +1,9 @@
 <?php
+    require_once 'models/User.php';
     session_start();
     
-    $name = $_SESSION['name'];
-    $_SESSION['name'] = null;
+    $login_user = $_SESSION['login_user'];
+    $name = $login_user->name;
     
     $email = $_SESSION['email'];
     $_SESSION['email'] = null;
@@ -48,7 +49,7 @@
     //mail 送信
     if(mb_send_mail($to, $subject2, $content2, $mailfrom)){
         mb_send_mail($email, $subject, $content, $mailfrom);
-    }
+    };
     
     header('Location: index.php');
     exit;

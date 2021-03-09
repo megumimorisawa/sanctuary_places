@@ -176,6 +176,10 @@ body {
                 color: red;
                 font-weight: normal;
             }
+            
+            &-ttx {
+                margin-left: 20px;
+            }
         }
         
         &-input {
@@ -197,6 +201,8 @@ body {
                 border: none;
                 color: #fff;
                 background-color: initial;
+                padding: 5px;
+                
             }
         }
     }

@@ -2094,6 +2094,12 @@ body {
   text-align: center;
   width: 30%;
   margin: 100px auto 0; }
+  @media screen and (max-width: 896px) {
+    .show .message {
+      width: 50%; } }
+  @media screen and (max-width: 480px) {
+    .show .message {
+      width: 80%; } }
   .show .message p {
     position: relative;
     color: #333;
@@ -2467,6 +2473,8 @@ body {
       .contact .form-name span {
         color: red;
         font-weight: normal; }
+      .contact .form-name-ttx {
+        margin-left: 20px; }
     .contact .form-input {
       margin: 10px 10px 20px; }
     .contact .form-btn {
@@ -2482,7 +2490,8 @@ body {
         font-size: 20px;
         border: none;
         color: #fff;
-        background-color: initial; }
+        background-color: initial;
+        padding: 5px; }
   .contact .home-btn {
     text-align: right;
     width: 45%;

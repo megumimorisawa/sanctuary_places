@@ -40,8 +40,8 @@
         
             <section class="form">
                 <form action="contact_check.php" method="post">
-                    <p class="form-name">お名前&emsp;<span>※必須</span></p>
-                    <div class="form-input"><input type="text" name="name" style="height:27px"></div>
+                    <p class="form-name">お名前&emsp;</p>
+                    <p class="form-name-ttx"><?php print $login_user->name; ?></p>
                     <p class="form-name">メールアドレス&emsp;<span>※必須</span></p>
                     <div class="form-input"><input type="email" name="email" style="height:27px;width:50%"></div>
                     <p class="form-name">内容&emsp;<span>※必須</span></p>

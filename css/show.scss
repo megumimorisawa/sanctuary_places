@@ -132,6 +132,13 @@ body {
         text-align: center;
         width: 30%;
         margin: 100px auto 0;
+        @media screen and (max-width: 896px){
+            width: 50%;
+        }
+        @media screen and (max-width: 480px){
+            width: 80%;
+        }
+        
         
         p {
             position: relative;

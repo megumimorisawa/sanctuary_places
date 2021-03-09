@@ -1,17 +1,16 @@
 <?php
+    require_once 'daos/UserDAO.php';
     session_start();
     
     //contact.phpからデータを取得
-    $name = $_POST['name'];
+    $login_user = $_SESSION['login_user'];
+    $name = $login_user->name;
     $email = $_POST['email'];
     $message = $_POST['message'];
     
     // 入力内容のチェック
-    function validate($name, $email, $message) {
+    function validate($email, $message) {
         $errors = array();
-            if($name === ''){
-                $errors[] = 'お名前を入力してください';
-            }
             if($email === ''){
                 $errors[] = 'メールアドレスを入力してください';
             }else if(!preg_match('/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/', $email)){
@@ -23,7 +22,7 @@
             return $errors;
     };
     
-    $errors = validate($name, $email, $message);
+    $errors = validate($email, $message);
     
     if(count($errors) !== 0){//エラーがあれば入力画面へ戻る
         $_SESSION['errors'] = $errors;

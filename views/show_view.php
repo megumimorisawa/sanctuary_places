@@ -108,7 +108,7 @@
                         <tr>
                             <th>営業時間(ラストオーダー)・定休日</th><td><?= $place->open_time ?>〜<?= $place->close_time ?>
                             <?php if(($place->last_order) === '00:00:00'): ?>
-                            <?php print ""; ?> 
+                            <?= '' ?> 
                             <?php else: ?>
                             (<?= $place->last_order ?>)
                             <?php endif; ?><br/>

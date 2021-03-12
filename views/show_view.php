@@ -24,17 +24,14 @@
                     </nav>
                 </div>
             </section>
-            
+            <div class="show-ttl">
+                <h1>聖地詳細情報</h1>
+            </div>
             <section class="message">
                 <?php if($flash_message !== null): ?>
                 <p><?= $flash_message ?></p>
                 <?php endif; ?>
             </section>
-            
-            <div class="show-ttl">
-                <h1>聖地詳細情報</h1>
-            </div>
-
             <section class="main">
                 <div class="main-inner">
                     <div class="main-top">

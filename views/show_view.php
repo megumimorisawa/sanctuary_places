@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap">
         <link rel="stylesheet" href="css/show.css">
+        <link rel="icon" href="favicon.ico">
         <title>聖地詳細情報</title>
     </head>
     <body>

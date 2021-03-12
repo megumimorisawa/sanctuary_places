@@ -3,11 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <title>「聖地さがし」へようこそ！</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap">
         <link rel="stylesheet" href="css/index.css">
+        <link rel="icon" href="favicon.ico">
+        <title>「聖地さがし」へようこそ！</title>
     </head>
     <body>
         <div class="index"> 

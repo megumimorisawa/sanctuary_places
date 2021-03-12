@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap">
     <link rel="stylesheet" href="css/profile_edit.css">
+    <link rel="icon" href="favicon.ico">
     <title>マイページ編集</title>
 </head>
 <body>

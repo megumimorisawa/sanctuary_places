@@ -155,7 +155,6 @@ li {
   text-align: center;
   width: 73%;
   font-size: 28px;
-  text-align: center;
   padding: 0.2em 0.5em;
   margin: 0 auto;
   color: #565656;
@@ -166,6 +165,11 @@ li {
   @media screen and (max-width: 1024px) {
     .feature-top {
       font-size: 20px; } }
+  @media screen and (max-width: 480px) {
+    .feature-top {
+      width: 85%;
+      font-size: 17px;
+      text-align: left; } }
 .feature-inner {
   margin-top: 170px; }
 .feature-content-box {
@@ -181,12 +185,24 @@ li {
       display: block;
       width: 70%;
       margin: 100px auto; } }
+  @media screen and (max-width: 896px) {
+    .feature-content-box {
+      width: 90%; } }
+  @media screen and (max-width: 480px) {
+    .feature-content-box {
+      width: 93%; } }
   .feature-content-box-ttx h2 {
     position: relative;
     padding-left: 25px;
     font-size: 24px;
     line-height: 1.8;
     margin-bottom: 54px; }
+    @media screen and (max-width: 896px) {
+      .feature-content-box-ttx h2 {
+        font-size: 22px; } }
+    @media screen and (max-width: 480px) {
+      .feature-content-box-ttx h2 {
+        font-size: 18px; } }
   .feature-content-box-ttx h2:before {
     position: absolute;
     content: '';
@@ -207,9 +223,21 @@ li {
   .feature-content-box-ttx span {
     font-size: 50px;
     color: #8b4513; }
+    @media screen and (max-width: 896px) {
+      .feature-content-box-ttx span {
+        font-size: 30px; } }
+    @media screen and (max-width: 480px) {
+      .feature-content-box-ttx span {
+        font-size: 21px; } }
   .feature-content-box-ttx p {
     line-height: 1.5;
     font-size: 20px; }
+    @media screen and (max-width: 896px) {
+      .feature-content-box-ttx p {
+        font-size: 18px; } }
+    @media screen and (max-width: 480px) {
+      .feature-content-box-ttx p {
+        font-size: 15px; } }
   @media screen and (max-width: 1024px) {
     .feature-content-box img {
       display: none; } }

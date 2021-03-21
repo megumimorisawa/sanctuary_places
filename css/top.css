@@ -97,38 +97,64 @@ li {
     margin-left: auto;
     margin-right: auto;
     padding: 55px 0px 100px; }
-  .main-start-btn {
+@keyframes sheen {
+  0% {
+    transform: skewY(-45deg) translateX(0); }
+  100% {
+    transform: skewY(-45deg) translateX(12.5em); } }
+  .main-start {
+    display: block;
     position: absolute;
     top: 65%;
-    left: 43%;
-    width: 180px;
-    height: 50px;
-    background: linear-gradient(to right, #87ceeb, #0bf);
-    border-radius: 50px;
-    display: block;
-    text-align: center;
-    box-shadow: 0 7px 4px rgba(0, 0, 0, 0.14); }
-    @media screen and (max-width: 1024px) {
-      .main-start-btn {
-        position: unset;
-        margin: 60px auto 0; } }
+    left: 50%;
+    transform: translate(-50%, -50%); }
     @media screen and (max-width: 480px) {
-      .main-start-btn {
-        width: 130px;
-        height: 40px;
-        margin: 30px auto 0; } }
-    .main-start-btn a {
-      font-size: 30px;
-      color: #fff; }
-      @media screen and (max-width: 480px) {
-        .main-start-btn a {
-          font-size: 25px; } }
+      .main-start {
+        position: relative;
+        text-align: center;
+        margin-top: 30px;
+        top: 0;
+        left: 0;
+        transform: none; } }
+  .main .start-btn {
+    padding: 0.75em 2em;
+    text-align: center;
+    text-decoration: none;
+    color: #2194E0;
+    border: 2px solid #2194E0;
+    font-size: 24px;
+    display: inline-block;
+    border-radius: 0.3em;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.5); }
+    @media screen and (max-width: 896px) {
+      .main .start-btn {
+        padding: 0.4em 1em; } }
+    .main .start-btn:before {
+      content: "";
+      background-color: rgba(255, 255, 255, 0.5);
+      height: 100%;
+      width: 3em;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -4.5em;
+      transform: skewX(-45deg) translateX(0);
+      transition: none; }
+    .main .start-btn:hover {
+      background-color: #2194E0;
+      color: #fff;
+      border-bottom: 4px solid #1977b5; }
+      .main .start-btn:hover:before {
+        transform: skewX(-45deg) translateX(13.5em);
+        transition: all 0.5s ease-in-out; }
 
 .feature-top {
   text-align: center;
   width: 73%;
   font-size: 28px;
-  text-align: center;
   padding: 0.2em 0.5em;
   margin: 0 auto;
   color: #565656;
@@ -139,6 +165,11 @@ li {
   @media screen and (max-width: 1024px) {
     .feature-top {
       font-size: 20px; } }
+  @media screen and (max-width: 480px) {
+    .feature-top {
+      width: 85%;
+      font-size: 17px;
+      text-align: left; } }
 .feature-inner {
   margin-top: 170px; }
 .feature-content-box {
@@ -154,12 +185,24 @@ li {
       display: block;
       width: 70%;
       margin: 100px auto; } }
+  @media screen and (max-width: 896px) {
+    .feature-content-box {
+      width: 90%; } }
+  @media screen and (max-width: 480px) {
+    .feature-content-box {
+      width: 93%; } }
   .feature-content-box-ttx h2 {
     position: relative;
     padding-left: 25px;
     font-size: 24px;
     line-height: 1.8;
     margin-bottom: 54px; }
+    @media screen and (max-width: 896px) {
+      .feature-content-box-ttx h2 {
+        font-size: 22px; } }
+    @media screen and (max-width: 480px) {
+      .feature-content-box-ttx h2 {
+        font-size: 18px; } }
   .feature-content-box-ttx h2:before {
     position: absolute;
     content: '';
@@ -180,9 +223,21 @@ li {
   .feature-content-box-ttx span {
     font-size: 50px;
     color: #8b4513; }
+    @media screen and (max-width: 896px) {
+      .feature-content-box-ttx span {
+        font-size: 30px; } }
+    @media screen and (max-width: 480px) {
+      .feature-content-box-ttx span {
+        font-size: 21px; } }
   .feature-content-box-ttx p {
     line-height: 1.5;
     font-size: 20px; }
+    @media screen and (max-width: 896px) {
+      .feature-content-box-ttx p {
+        font-size: 18px; } }
+    @media screen and (max-width: 480px) {
+      .feature-content-box-ttx p {
+        font-size: 15px; } }
   @media screen and (max-width: 1024px) {
     .feature-content-box img {
       display: none; } }
@@ -213,15 +268,59 @@ li {
         display: contents; }
         .feature-bottom-box p {
           font-size: 20px; } }
-  .feature-bottom-btn {
-    width: 200px;
-    height: 50px;
-    background: linear-gradient(to right, #87ceeb, #0bf);
-    border-radius: 50px;
-    box-shadow: 0 7px 4px rgba(0, 0, 0, 0.14);
-    margin: 0 auto;
-    color: #fff;
-    display: block; }
+@keyframes sheen {
+  0% {
+    transform: skewY(-45deg) translateX(0); }
+  100% {
+    transform: skewY(-45deg) translateX(12.5em); } }
+  .feature-bottom-start {
+    display: block;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    @media screen and (max-width: 480px) {
+      .feature-bottom-start {
+        position: relative;
+        text-align: center;
+        margin-top: 30px;
+        top: 0;
+        left: 0;
+        transform: none; } }
+  .feature-bottom .start-btn {
+    padding: 0.75em 2em;
+    text-align: center;
+    text-decoration: none;
+    color: #2194E0;
+    border: 2px solid #2194E0;
+    font-size: 24px;
+    display: inline-block;
+    border-radius: 0.3em;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.5); }
+    @media screen and (max-width: 896px) {
+      .feature-bottom .start-btn {
+        padding: 0.4em 1em; } }
+    .feature-bottom .start-btn:before {
+      content: "";
+      background-color: rgba(255, 255, 255, 0.5);
+      height: 100%;
+      width: 3em;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -4.5em;
+      transform: skewX(-45deg) translateX(0);
+      transition: none; }
+    .feature-bottom .start-btn:hover {
+      background-color: #2194E0;
+      color: #fff;
+      border-bottom: 4px solid #1977b5; }
+      .feature-bottom .start-btn:hover:before {
+        transform: skewX(-45deg) translateX(13.5em);
+        transition: all 0.5s ease-in-out; }
 
 .footer {
   width: 100%;
